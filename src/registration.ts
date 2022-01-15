@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/acme/r/registration.html
+// https://www.terraform.io/docs/providers/acme/r/registration
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,27 +8,27 @@ import * as cdktf from 'cdktf';
 
 export interface RegistrationConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/registration.html#account_key_pem Registration#account_key_pem}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/registration#account_key_pem Registration#account_key_pem}
   */
   readonly accountKeyPem: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/registration.html#email_address Registration#email_address}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/registration#email_address Registration#email_address}
   */
   readonly emailAddress: string;
   /**
   * external_account_binding block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/registration.html#external_account_binding Registration#external_account_binding}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/registration#external_account_binding Registration#external_account_binding}
   */
   readonly externalAccountBinding?: RegistrationExternalAccountBinding;
 }
 export interface RegistrationExternalAccountBinding {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/registration.html#hmac_base64 Registration#hmac_base64}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/registration#hmac_base64 Registration#hmac_base64}
   */
   readonly hmacBase64: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/registration.html#key_id Registration#key_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/registration#key_id Registration#key_id}
   */
   readonly keyId: string;
 }
@@ -111,7 +111,7 @@ export class RegistrationExternalAccountBindingOutputReference extends cdktf.Com
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/acme/r/registration.html acme_registration}
+* Represents a {@link https://www.terraform.io/docs/providers/acme/r/registration acme_registration}
 */
 export class Registration extends cdktf.TerraformResource {
 
@@ -125,7 +125,7 @@ export class Registration extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/acme/r/registration.html acme_registration} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/acme/r/registration acme_registration} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

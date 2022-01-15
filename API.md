@@ -128,7 +128,7 @@ public readonly serverUrl: string;
 
 ### Certificate <a name="@cdktf/provider-acme.Certificate" id="cdktfprovideracmecertificate"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/acme/r/certificate.html acme_certificate}.
+Represents a {@link https://www.terraform.io/docs/providers/acme/r/certificate acme_certificate}.
 
 #### Initializers <a name="@cdktf/provider-acme.Certificate.Initializer" id="cdktfprovideracmecertificateinitializer"></a>
 
@@ -845,7 +845,7 @@ public readonly subjectAlternativeNames: string[];
 
 ### Registration <a name="@cdktf/provider-acme.Registration" id="cdktfprovideracmeregistration"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/acme/r/registration.html acme_registration}.
+Represents a {@link https://www.terraform.io/docs/providers/acme/r/registration acme_registration}.
 
 #### Initializers <a name="@cdktf/provider-acme.Registration.Initializer" id="cdktfprovideracmeregistrationinitializer"></a>
 
@@ -1089,23 +1089,23 @@ const certificateConfig: CertificateConfig = { ... }
 | [`dependsOn`](#cdktfprovideracmecertificateconfigpropertydependson) | [`cdktf.ITerraformDependable`](#cdktf.ITerraformDependable)[] | *No description.* |
 | [`lifecycle`](#cdktfprovideracmecertificateconfigpropertylifecycle) | [`cdktf.TerraformResourceLifecycle`](#cdktf.TerraformResourceLifecycle) | *No description.* |
 | [`provider`](#cdktfprovideracmecertificateconfigpropertyprovider) | [`cdktf.TerraformProvider`](#cdktf.TerraformProvider) | *No description.* |
-| [`accountKeyPem`](#cdktfprovideracmecertificateconfigpropertyaccountkeypem)<span title="Required">*</span> | `string` | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#account_key_pem Certificate#account_key_pem}. |
-| [`certificateP12Password`](#cdktfprovideracmecertificateconfigpropertycertificatep12password) | `string` | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#certificate_p12_password Certificate#certificate_p12_password}. |
-| [`certificateRequestPem`](#cdktfprovideracmecertificateconfigpropertycertificaterequestpem) | `string` | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#certificate_request_pem Certificate#certificate_request_pem}. |
-| [`commonName`](#cdktfprovideracmecertificateconfigpropertycommonname) | `string` | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#common_name Certificate#common_name}. |
-| [`disableCompletePropagation`](#cdktfprovideracmecertificateconfigpropertydisablecompletepropagation) | `boolean` \| [`cdktf.IResolvable`](#cdktf.IResolvable) | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#disable_complete_propagation Certificate#disable_complete_propagation}. |
+| [`accountKeyPem`](#cdktfprovideracmecertificateconfigpropertyaccountkeypem)<span title="Required">*</span> | `string` | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#account_key_pem Certificate#account_key_pem}. |
+| [`certificateP12Password`](#cdktfprovideracmecertificateconfigpropertycertificatep12password) | `string` | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#certificate_p12_password Certificate#certificate_p12_password}. |
+| [`certificateRequestPem`](#cdktfprovideracmecertificateconfigpropertycertificaterequestpem) | `string` | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#certificate_request_pem Certificate#certificate_request_pem}. |
+| [`commonName`](#cdktfprovideracmecertificateconfigpropertycommonname) | `string` | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#common_name Certificate#common_name}. |
+| [`disableCompletePropagation`](#cdktfprovideracmecertificateconfigpropertydisablecompletepropagation) | `boolean` \| [`cdktf.IResolvable`](#cdktf.IResolvable) | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#disable_complete_propagation Certificate#disable_complete_propagation}. |
 | [`dnsChallenge`](#cdktfprovideracmecertificateconfigpropertydnschallenge) | [`@cdktf/provider-acme.CertificateDnsChallenge`](#@cdktf/provider-acme.CertificateDnsChallenge)[] | dns_challenge block. |
 | [`httpChallenge`](#cdktfprovideracmecertificateconfigpropertyhttpchallenge) | [`@cdktf/provider-acme.CertificateHttpChallenge`](#@cdktf/provider-acme.CertificateHttpChallenge) | http_challenge block. |
 | [`httpMemcachedChallenge`](#cdktfprovideracmecertificateconfigpropertyhttpmemcachedchallenge) | [`@cdktf/provider-acme.CertificateHttpMemcachedChallenge`](#@cdktf/provider-acme.CertificateHttpMemcachedChallenge) | http_memcached_challenge block. |
 | [`httpWebrootChallenge`](#cdktfprovideracmecertificateconfigpropertyhttpwebrootchallenge) | [`@cdktf/provider-acme.CertificateHttpWebrootChallenge`](#@cdktf/provider-acme.CertificateHttpWebrootChallenge) | http_webroot_challenge block. |
-| [`keyType`](#cdktfprovideracmecertificateconfigpropertykeytype) | `string` | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#key_type Certificate#key_type}. |
-| [`minDaysRemaining`](#cdktfprovideracmecertificateconfigpropertymindaysremaining) | `number` | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#min_days_remaining Certificate#min_days_remaining}. |
-| [`mustStaple`](#cdktfprovideracmecertificateconfigpropertymuststaple) | `boolean` \| [`cdktf.IResolvable`](#cdktf.IResolvable) | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#must_staple Certificate#must_staple}. |
-| [`preCheckDelay`](#cdktfprovideracmecertificateconfigpropertyprecheckdelay) | `number` | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#pre_check_delay Certificate#pre_check_delay}. |
-| [`preferredChain`](#cdktfprovideracmecertificateconfigpropertypreferredchain) | `string` | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#preferred_chain Certificate#preferred_chain}. |
-| [`recursiveNameservers`](#cdktfprovideracmecertificateconfigpropertyrecursivenameservers) | `string`[] | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#recursive_nameservers Certificate#recursive_nameservers}. |
-| [`revokeCertificateOnDestroy`](#cdktfprovideracmecertificateconfigpropertyrevokecertificateondestroy) | `boolean` \| [`cdktf.IResolvable`](#cdktf.IResolvable) | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#revoke_certificate_on_destroy Certificate#revoke_certificate_on_destroy}. |
-| [`subjectAlternativeNames`](#cdktfprovideracmecertificateconfigpropertysubjectalternativenames) | `string`[] | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#subject_alternative_names Certificate#subject_alternative_names}. |
+| [`keyType`](#cdktfprovideracmecertificateconfigpropertykeytype) | `string` | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#key_type Certificate#key_type}. |
+| [`minDaysRemaining`](#cdktfprovideracmecertificateconfigpropertymindaysremaining) | `number` | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#min_days_remaining Certificate#min_days_remaining}. |
+| [`mustStaple`](#cdktfprovideracmecertificateconfigpropertymuststaple) | `boolean` \| [`cdktf.IResolvable`](#cdktf.IResolvable) | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#must_staple Certificate#must_staple}. |
+| [`preCheckDelay`](#cdktfprovideracmecertificateconfigpropertyprecheckdelay) | `number` | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#pre_check_delay Certificate#pre_check_delay}. |
+| [`preferredChain`](#cdktfprovideracmecertificateconfigpropertypreferredchain) | `string` | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#preferred_chain Certificate#preferred_chain}. |
+| [`recursiveNameservers`](#cdktfprovideracmecertificateconfigpropertyrecursivenameservers) | `string`[] | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#recursive_nameservers Certificate#recursive_nameservers}. |
+| [`revokeCertificateOnDestroy`](#cdktfprovideracmecertificateconfigpropertyrevokecertificateondestroy) | `boolean` \| [`cdktf.IResolvable`](#cdktf.IResolvable) | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#revoke_certificate_on_destroy Certificate#revoke_certificate_on_destroy}. |
+| [`subjectAlternativeNames`](#cdktfprovideracmecertificateconfigpropertysubjectalternativenames) | `string`[] | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#subject_alternative_names Certificate#subject_alternative_names}. |
 | [`tlsChallenge`](#cdktfprovideracmecertificateconfigpropertytlschallenge) | [`@cdktf/provider-acme.CertificateTlsChallenge`](#@cdktf/provider-acme.CertificateTlsChallenge) | tls_challenge block. |
 
 ---
@@ -1158,7 +1158,7 @@ public readonly accountKeyPem: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#account_key_pem Certificate#account_key_pem}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#account_key_pem Certificate#account_key_pem}.
 
 ---
 
@@ -1170,7 +1170,7 @@ public readonly certificateP12Password: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#certificate_p12_password Certificate#certificate_p12_password}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#certificate_p12_password Certificate#certificate_p12_password}.
 
 ---
 
@@ -1182,7 +1182,7 @@ public readonly certificateRequestPem: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#certificate_request_pem Certificate#certificate_request_pem}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#certificate_request_pem Certificate#certificate_request_pem}.
 
 ---
 
@@ -1194,7 +1194,7 @@ public readonly commonName: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#common_name Certificate#common_name}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#common_name Certificate#common_name}.
 
 ---
 
@@ -1206,7 +1206,7 @@ public readonly disableCompletePropagation: boolean | IResolvable;
 
 - *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#disable_complete_propagation Certificate#disable_complete_propagation}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#disable_complete_propagation Certificate#disable_complete_propagation}.
 
 ---
 
@@ -1220,7 +1220,7 @@ public readonly dnsChallenge: CertificateDnsChallenge[];
 
 dns_challenge block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#dns_challenge Certificate#dns_challenge}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#dns_challenge Certificate#dns_challenge}
 
 ---
 
@@ -1234,7 +1234,7 @@ public readonly httpChallenge: CertificateHttpChallenge;
 
 http_challenge block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#http_challenge Certificate#http_challenge}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#http_challenge Certificate#http_challenge}
 
 ---
 
@@ -1248,7 +1248,7 @@ public readonly httpMemcachedChallenge: CertificateHttpMemcachedChallenge;
 
 http_memcached_challenge block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#http_memcached_challenge Certificate#http_memcached_challenge}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#http_memcached_challenge Certificate#http_memcached_challenge}
 
 ---
 
@@ -1262,7 +1262,7 @@ public readonly httpWebrootChallenge: CertificateHttpWebrootChallenge;
 
 http_webroot_challenge block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#http_webroot_challenge Certificate#http_webroot_challenge}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#http_webroot_challenge Certificate#http_webroot_challenge}
 
 ---
 
@@ -1274,7 +1274,7 @@ public readonly keyType: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#key_type Certificate#key_type}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#key_type Certificate#key_type}.
 
 ---
 
@@ -1286,7 +1286,7 @@ public readonly minDaysRemaining: number;
 
 - *Type:* `number`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#min_days_remaining Certificate#min_days_remaining}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#min_days_remaining Certificate#min_days_remaining}.
 
 ---
 
@@ -1298,7 +1298,7 @@ public readonly mustStaple: boolean | IResolvable;
 
 - *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#must_staple Certificate#must_staple}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#must_staple Certificate#must_staple}.
 
 ---
 
@@ -1310,7 +1310,7 @@ public readonly preCheckDelay: number;
 
 - *Type:* `number`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#pre_check_delay Certificate#pre_check_delay}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#pre_check_delay Certificate#pre_check_delay}.
 
 ---
 
@@ -1322,7 +1322,7 @@ public readonly preferredChain: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#preferred_chain Certificate#preferred_chain}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#preferred_chain Certificate#preferred_chain}.
 
 ---
 
@@ -1334,7 +1334,7 @@ public readonly recursiveNameservers: string[];
 
 - *Type:* `string`[]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#recursive_nameservers Certificate#recursive_nameservers}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#recursive_nameservers Certificate#recursive_nameservers}.
 
 ---
 
@@ -1346,7 +1346,7 @@ public readonly revokeCertificateOnDestroy: boolean | IResolvable;
 
 - *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#revoke_certificate_on_destroy Certificate#revoke_certificate_on_destroy}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#revoke_certificate_on_destroy Certificate#revoke_certificate_on_destroy}.
 
 ---
 
@@ -1358,7 +1358,7 @@ public readonly subjectAlternativeNames: string[];
 
 - *Type:* `string`[]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#subject_alternative_names Certificate#subject_alternative_names}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#subject_alternative_names Certificate#subject_alternative_names}.
 
 ---
 
@@ -1372,7 +1372,7 @@ public readonly tlsChallenge: CertificateTlsChallenge;
 
 tls_challenge block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#tls_challenge Certificate#tls_challenge}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#tls_challenge Certificate#tls_challenge}
 
 ---
 
@@ -1390,8 +1390,8 @@ const certificateDnsChallenge: CertificateDnsChallenge = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| [`provider`](#cdktfprovideracmecertificatednschallengepropertyprovider)<span title="Required">*</span> | `string` | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#provider Certificate#provider}. |
-| [`config`](#cdktfprovideracmecertificatednschallengepropertyconfig) | {[ key: string ]: `string`} \| [`cdktf.IResolvable`](#cdktf.IResolvable) | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#config Certificate#config}. |
+| [`provider`](#cdktfprovideracmecertificatednschallengepropertyprovider)<span title="Required">*</span> | `string` | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#provider Certificate#provider}. |
+| [`config`](#cdktfprovideracmecertificatednschallengepropertyconfig) | {[ key: string ]: `string`} \| [`cdktf.IResolvable`](#cdktf.IResolvable) | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#config Certificate#config}. |
 
 ---
 
@@ -1403,7 +1403,7 @@ public readonly provider: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#provider Certificate#provider}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#provider Certificate#provider}.
 
 ---
 
@@ -1415,7 +1415,7 @@ public readonly config: {[ key: string ]: string} | IResolvable;
 
 - *Type:* {[ key: string ]: `string`} | [`cdktf.IResolvable`](#cdktf.IResolvable)
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#config Certificate#config}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#config Certificate#config}.
 
 ---
 
@@ -1433,8 +1433,8 @@ const certificateHttpChallenge: CertificateHttpChallenge = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| [`port`](#cdktfprovideracmecertificatehttpchallengepropertyport) | `number` | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#port Certificate#port}. |
-| [`proxyHeader`](#cdktfprovideracmecertificatehttpchallengepropertyproxyheader) | `string` | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#proxy_header Certificate#proxy_header}. |
+| [`port`](#cdktfprovideracmecertificatehttpchallengepropertyport) | `number` | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#port Certificate#port}. |
+| [`proxyHeader`](#cdktfprovideracmecertificatehttpchallengepropertyproxyheader) | `string` | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#proxy_header Certificate#proxy_header}. |
 
 ---
 
@@ -1446,7 +1446,7 @@ public readonly port: number;
 
 - *Type:* `number`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#port Certificate#port}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#port Certificate#port}.
 
 ---
 
@@ -1458,7 +1458,7 @@ public readonly proxyHeader: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#proxy_header Certificate#proxy_header}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#proxy_header Certificate#proxy_header}.
 
 ---
 
@@ -1476,7 +1476,7 @@ const certificateHttpMemcachedChallenge: CertificateHttpMemcachedChallenge = { .
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| [`hosts`](#cdktfprovideracmecertificatehttpmemcachedchallengepropertyhosts)<span title="Required">*</span> | `string`[] | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#hosts Certificate#hosts}. |
+| [`hosts`](#cdktfprovideracmecertificatehttpmemcachedchallengepropertyhosts)<span title="Required">*</span> | `string`[] | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#hosts Certificate#hosts}. |
 
 ---
 
@@ -1488,7 +1488,7 @@ public readonly hosts: string[];
 
 - *Type:* `string`[]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#hosts Certificate#hosts}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#hosts Certificate#hosts}.
 
 ---
 
@@ -1506,7 +1506,7 @@ const certificateHttpWebrootChallenge: CertificateHttpWebrootChallenge = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| [`directory`](#cdktfprovideracmecertificatehttpwebrootchallengepropertydirectory)<span title="Required">*</span> | `string` | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#directory Certificate#directory}. |
+| [`directory`](#cdktfprovideracmecertificatehttpwebrootchallengepropertydirectory)<span title="Required">*</span> | `string` | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#directory Certificate#directory}. |
 
 ---
 
@@ -1518,7 +1518,7 @@ public readonly directory: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#directory Certificate#directory}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#directory Certificate#directory}.
 
 ---
 
@@ -1536,7 +1536,7 @@ const certificateTlsChallenge: CertificateTlsChallenge = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| [`port`](#cdktfprovideracmecertificatetlschallengepropertyport) | `number` | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#port Certificate#port}. |
+| [`port`](#cdktfprovideracmecertificatetlschallengepropertyport) | `number` | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#port Certificate#port}. |
 
 ---
 
@@ -1548,7 +1548,7 @@ public readonly port: number;
 
 - *Type:* `number`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#port Certificate#port}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#port Certificate#port}.
 
 ---
 
@@ -1570,8 +1570,8 @@ const registrationConfig: RegistrationConfig = { ... }
 | [`dependsOn`](#cdktfprovideracmeregistrationconfigpropertydependson) | [`cdktf.ITerraformDependable`](#cdktf.ITerraformDependable)[] | *No description.* |
 | [`lifecycle`](#cdktfprovideracmeregistrationconfigpropertylifecycle) | [`cdktf.TerraformResourceLifecycle`](#cdktf.TerraformResourceLifecycle) | *No description.* |
 | [`provider`](#cdktfprovideracmeregistrationconfigpropertyprovider) | [`cdktf.TerraformProvider`](#cdktf.TerraformProvider) | *No description.* |
-| [`accountKeyPem`](#cdktfprovideracmeregistrationconfigpropertyaccountkeypem)<span title="Required">*</span> | `string` | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/registration.html#account_key_pem Registration#account_key_pem}. |
-| [`emailAddress`](#cdktfprovideracmeregistrationconfigpropertyemailaddress)<span title="Required">*</span> | `string` | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/registration.html#email_address Registration#email_address}. |
+| [`accountKeyPem`](#cdktfprovideracmeregistrationconfigpropertyaccountkeypem)<span title="Required">*</span> | `string` | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/registration#account_key_pem Registration#account_key_pem}. |
+| [`emailAddress`](#cdktfprovideracmeregistrationconfigpropertyemailaddress)<span title="Required">*</span> | `string` | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/registration#email_address Registration#email_address}. |
 | [`externalAccountBinding`](#cdktfprovideracmeregistrationconfigpropertyexternalaccountbinding) | [`@cdktf/provider-acme.RegistrationExternalAccountBinding`](#@cdktf/provider-acme.RegistrationExternalAccountBinding) | external_account_binding block. |
 
 ---
@@ -1624,7 +1624,7 @@ public readonly accountKeyPem: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/registration.html#account_key_pem Registration#account_key_pem}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/registration#account_key_pem Registration#account_key_pem}.
 
 ---
 
@@ -1636,7 +1636,7 @@ public readonly emailAddress: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/registration.html#email_address Registration#email_address}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/registration#email_address Registration#email_address}.
 
 ---
 
@@ -1650,7 +1650,7 @@ public readonly externalAccountBinding: RegistrationExternalAccountBinding;
 
 external_account_binding block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/registration.html#external_account_binding Registration#external_account_binding}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/registration#external_account_binding Registration#external_account_binding}
 
 ---
 
@@ -1668,8 +1668,8 @@ const registrationExternalAccountBinding: RegistrationExternalAccountBinding = {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| [`hmacBase64`](#cdktfprovideracmeregistrationexternalaccountbindingpropertyhmacbase64)<span title="Required">*</span> | `string` | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/registration.html#hmac_base64 Registration#hmac_base64}. |
-| [`keyId`](#cdktfprovideracmeregistrationexternalaccountbindingpropertykeyid)<span title="Required">*</span> | `string` | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/registration.html#key_id Registration#key_id}. |
+| [`hmacBase64`](#cdktfprovideracmeregistrationexternalaccountbindingpropertyhmacbase64)<span title="Required">*</span> | `string` | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/registration#hmac_base64 Registration#hmac_base64}. |
+| [`keyId`](#cdktfprovideracmeregistrationexternalaccountbindingpropertykeyid)<span title="Required">*</span> | `string` | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/registration#key_id Registration#key_id}. |
 
 ---
 
@@ -1681,7 +1681,7 @@ public readonly hmacBase64: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/registration.html#hmac_base64 Registration#hmac_base64}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/registration#hmac_base64 Registration#hmac_base64}.
 
 ---
 
@@ -1693,7 +1693,7 @@ public readonly keyId: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/registration.html#key_id Registration#key_id}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/registration#key_id Registration#key_id}.
 
 ---
 
