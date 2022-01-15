@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/acme/r/certificate.html
+// https://www.terraform.io/docs/providers/acme/r/certificate
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,95 +8,95 @@ import * as cdktf from 'cdktf';
 
 export interface CertificateConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#account_key_pem Certificate#account_key_pem}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#account_key_pem Certificate#account_key_pem}
   */
   readonly accountKeyPem: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#certificate_p12_password Certificate#certificate_p12_password}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#certificate_p12_password Certificate#certificate_p12_password}
   */
   readonly certificateP12Password?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#certificate_request_pem Certificate#certificate_request_pem}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#certificate_request_pem Certificate#certificate_request_pem}
   */
   readonly certificateRequestPem?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#common_name Certificate#common_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#common_name Certificate#common_name}
   */
   readonly commonName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#disable_complete_propagation Certificate#disable_complete_propagation}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#disable_complete_propagation Certificate#disable_complete_propagation}
   */
   readonly disableCompletePropagation?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#key_type Certificate#key_type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#key_type Certificate#key_type}
   */
   readonly keyType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#min_days_remaining Certificate#min_days_remaining}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#min_days_remaining Certificate#min_days_remaining}
   */
   readonly minDaysRemaining?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#must_staple Certificate#must_staple}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#must_staple Certificate#must_staple}
   */
   readonly mustStaple?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#pre_check_delay Certificate#pre_check_delay}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#pre_check_delay Certificate#pre_check_delay}
   */
   readonly preCheckDelay?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#preferred_chain Certificate#preferred_chain}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#preferred_chain Certificate#preferred_chain}
   */
   readonly preferredChain?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#recursive_nameservers Certificate#recursive_nameservers}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#recursive_nameservers Certificate#recursive_nameservers}
   */
   readonly recursiveNameservers?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#revoke_certificate_on_destroy Certificate#revoke_certificate_on_destroy}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#revoke_certificate_on_destroy Certificate#revoke_certificate_on_destroy}
   */
   readonly revokeCertificateOnDestroy?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#subject_alternative_names Certificate#subject_alternative_names}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#subject_alternative_names Certificate#subject_alternative_names}
   */
   readonly subjectAlternativeNames?: string[];
   /**
   * dns_challenge block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#dns_challenge Certificate#dns_challenge}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#dns_challenge Certificate#dns_challenge}
   */
   readonly dnsChallenge?: CertificateDnsChallenge[];
   /**
   * http_challenge block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#http_challenge Certificate#http_challenge}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#http_challenge Certificate#http_challenge}
   */
   readonly httpChallenge?: CertificateHttpChallenge;
   /**
   * http_memcached_challenge block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#http_memcached_challenge Certificate#http_memcached_challenge}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#http_memcached_challenge Certificate#http_memcached_challenge}
   */
   readonly httpMemcachedChallenge?: CertificateHttpMemcachedChallenge;
   /**
   * http_webroot_challenge block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#http_webroot_challenge Certificate#http_webroot_challenge}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#http_webroot_challenge Certificate#http_webroot_challenge}
   */
   readonly httpWebrootChallenge?: CertificateHttpWebrootChallenge;
   /**
   * tls_challenge block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#tls_challenge Certificate#tls_challenge}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#tls_challenge Certificate#tls_challenge}
   */
   readonly tlsChallenge?: CertificateTlsChallenge;
 }
 export interface CertificateDnsChallenge {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#config Certificate#config}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#config Certificate#config}
   */
   readonly config?: { [key: string]: string } | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#provider Certificate#provider}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#provider Certificate#provider}
   */
   readonly provider: string;
 }
@@ -114,11 +114,11 @@ export function certificateDnsChallengeToTerraform(struct?: CertificateDnsChalle
 
 export interface CertificateHttpChallenge {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#port Certificate#port}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#port Certificate#port}
   */
   readonly port?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#proxy_header Certificate#proxy_header}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#proxy_header Certificate#proxy_header}
   */
   readonly proxyHeader?: string;
 }
@@ -207,7 +207,7 @@ export class CertificateHttpChallengeOutputReference extends cdktf.ComplexObject
 }
 export interface CertificateHttpMemcachedChallenge {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#hosts Certificate#hosts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#hosts Certificate#hosts}
   */
   readonly hosts: string[];
 }
@@ -270,7 +270,7 @@ export class CertificateHttpMemcachedChallengeOutputReference extends cdktf.Comp
 }
 export interface CertificateHttpWebrootChallenge {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#directory Certificate#directory}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#directory Certificate#directory}
   */
   readonly directory: string;
 }
@@ -333,7 +333,7 @@ export class CertificateHttpWebrootChallengeOutputReference extends cdktf.Comple
 }
 export interface CertificateTlsChallenge {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate.html#port Certificate#port}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#port Certificate#port}
   */
   readonly port?: number;
 }
@@ -399,7 +399,7 @@ export class CertificateTlsChallengeOutputReference extends cdktf.ComplexObject 
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/acme/r/certificate.html acme_certificate}
+* Represents a {@link https://www.terraform.io/docs/providers/acme/r/certificate acme_certificate}
 */
 export class Certificate extends cdktf.TerraformResource {
 
@@ -413,7 +413,7 @@ export class Certificate extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/acme/r/certificate.html acme_certificate} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/acme/r/certificate acme_certificate} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
