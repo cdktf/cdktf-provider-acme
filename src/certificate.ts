@@ -64,7 +64,7 @@ export interface CertificateConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#dns_challenge Certificate#dns_challenge}
   */
-  readonly dnsChallenge?: CertificateDnsChallenge[];
+  readonly dnsChallenge?: CertificateDnsChallenge[] | cdktf.IResolvable;
   /**
   * http_challenge block
   * 
@@ -94,20 +94,20 @@ export interface CertificateDnsChallenge {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#config Certificate#config}
   */
-  readonly config?: { [key: string]: string } | cdktf.IResolvable;
+  readonly config?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#provider Certificate#provider}
   */
   readonly provider: string;
 }
 
-export function certificateDnsChallengeToTerraform(struct?: CertificateDnsChallenge): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function certificateDnsChallengeToTerraform(struct?: CertificateDnsChallenge | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    config: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.config),
+    config: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.config),
     provider: cdktf.stringToTerraform(struct!.provider),
   }
 }
@@ -124,7 +124,7 @@ export interface CertificateHttpChallenge {
 }
 
 export function certificateHttpChallengeToTerraform(struct?: CertificateHttpChallengeOutputReference | CertificateHttpChallenge): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -142,7 +142,7 @@ export class CertificateHttpChallengeOutputReference extends cdktf.ComplexObject
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -213,7 +213,7 @@ export interface CertificateHttpMemcachedChallenge {
 }
 
 export function certificateHttpMemcachedChallengeToTerraform(struct?: CertificateHttpMemcachedChallengeOutputReference | CertificateHttpMemcachedChallenge): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -230,7 +230,7 @@ export class CertificateHttpMemcachedChallengeOutputReference extends cdktf.Comp
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -258,7 +258,7 @@ export class CertificateHttpMemcachedChallengeOutputReference extends cdktf.Comp
   // hosts - computed: false, optional: false, required: true
   private _hosts?: string[]; 
   public get hosts() {
-    return this.getListAttribute('hosts');
+    return cdktf.Fn.tolist(this.getListAttribute('hosts'));
   }
   public set hosts(value: string[]) {
     this._hosts = value;
@@ -276,7 +276,7 @@ export interface CertificateHttpWebrootChallenge {
 }
 
 export function certificateHttpWebrootChallengeToTerraform(struct?: CertificateHttpWebrootChallengeOutputReference | CertificateHttpWebrootChallenge): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -293,7 +293,7 @@ export class CertificateHttpWebrootChallengeOutputReference extends cdktf.Comple
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -339,7 +339,7 @@ export interface CertificateTlsChallenge {
 }
 
 export function certificateTlsChallengeToTerraform(struct?: CertificateTlsChallengeOutputReference | CertificateTlsChallenge): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -356,7 +356,7 @@ export class CertificateTlsChallengeOutputReference extends cdktf.ComplexObject 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -538,7 +538,7 @@ export class Certificate extends cdktf.TerraformResource {
   // disable_complete_propagation - computed: false, optional: true, required: false
   private _disableCompletePropagation?: boolean | cdktf.IResolvable; 
   public get disableCompletePropagation() {
-    return this.getBooleanAttribute('disable_complete_propagation') as any;
+    return this.getBooleanAttribute('disable_complete_propagation');
   }
   public set disableCompletePropagation(value: boolean | cdktf.IResolvable) {
     this._disableCompletePropagation = value;
@@ -596,7 +596,7 @@ export class Certificate extends cdktf.TerraformResource {
   // must_staple - computed: false, optional: true, required: false
   private _mustStaple?: boolean | cdktf.IResolvable; 
   public get mustStaple() {
-    return this.getBooleanAttribute('must_staple') as any;
+    return this.getBooleanAttribute('must_staple');
   }
   public set mustStaple(value: boolean | cdktf.IResolvable) {
     this._mustStaple = value;
@@ -665,7 +665,7 @@ export class Certificate extends cdktf.TerraformResource {
   // revoke_certificate_on_destroy - computed: false, optional: true, required: false
   private _revokeCertificateOnDestroy?: boolean | cdktf.IResolvable; 
   public get revokeCertificateOnDestroy() {
-    return this.getBooleanAttribute('revoke_certificate_on_destroy') as any;
+    return this.getBooleanAttribute('revoke_certificate_on_destroy');
   }
   public set revokeCertificateOnDestroy(value: boolean | cdktf.IResolvable) {
     this._revokeCertificateOnDestroy = value;
@@ -681,7 +681,7 @@ export class Certificate extends cdktf.TerraformResource {
   // subject_alternative_names - computed: false, optional: true, required: false
   private _subjectAlternativeNames?: string[]; 
   public get subjectAlternativeNames() {
-    return this.getListAttribute('subject_alternative_names');
+    return cdktf.Fn.tolist(this.getListAttribute('subject_alternative_names'));
   }
   public set subjectAlternativeNames(value: string[]) {
     this._subjectAlternativeNames = value;
@@ -695,12 +695,12 @@ export class Certificate extends cdktf.TerraformResource {
   }
 
   // dns_challenge - computed: false, optional: true, required: false
-  private _dnsChallenge?: CertificateDnsChallenge[]; 
+  private _dnsChallenge?: CertificateDnsChallenge[] | cdktf.IResolvable; 
   public get dnsChallenge() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('dns_challenge') as any;
+    return this.interpolationForAttribute('dns_challenge');
   }
-  public set dnsChallenge(value: CertificateDnsChallenge[]) {
+  public set dnsChallenge(value: CertificateDnsChallenge[] | cdktf.IResolvable) {
     this._dnsChallenge = value;
   }
   public resetDnsChallenge() {
@@ -712,7 +712,7 @@ export class Certificate extends cdktf.TerraformResource {
   }
 
   // http_challenge - computed: false, optional: true, required: false
-  private _httpChallenge = new CertificateHttpChallengeOutputReference(this as any, "http_challenge", true);
+  private _httpChallenge = new CertificateHttpChallengeOutputReference(this, "http_challenge", true);
   public get httpChallenge() {
     return this._httpChallenge;
   }
@@ -728,7 +728,7 @@ export class Certificate extends cdktf.TerraformResource {
   }
 
   // http_memcached_challenge - computed: false, optional: true, required: false
-  private _httpMemcachedChallenge = new CertificateHttpMemcachedChallengeOutputReference(this as any, "http_memcached_challenge", true);
+  private _httpMemcachedChallenge = new CertificateHttpMemcachedChallengeOutputReference(this, "http_memcached_challenge", true);
   public get httpMemcachedChallenge() {
     return this._httpMemcachedChallenge;
   }
@@ -744,7 +744,7 @@ export class Certificate extends cdktf.TerraformResource {
   }
 
   // http_webroot_challenge - computed: false, optional: true, required: false
-  private _httpWebrootChallenge = new CertificateHttpWebrootChallengeOutputReference(this as any, "http_webroot_challenge", true);
+  private _httpWebrootChallenge = new CertificateHttpWebrootChallengeOutputReference(this, "http_webroot_challenge", true);
   public get httpWebrootChallenge() {
     return this._httpWebrootChallenge;
   }
@@ -760,7 +760,7 @@ export class Certificate extends cdktf.TerraformResource {
   }
 
   // tls_challenge - computed: false, optional: true, required: false
-  private _tlsChallenge = new CertificateTlsChallengeOutputReference(this as any, "tls_challenge", true);
+  private _tlsChallenge = new CertificateTlsChallengeOutputReference(this, "tls_challenge", true);
   public get tlsChallenge() {
     return this._tlsChallenge;
   }
