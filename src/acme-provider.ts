@@ -27,7 +27,7 @@ export class AcmeProvider extends cdktf.TerraformProvider {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "acme";
+  public static readonly tfResourceType = "acme";
 
   // ===========
   // INITIALIZER
@@ -45,6 +45,7 @@ export class AcmeProvider extends cdktf.TerraformProvider {
       terraformResourceType: 'acme',
       terraformGeneratorMetadata: {
         providerName: 'acme',
+        providerVersion: '2.8.0',
         providerVersionConstraint: '~> 2.7'
       },
       terraformProviderSource: 'vancluever/acme'

@@ -1706,14 +1706,13 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/
 ```typescript
 import { CertificateHttpChallengeOutputReference } from '@cdktf/provider-acme'
 
-new CertificateHttpChallengeOutputReference(terraformResource: IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean)
+new CertificateHttpChallengeOutputReference(terraformResource: IInterpolatingParent, terraformAttribute: string)
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | [`terraformResource`](#cdktfprovideracmecertificatehttpchallengeoutputreferenceparameterterraformresource)<span title="Required">*</span> | [`cdktf.IInterpolatingParent`](#cdktf.IInterpolatingParent) | The parent resource. |
 | [`terraformAttribute`](#cdktfprovideracmecertificatehttpchallengeoutputreferenceparameterterraformattribute)<span title="Required">*</span> | `string` | The attribute on the parent resource this class is referencing. |
-| [`isSingleItem`](#cdktfprovideracmecertificatehttpchallengeoutputreferenceparameterissingleitem)<span title="Required">*</span> | `boolean` | True if this is a block, false if it's a list. |
 
 ---
 
@@ -1730,14 +1729,6 @@ The parent resource.
 - *Type:* `string`
 
 The attribute on the parent resource this class is referencing.
-
----
-
-##### `isSingleItem`<sup>Required</sup> <a name="@cdktf/provider-acme.CertificateHttpChallengeOutputReference.parameter.isSingleItem" id="cdktfprovideracmecertificatehttpchallengeoutputreferenceparameterissingleitem"></a>
-
-- *Type:* `boolean`
-
-True if this is a block, false if it's a list.
 
 ---
 
@@ -1833,14 +1824,13 @@ public readonly internalValue: CertificateHttpChallenge;
 ```typescript
 import { CertificateHttpMemcachedChallengeOutputReference } from '@cdktf/provider-acme'
 
-new CertificateHttpMemcachedChallengeOutputReference(terraformResource: IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean)
+new CertificateHttpMemcachedChallengeOutputReference(terraformResource: IInterpolatingParent, terraformAttribute: string)
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | [`terraformResource`](#cdktfprovideracmecertificatehttpmemcachedchallengeoutputreferenceparameterterraformresource)<span title="Required">*</span> | [`cdktf.IInterpolatingParent`](#cdktf.IInterpolatingParent) | The parent resource. |
 | [`terraformAttribute`](#cdktfprovideracmecertificatehttpmemcachedchallengeoutputreferenceparameterterraformattribute)<span title="Required">*</span> | `string` | The attribute on the parent resource this class is referencing. |
-| [`isSingleItem`](#cdktfprovideracmecertificatehttpmemcachedchallengeoutputreferenceparameterissingleitem)<span title="Required">*</span> | `boolean` | True if this is a block, false if it's a list. |
 
 ---
 
@@ -1857,14 +1847,6 @@ The parent resource.
 - *Type:* `string`
 
 The attribute on the parent resource this class is referencing.
-
----
-
-##### `isSingleItem`<sup>Required</sup> <a name="@cdktf/provider-acme.CertificateHttpMemcachedChallengeOutputReference.parameter.isSingleItem" id="cdktfprovideracmecertificatehttpmemcachedchallengeoutputreferenceparameterissingleitem"></a>
-
-- *Type:* `boolean`
-
-True if this is a block, false if it's a list.
 
 ---
 
@@ -1918,14 +1900,13 @@ public readonly internalValue: CertificateHttpMemcachedChallenge;
 ```typescript
 import { CertificateHttpWebrootChallengeOutputReference } from '@cdktf/provider-acme'
 
-new CertificateHttpWebrootChallengeOutputReference(terraformResource: IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean)
+new CertificateHttpWebrootChallengeOutputReference(terraformResource: IInterpolatingParent, terraformAttribute: string)
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | [`terraformResource`](#cdktfprovideracmecertificatehttpwebrootchallengeoutputreferenceparameterterraformresource)<span title="Required">*</span> | [`cdktf.IInterpolatingParent`](#cdktf.IInterpolatingParent) | The parent resource. |
 | [`terraformAttribute`](#cdktfprovideracmecertificatehttpwebrootchallengeoutputreferenceparameterterraformattribute)<span title="Required">*</span> | `string` | The attribute on the parent resource this class is referencing. |
-| [`isSingleItem`](#cdktfprovideracmecertificatehttpwebrootchallengeoutputreferenceparameterissingleitem)<span title="Required">*</span> | `boolean` | True if this is a block, false if it's a list. |
 
 ---
 
@@ -1942,14 +1923,6 @@ The parent resource.
 - *Type:* `string`
 
 The attribute on the parent resource this class is referencing.
-
----
-
-##### `isSingleItem`<sup>Required</sup> <a name="@cdktf/provider-acme.CertificateHttpWebrootChallengeOutputReference.parameter.isSingleItem" id="cdktfprovideracmecertificatehttpwebrootchallengeoutputreferenceparameterissingleitem"></a>
-
-- *Type:* `boolean`
-
-True if this is a block, false if it's a list.
 
 ---
 
@@ -2003,14 +1976,13 @@ public readonly internalValue: CertificateHttpWebrootChallenge;
 ```typescript
 import { CertificateTlsChallengeOutputReference } from '@cdktf/provider-acme'
 
-new CertificateTlsChallengeOutputReference(terraformResource: IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean)
+new CertificateTlsChallengeOutputReference(terraformResource: IInterpolatingParent, terraformAttribute: string)
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | [`terraformResource`](#cdktfprovideracmecertificatetlschallengeoutputreferenceparameterterraformresource)<span title="Required">*</span> | [`cdktf.IInterpolatingParent`](#cdktf.IInterpolatingParent) | The parent resource. |
 | [`terraformAttribute`](#cdktfprovideracmecertificatetlschallengeoutputreferenceparameterterraformattribute)<span title="Required">*</span> | `string` | The attribute on the parent resource this class is referencing. |
-| [`isSingleItem`](#cdktfprovideracmecertificatetlschallengeoutputreferenceparameterissingleitem)<span title="Required">*</span> | `boolean` | True if this is a block, false if it's a list. |
 
 ---
 
@@ -2027,14 +1999,6 @@ The parent resource.
 - *Type:* `string`
 
 The attribute on the parent resource this class is referencing.
-
----
-
-##### `isSingleItem`<sup>Required</sup> <a name="@cdktf/provider-acme.CertificateTlsChallengeOutputReference.parameter.isSingleItem" id="cdktfprovideracmecertificatetlschallengeoutputreferenceparameterissingleitem"></a>
-
-- *Type:* `boolean`
-
-True if this is a block, false if it's a list.
 
 ---
 
@@ -2101,14 +2065,13 @@ public readonly internalValue: CertificateTlsChallenge;
 ```typescript
 import { RegistrationExternalAccountBindingOutputReference } from '@cdktf/provider-acme'
 
-new RegistrationExternalAccountBindingOutputReference(terraformResource: IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean)
+new RegistrationExternalAccountBindingOutputReference(terraformResource: IInterpolatingParent, terraformAttribute: string)
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | [`terraformResource`](#cdktfprovideracmeregistrationexternalaccountbindingoutputreferenceparameterterraformresource)<span title="Required">*</span> | [`cdktf.IInterpolatingParent`](#cdktf.IInterpolatingParent) | The parent resource. |
 | [`terraformAttribute`](#cdktfprovideracmeregistrationexternalaccountbindingoutputreferenceparameterterraformattribute)<span title="Required">*</span> | `string` | The attribute on the parent resource this class is referencing. |
-| [`isSingleItem`](#cdktfprovideracmeregistrationexternalaccountbindingoutputreferenceparameterissingleitem)<span title="Required">*</span> | `boolean` | True if this is a block, false if it's a list. |
 
 ---
 
@@ -2125,14 +2088,6 @@ The parent resource.
 - *Type:* `string`
 
 The attribute on the parent resource this class is referencing.
-
----
-
-##### `isSingleItem`<sup>Required</sup> <a name="@cdktf/provider-acme.RegistrationExternalAccountBindingOutputReference.parameter.isSingleItem" id="cdktfprovideracmeregistrationexternalaccountbindingoutputreferenceparameterissingleitem"></a>
-
-- *Type:* `boolean`
-
-True if this is a block, false if it's a list.
 
 ---
 
