@@ -50,10 +50,9 @@ export class RegistrationExternalAccountBindingOutputReference extends cdktf.Com
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): RegistrationExternalAccountBinding | undefined {
@@ -118,7 +117,7 @@ export class Registration extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "acme_registration";
+  public static readonly tfResourceType = "acme_registration";
 
   // ===========
   // INITIALIZER
@@ -135,7 +134,9 @@ export class Registration extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'acme_registration',
       terraformGeneratorMetadata: {
-        providerName: 'acme'
+        providerName: 'acme',
+        providerVersion: '2.8.0',
+        providerVersionConstraint: '~> 2.7'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -188,7 +189,7 @@ export class Registration extends cdktf.TerraformResource {
   }
 
   // external_account_binding - computed: false, optional: true, required: false
-  private _externalAccountBinding = new RegistrationExternalAccountBindingOutputReference(this, "external_account_binding", true);
+  private _externalAccountBinding = new RegistrationExternalAccountBindingOutputReference(this, "external_account_binding");
   public get externalAccountBinding() {
     return this._externalAccountBinding;
   }
