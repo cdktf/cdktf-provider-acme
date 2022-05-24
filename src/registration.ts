@@ -16,6 +16,13 @@ export interface RegistrationConfig extends cdktf.TerraformMetaArguments {
   */
   readonly emailAddress: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/registration#id Registration#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * external_account_binding block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/registration#external_account_binding Registration#external_account_binding}
@@ -145,6 +152,7 @@ export class Registration extends cdktf.TerraformResource {
     });
     this._accountKeyPem = config.accountKeyPem;
     this._emailAddress = config.emailAddress;
+    this._id = config.id;
     this._externalAccountBinding.internalValue = config.externalAccountBinding;
   }
 
@@ -179,8 +187,19 @@ export class Registration extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // registration_url - computed: true, optional: false, required: false
@@ -212,6 +231,7 @@ export class Registration extends cdktf.TerraformResource {
     return {
       account_key_pem: cdktf.stringToTerraform(this._accountKeyPem),
       email_address: cdktf.stringToTerraform(this._emailAddress),
+      id: cdktf.stringToTerraform(this._id),
       external_account_binding: registrationExternalAccountBindingToTerraform(this._externalAccountBinding.internalValue),
     };
   }

@@ -28,6 +28,13 @@ export interface CertificateConfig extends cdktf.TerraformMetaArguments {
   */
   readonly disableCompletePropagation?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#id Certificate#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#key_type Certificate#key_type}
   */
   readonly keyType?: string;
@@ -112,6 +119,105 @@ export function certificateDnsChallengeToTerraform(struct?: CertificateDnsChalle
   }
 }
 
+export class CertificateDnsChallengeOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CertificateDnsChallenge | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._config !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.config = this._config;
+    }
+    if (this._provider !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.provider = this._provider;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CertificateDnsChallenge | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._config = undefined;
+      this._provider = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._config = value.config;
+      this._provider = value.provider;
+    }
+  }
+
+  // config - computed: false, optional: true, required: false
+  private _config?: { [key: string]: string }; 
+  public get config() {
+    return this.getStringMapAttribute('config');
+  }
+  public set config(value: { [key: string]: string }) {
+    this._config = value;
+  }
+  public resetConfig() {
+    this._config = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get configInput() {
+    return this._config;
+  }
+
+  // provider - computed: false, optional: false, required: true
+  private _provider?: string; 
+  public get provider() {
+    return this.getStringAttribute('provider');
+  }
+  public set provider(value: string) {
+    this._provider = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get providerInput() {
+    return this._provider;
+  }
+}
+
+export class CertificateDnsChallengeList extends cdktf.ComplexList {
+  public internalValue? : CertificateDnsChallenge[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CertificateDnsChallengeOutputReference {
+    return new CertificateDnsChallengeOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface CertificateHttpChallenge {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#port Certificate#port}
@@ -433,6 +539,7 @@ export class Certificate extends cdktf.TerraformResource {
     this._certificateRequestPem = config.certificateRequestPem;
     this._commonName = config.commonName;
     this._disableCompletePropagation = config.disableCompletePropagation;
+    this._id = config.id;
     this._keyType = config.keyType;
     this._minDaysRemaining = config.minDaysRemaining;
     this._mustStaple = config.mustStaple;
@@ -441,7 +548,7 @@ export class Certificate extends cdktf.TerraformResource {
     this._recursiveNameservers = config.recursiveNameservers;
     this._revokeCertificateOnDestroy = config.revokeCertificateOnDestroy;
     this._subjectAlternativeNames = config.subjectAlternativeNames;
-    this._dnsChallenge = config.dnsChallenge;
+    this._dnsChallenge.internalValue = config.dnsChallenge;
     this._httpChallenge.internalValue = config.httpChallenge;
     this._httpMemcachedChallenge.internalValue = config.httpMemcachedChallenge;
     this._httpWebrootChallenge.internalValue = config.httpWebrootChallenge;
@@ -550,8 +657,19 @@ export class Certificate extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // issuer_pem - computed: true, optional: false, required: false
@@ -693,20 +811,19 @@ export class Certificate extends cdktf.TerraformResource {
   }
 
   // dns_challenge - computed: false, optional: true, required: false
-  private _dnsChallenge?: CertificateDnsChallenge[] | cdktf.IResolvable; 
+  private _dnsChallenge = new CertificateDnsChallengeList(this, "dns_challenge", false);
   public get dnsChallenge() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('dns_challenge');
+    return this._dnsChallenge;
   }
-  public set dnsChallenge(value: CertificateDnsChallenge[] | cdktf.IResolvable) {
-    this._dnsChallenge = value;
+  public putDnsChallenge(value: CertificateDnsChallenge[] | cdktf.IResolvable) {
+    this._dnsChallenge.internalValue = value;
   }
   public resetDnsChallenge() {
-    this._dnsChallenge = undefined;
+    this._dnsChallenge.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get dnsChallengeInput() {
-    return this._dnsChallenge;
+    return this._dnsChallenge.internalValue;
   }
 
   // http_challenge - computed: false, optional: true, required: false
@@ -784,6 +901,7 @@ export class Certificate extends cdktf.TerraformResource {
       certificate_request_pem: cdktf.stringToTerraform(this._certificateRequestPem),
       common_name: cdktf.stringToTerraform(this._commonName),
       disable_complete_propagation: cdktf.booleanToTerraform(this._disableCompletePropagation),
+      id: cdktf.stringToTerraform(this._id),
       key_type: cdktf.stringToTerraform(this._keyType),
       min_days_remaining: cdktf.numberToTerraform(this._minDaysRemaining),
       must_staple: cdktf.booleanToTerraform(this._mustStaple),
@@ -792,7 +910,7 @@ export class Certificate extends cdktf.TerraformResource {
       recursive_nameservers: cdktf.listMapper(cdktf.stringToTerraform)(this._recursiveNameservers),
       revoke_certificate_on_destroy: cdktf.booleanToTerraform(this._revokeCertificateOnDestroy),
       subject_alternative_names: cdktf.listMapper(cdktf.stringToTerraform)(this._subjectAlternativeNames),
-      dns_challenge: cdktf.listMapper(certificateDnsChallengeToTerraform)(this._dnsChallenge),
+      dns_challenge: cdktf.listMapper(certificateDnsChallengeToTerraform)(this._dnsChallenge.internalValue),
       http_challenge: certificateHttpChallengeToTerraform(this._httpChallenge.internalValue),
       http_memcached_challenge: certificateHttpMemcachedChallengeToTerraform(this._httpMemcachedChallenge.internalValue),
       http_webroot_challenge: certificateHttpWebrootChallengeToTerraform(this._httpWebrootChallenge.internalValue),
