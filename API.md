@@ -174,6 +174,7 @@ Must be unique amongst siblings in the same scope
 
 | **Name** | **Description** |
 | --- | --- |
+| [`putDnsChallenge`](#cdktfprovideracmecertificateputdnschallenge) | *No description.* |
 | [`putHttpChallenge`](#cdktfprovideracmecertificateputhttpchallenge) | *No description.* |
 | [`putHttpMemcachedChallenge`](#cdktfprovideracmecertificateputhttpmemcachedchallenge) | *No description.* |
 | [`putHttpWebrootChallenge`](#cdktfprovideracmecertificateputhttpwebrootchallenge) | *No description.* |
@@ -186,6 +187,7 @@ Must be unique amongst siblings in the same scope
 | [`resetHttpChallenge`](#cdktfprovideracmecertificateresethttpchallenge) | *No description.* |
 | [`resetHttpMemcachedChallenge`](#cdktfprovideracmecertificateresethttpmemcachedchallenge) | *No description.* |
 | [`resetHttpWebrootChallenge`](#cdktfprovideracmecertificateresethttpwebrootchallenge) | *No description.* |
+| [`resetId`](#cdktfprovideracmecertificateresetid) | *No description.* |
 | [`resetKeyType`](#cdktfprovideracmecertificateresetkeytype) | *No description.* |
 | [`resetMinDaysRemaining`](#cdktfprovideracmecertificateresetmindaysremaining) | *No description.* |
 | [`resetMustStaple`](#cdktfprovideracmecertificateresetmuststaple) | *No description.* |
@@ -195,6 +197,18 @@ Must be unique amongst siblings in the same scope
 | [`resetRevokeCertificateOnDestroy`](#cdktfprovideracmecertificateresetrevokecertificateondestroy) | *No description.* |
 | [`resetSubjectAlternativeNames`](#cdktfprovideracmecertificateresetsubjectalternativenames) | *No description.* |
 | [`resetTlsChallenge`](#cdktfprovideracmecertificateresettlschallenge) | *No description.* |
+
+---
+
+##### `putDnsChallenge` <a name="@cdktf/provider-acme.Certificate.putDnsChallenge" id="cdktfprovideracmecertificateputdnschallenge"></a>
+
+```typescript
+public putDnsChallenge(value: IResolvable | CertificateDnsChallenge[])
+```
+
+###### `value`<sup>Required</sup> <a name="@cdktf/provider-acme.Certificate.parameter.value" id="cdktfprovideracmecertificateparametervalue"></a>
+
+- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-acme.CertificateDnsChallenge`](#@cdktf/provider-acme.CertificateDnsChallenge)[]
 
 ---
 
@@ -294,6 +308,12 @@ public resetHttpMemcachedChallenge()
 public resetHttpWebrootChallenge()
 ```
 
+##### `resetId` <a name="@cdktf/provider-acme.Certificate.resetId" id="cdktfprovideracmecertificateresetid"></a>
+
+```typescript
+public resetId()
+```
+
 ##### `resetKeyType` <a name="@cdktf/provider-acme.Certificate.resetKeyType" id="cdktfprovideracmecertificateresetkeytype"></a>
 
 ```typescript
@@ -357,10 +377,10 @@ public resetTlsChallenge()
 | [`certificateP12`](#cdktfprovideracmecertificatepropertycertificatep12)<span title="Required">*</span> | `string` | *No description.* |
 | [`certificatePem`](#cdktfprovideracmecertificatepropertycertificatepem)<span title="Required">*</span> | `string` | *No description.* |
 | [`certificateUrl`](#cdktfprovideracmecertificatepropertycertificateurl)<span title="Required">*</span> | `string` | *No description.* |
+| [`dnsChallenge`](#cdktfprovideracmecertificatepropertydnschallenge)<span title="Required">*</span> | [`@cdktf/provider-acme.CertificateDnsChallengeList`](#@cdktf/provider-acme.CertificateDnsChallengeList) | *No description.* |
 | [`httpChallenge`](#cdktfprovideracmecertificatepropertyhttpchallenge)<span title="Required">*</span> | [`@cdktf/provider-acme.CertificateHttpChallengeOutputReference`](#@cdktf/provider-acme.CertificateHttpChallengeOutputReference) | *No description.* |
 | [`httpMemcachedChallenge`](#cdktfprovideracmecertificatepropertyhttpmemcachedchallenge)<span title="Required">*</span> | [`@cdktf/provider-acme.CertificateHttpMemcachedChallengeOutputReference`](#@cdktf/provider-acme.CertificateHttpMemcachedChallengeOutputReference) | *No description.* |
 | [`httpWebrootChallenge`](#cdktfprovideracmecertificatepropertyhttpwebrootchallenge)<span title="Required">*</span> | [`@cdktf/provider-acme.CertificateHttpWebrootChallengeOutputReference`](#@cdktf/provider-acme.CertificateHttpWebrootChallengeOutputReference) | *No description.* |
-| [`id`](#cdktfprovideracmecertificatepropertyid)<span title="Required">*</span> | `string` | *No description.* |
 | [`issuerPem`](#cdktfprovideracmecertificatepropertyissuerpem)<span title="Required">*</span> | `string` | *No description.* |
 | [`privateKeyPem`](#cdktfprovideracmecertificatepropertyprivatekeypem)<span title="Required">*</span> | `string` | *No description.* |
 | [`tlsChallenge`](#cdktfprovideracmecertificatepropertytlschallenge)<span title="Required">*</span> | [`@cdktf/provider-acme.CertificateTlsChallengeOutputReference`](#@cdktf/provider-acme.CertificateTlsChallengeOutputReference) | *No description.* |
@@ -373,6 +393,7 @@ public resetTlsChallenge()
 | [`httpChallengeInput`](#cdktfprovideracmecertificatepropertyhttpchallengeinput) | [`@cdktf/provider-acme.CertificateHttpChallenge`](#@cdktf/provider-acme.CertificateHttpChallenge) | *No description.* |
 | [`httpMemcachedChallengeInput`](#cdktfprovideracmecertificatepropertyhttpmemcachedchallengeinput) | [`@cdktf/provider-acme.CertificateHttpMemcachedChallenge`](#@cdktf/provider-acme.CertificateHttpMemcachedChallenge) | *No description.* |
 | [`httpWebrootChallengeInput`](#cdktfprovideracmecertificatepropertyhttpwebrootchallengeinput) | [`@cdktf/provider-acme.CertificateHttpWebrootChallenge`](#@cdktf/provider-acme.CertificateHttpWebrootChallenge) | *No description.* |
+| [`idInput`](#cdktfprovideracmecertificatepropertyidinput) | `string` | *No description.* |
 | [`keyTypeInput`](#cdktfprovideracmecertificatepropertykeytypeinput) | `string` | *No description.* |
 | [`minDaysRemainingInput`](#cdktfprovideracmecertificatepropertymindaysremaininginput) | `number` | *No description.* |
 | [`mustStapleInput`](#cdktfprovideracmecertificatepropertymuststapleinput) | `boolean` \| [`cdktf.IResolvable`](#cdktf.IResolvable) | *No description.* |
@@ -387,7 +408,7 @@ public resetTlsChallenge()
 | [`certificateRequestPem`](#cdktfprovideracmecertificatepropertycertificaterequestpem)<span title="Required">*</span> | `string` | *No description.* |
 | [`commonName`](#cdktfprovideracmecertificatepropertycommonname)<span title="Required">*</span> | `string` | *No description.* |
 | [`disableCompletePropagation`](#cdktfprovideracmecertificatepropertydisablecompletepropagation)<span title="Required">*</span> | `boolean` \| [`cdktf.IResolvable`](#cdktf.IResolvable) | *No description.* |
-| [`dnsChallenge`](#cdktfprovideracmecertificatepropertydnschallenge)<span title="Required">*</span> | [`cdktf.IResolvable`](#cdktf.IResolvable) \| [`@cdktf/provider-acme.CertificateDnsChallenge`](#@cdktf/provider-acme.CertificateDnsChallenge)[] | *No description.* |
+| [`id`](#cdktfprovideracmecertificatepropertyid)<span title="Required">*</span> | `string` | *No description.* |
 | [`keyType`](#cdktfprovideracmecertificatepropertykeytype)<span title="Required">*</span> | `string` | *No description.* |
 | [`minDaysRemaining`](#cdktfprovideracmecertificatepropertymindaysremaining)<span title="Required">*</span> | `number` | *No description.* |
 | [`mustStaple`](#cdktfprovideracmecertificatepropertymuststaple)<span title="Required">*</span> | `boolean` \| [`cdktf.IResolvable`](#cdktf.IResolvable) | *No description.* |
@@ -439,6 +460,16 @@ public readonly certificateUrl: string;
 
 ---
 
+##### `dnsChallenge`<sup>Required</sup> <a name="@cdktf/provider-acme.Certificate.property.dnsChallenge" id="cdktfprovideracmecertificatepropertydnschallenge"></a>
+
+```typescript
+public readonly dnsChallenge: CertificateDnsChallengeList;
+```
+
+- *Type:* [`@cdktf/provider-acme.CertificateDnsChallengeList`](#@cdktf/provider-acme.CertificateDnsChallengeList)
+
+---
+
 ##### `httpChallenge`<sup>Required</sup> <a name="@cdktf/provider-acme.Certificate.property.httpChallenge" id="cdktfprovideracmecertificatepropertyhttpchallenge"></a>
 
 ```typescript
@@ -466,16 +497,6 @@ public readonly httpWebrootChallenge: CertificateHttpWebrootChallengeOutputRefer
 ```
 
 - *Type:* [`@cdktf/provider-acme.CertificateHttpWebrootChallengeOutputReference`](#@cdktf/provider-acme.CertificateHttpWebrootChallengeOutputReference)
-
----
-
-##### `id`<sup>Required</sup> <a name="@cdktf/provider-acme.Certificate.property.id" id="cdktfprovideracmecertificatepropertyid"></a>
-
-```typescript
-public readonly id: string;
-```
-
-- *Type:* `string`
 
 ---
 
@@ -596,6 +617,16 @@ public readonly httpWebrootChallengeInput: CertificateHttpWebrootChallenge;
 ```
 
 - *Type:* [`@cdktf/provider-acme.CertificateHttpWebrootChallenge`](#@cdktf/provider-acme.CertificateHttpWebrootChallenge)
+
+---
+
+##### `idInput`<sup>Optional</sup> <a name="@cdktf/provider-acme.Certificate.property.idInput" id="cdktfprovideracmecertificatepropertyidinput"></a>
+
+```typescript
+public readonly idInput: string;
+```
+
+- *Type:* `string`
 
 ---
 
@@ -739,13 +770,13 @@ public readonly disableCompletePropagation: boolean | IResolvable;
 
 ---
 
-##### `dnsChallenge`<sup>Required</sup> <a name="@cdktf/provider-acme.Certificate.property.dnsChallenge" id="cdktfprovideracmecertificatepropertydnschallenge"></a>
+##### `id`<sup>Required</sup> <a name="@cdktf/provider-acme.Certificate.property.id" id="cdktfprovideracmecertificatepropertyid"></a>
 
 ```typescript
-public readonly dnsChallenge: IResolvable | CertificateDnsChallenge[];
+public readonly id: string;
 ```
 
-- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-acme.CertificateDnsChallenge`](#@cdktf/provider-acme.CertificateDnsChallenge)[]
+- *Type:* `string`
 
 ---
 
@@ -893,6 +924,7 @@ Must be unique amongst siblings in the same scope
 | --- | --- |
 | [`putExternalAccountBinding`](#cdktfprovideracmeregistrationputexternalaccountbinding) | *No description.* |
 | [`resetExternalAccountBinding`](#cdktfprovideracmeregistrationresetexternalaccountbinding) | *No description.* |
+| [`resetId`](#cdktfprovideracmeregistrationresetid) | *No description.* |
 
 ---
 
@@ -914,19 +946,26 @@ public putExternalAccountBinding(value: RegistrationExternalAccountBinding)
 public resetExternalAccountBinding()
 ```
 
+##### `resetId` <a name="@cdktf/provider-acme.Registration.resetId" id="cdktfprovideracmeregistrationresetid"></a>
+
+```typescript
+public resetId()
+```
+
 
 #### Properties <a name="Properties" id="properties"></a>
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | [`externalAccountBinding`](#cdktfprovideracmeregistrationpropertyexternalaccountbinding)<span title="Required">*</span> | [`@cdktf/provider-acme.RegistrationExternalAccountBindingOutputReference`](#@cdktf/provider-acme.RegistrationExternalAccountBindingOutputReference) | *No description.* |
-| [`id`](#cdktfprovideracmeregistrationpropertyid)<span title="Required">*</span> | `string` | *No description.* |
 | [`registrationUrl`](#cdktfprovideracmeregistrationpropertyregistrationurl)<span title="Required">*</span> | `string` | *No description.* |
 | [`accountKeyPemInput`](#cdktfprovideracmeregistrationpropertyaccountkeypeminput) | `string` | *No description.* |
 | [`emailAddressInput`](#cdktfprovideracmeregistrationpropertyemailaddressinput) | `string` | *No description.* |
 | [`externalAccountBindingInput`](#cdktfprovideracmeregistrationpropertyexternalaccountbindinginput) | [`@cdktf/provider-acme.RegistrationExternalAccountBinding`](#@cdktf/provider-acme.RegistrationExternalAccountBinding) | *No description.* |
+| [`idInput`](#cdktfprovideracmeregistrationpropertyidinput) | `string` | *No description.* |
 | [`accountKeyPem`](#cdktfprovideracmeregistrationpropertyaccountkeypem)<span title="Required">*</span> | `string` | *No description.* |
 | [`emailAddress`](#cdktfprovideracmeregistrationpropertyemailaddress)<span title="Required">*</span> | `string` | *No description.* |
+| [`id`](#cdktfprovideracmeregistrationpropertyid)<span title="Required">*</span> | `string` | *No description.* |
 
 ---
 
@@ -937,16 +976,6 @@ public readonly externalAccountBinding: RegistrationExternalAccountBindingOutput
 ```
 
 - *Type:* [`@cdktf/provider-acme.RegistrationExternalAccountBindingOutputReference`](#@cdktf/provider-acme.RegistrationExternalAccountBindingOutputReference)
-
----
-
-##### `id`<sup>Required</sup> <a name="@cdktf/provider-acme.Registration.property.id" id="cdktfprovideracmeregistrationpropertyid"></a>
-
-```typescript
-public readonly id: string;
-```
-
-- *Type:* `string`
 
 ---
 
@@ -990,6 +1019,16 @@ public readonly externalAccountBindingInput: RegistrationExternalAccountBinding;
 
 ---
 
+##### `idInput`<sup>Optional</sup> <a name="@cdktf/provider-acme.Registration.property.idInput" id="cdktfprovideracmeregistrationpropertyidinput"></a>
+
+```typescript
+public readonly idInput: string;
+```
+
+- *Type:* `string`
+
+---
+
 ##### `accountKeyPem`<sup>Required</sup> <a name="@cdktf/provider-acme.Registration.property.accountKeyPem" id="cdktfprovideracmeregistrationpropertyaccountkeypem"></a>
 
 ```typescript
@@ -1004,6 +1043,16 @@ public readonly accountKeyPem: string;
 
 ```typescript
 public readonly emailAddress: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `id`<sup>Required</sup> <a name="@cdktf/provider-acme.Registration.property.id" id="cdktfprovideracmeregistrationpropertyid"></a>
+
+```typescript
+public readonly id: string;
 ```
 
 - *Type:* `string`
@@ -1098,6 +1147,7 @@ const certificateConfig: CertificateConfig = { ... }
 | [`httpChallenge`](#cdktfprovideracmecertificateconfigpropertyhttpchallenge) | [`@cdktf/provider-acme.CertificateHttpChallenge`](#@cdktf/provider-acme.CertificateHttpChallenge) | http_challenge block. |
 | [`httpMemcachedChallenge`](#cdktfprovideracmecertificateconfigpropertyhttpmemcachedchallenge) | [`@cdktf/provider-acme.CertificateHttpMemcachedChallenge`](#@cdktf/provider-acme.CertificateHttpMemcachedChallenge) | http_memcached_challenge block. |
 | [`httpWebrootChallenge`](#cdktfprovideracmecertificateconfigpropertyhttpwebrootchallenge) | [`@cdktf/provider-acme.CertificateHttpWebrootChallenge`](#@cdktf/provider-acme.CertificateHttpWebrootChallenge) | http_webroot_challenge block. |
+| [`id`](#cdktfprovideracmecertificateconfigpropertyid) | `string` | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#id Certificate#id}. |
 | [`keyType`](#cdktfprovideracmecertificateconfigpropertykeytype) | `string` | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#key_type Certificate#key_type}. |
 | [`minDaysRemaining`](#cdktfprovideracmecertificateconfigpropertymindaysremaining) | `number` | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#min_days_remaining Certificate#min_days_remaining}. |
 | [`mustStaple`](#cdktfprovideracmecertificateconfigpropertymuststaple) | `boolean` \| [`cdktf.IResolvable`](#cdktf.IResolvable) | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#must_staple Certificate#must_staple}. |
@@ -1263,6 +1313,20 @@ public readonly httpWebrootChallenge: CertificateHttpWebrootChallenge;
 http_webroot_challenge block.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#http_webroot_challenge Certificate#http_webroot_challenge}
+
+---
+
+##### `id`<sup>Optional</sup> <a name="@cdktf/provider-acme.CertificateConfig.property.id" id="cdktfprovideracmecertificateconfigpropertyid"></a>
+
+```typescript
+public readonly id: string;
+```
+
+- *Type:* `string`
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#id Certificate#id}.
+
+Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2. If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
 
 ---
 
@@ -1573,6 +1637,7 @@ const registrationConfig: RegistrationConfig = { ... }
 | [`accountKeyPem`](#cdktfprovideracmeregistrationconfigpropertyaccountkeypem)<span title="Required">*</span> | `string` | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/registration#account_key_pem Registration#account_key_pem}. |
 | [`emailAddress`](#cdktfprovideracmeregistrationconfigpropertyemailaddress)<span title="Required">*</span> | `string` | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/registration#email_address Registration#email_address}. |
 | [`externalAccountBinding`](#cdktfprovideracmeregistrationconfigpropertyexternalaccountbinding) | [`@cdktf/provider-acme.RegistrationExternalAccountBinding`](#@cdktf/provider-acme.RegistrationExternalAccountBinding) | external_account_binding block. |
+| [`id`](#cdktfprovideracmeregistrationconfigpropertyid) | `string` | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/registration#id Registration#id}. |
 
 ---
 
@@ -1654,6 +1719,20 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/
 
 ---
 
+##### `id`<sup>Optional</sup> <a name="@cdktf/provider-acme.RegistrationConfig.property.id" id="cdktfprovideracmeregistrationconfigpropertyid"></a>
+
+```typescript
+public readonly id: string;
+```
+
+- *Type:* `string`
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/registration#id Registration#id}.
+
+Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2. If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+
+---
+
 ### RegistrationExternalAccountBinding <a name="@cdktf/provider-acme.RegistrationExternalAccountBinding" id="cdktfprovideracmeregistrationexternalaccountbinding"></a>
 
 #### Initializer <a name="[object Object].Initializer" id="object-objectinitializer"></a>
@@ -1698,6 +1777,219 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/
 ---
 
 ## Classes <a name="Classes" id="classes"></a>
+
+### CertificateDnsChallengeList <a name="@cdktf/provider-acme.CertificateDnsChallengeList" id="cdktfprovideracmecertificatednschallengelist"></a>
+
+#### Initializers <a name="@cdktf/provider-acme.CertificateDnsChallengeList.Initializer" id="cdktfprovideracmecertificatednschallengelistinitializer"></a>
+
+```typescript
+import { CertificateDnsChallengeList } from '@cdktf/provider-acme'
+
+new CertificateDnsChallengeList(terraformResource: IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| [`terraformResource`](#cdktfprovideracmecertificatednschallengelistparameterterraformresource)<span title="Required">*</span> | [`cdktf.IInterpolatingParent`](#cdktf.IInterpolatingParent) | The parent resource. |
+| [`terraformAttribute`](#cdktfprovideracmecertificatednschallengelistparameterterraformattribute)<span title="Required">*</span> | `string` | The attribute on the parent resource this class is referencing. |
+| [`wrapsSet`](#cdktfprovideracmecertificatednschallengelistparameterwrapsset)<span title="Required">*</span> | `boolean` | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="@cdktf/provider-acme.CertificateDnsChallengeList.parameter.terraformResource" id="cdktfprovideracmecertificatednschallengelistparameterterraformresource"></a>
+
+- *Type:* [`cdktf.IInterpolatingParent`](#cdktf.IInterpolatingParent)
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="@cdktf/provider-acme.CertificateDnsChallengeList.parameter.terraformAttribute" id="cdktfprovideracmecertificatednschallengelistparameterterraformattribute"></a>
+
+- *Type:* `string`
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `wrapsSet`<sup>Required</sup> <a name="@cdktf/provider-acme.CertificateDnsChallengeList.parameter.wrapsSet" id="cdktfprovideracmecertificatednschallengelistparameterwrapsset"></a>
+
+- *Type:* `boolean`
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| [`get`](#cdktfprovideracmecertificatednschallengelistget) | *No description.* |
+
+---
+
+##### `get` <a name="@cdktf/provider-acme.CertificateDnsChallengeList.get" id="cdktfprovideracmecertificatednschallengelistget"></a>
+
+```typescript
+public get(index: number)
+```
+
+###### `index`<sup>Required</sup> <a name="@cdktf/provider-acme.CertificateDnsChallengeList.parameter.index" id="cdktfprovideracmecertificatednschallengelistparameterindex"></a>
+
+- *Type:* `number`
+
+the index of the item to return.
+
+---
+
+
+#### Properties <a name="Properties" id="properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| [`internalValue`](#cdktfprovideracmecertificatednschallengelistpropertyinternalvalue) | [`cdktf.IResolvable`](#cdktf.IResolvable) \| [`@cdktf/provider-acme.CertificateDnsChallenge`](#@cdktf/provider-acme.CertificateDnsChallenge)[] | *No description.* |
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="@cdktf/provider-acme.CertificateDnsChallengeList.property.internalValue" id="cdktfprovideracmecertificatednschallengelistpropertyinternalvalue"></a>
+
+```typescript
+public readonly internalValue: IResolvable | CertificateDnsChallenge[];
+```
+
+- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-acme.CertificateDnsChallenge`](#@cdktf/provider-acme.CertificateDnsChallenge)[]
+
+---
+
+
+### CertificateDnsChallengeOutputReference <a name="@cdktf/provider-acme.CertificateDnsChallengeOutputReference" id="cdktfprovideracmecertificatednschallengeoutputreference"></a>
+
+#### Initializers <a name="@cdktf/provider-acme.CertificateDnsChallengeOutputReference.Initializer" id="cdktfprovideracmecertificatednschallengeoutputreferenceinitializer"></a>
+
+```typescript
+import { CertificateDnsChallengeOutputReference } from '@cdktf/provider-acme'
+
+new CertificateDnsChallengeOutputReference(terraformResource: IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| [`terraformResource`](#cdktfprovideracmecertificatednschallengeoutputreferenceparameterterraformresource)<span title="Required">*</span> | [`cdktf.IInterpolatingParent`](#cdktf.IInterpolatingParent) | The parent resource. |
+| [`terraformAttribute`](#cdktfprovideracmecertificatednschallengeoutputreferenceparameterterraformattribute)<span title="Required">*</span> | `string` | The attribute on the parent resource this class is referencing. |
+| [`complexObjectIndex`](#cdktfprovideracmecertificatednschallengeoutputreferenceparametercomplexobjectindex)<span title="Required">*</span> | `number` | the index of this item in the list. |
+| [`complexObjectIsFromSet`](#cdktfprovideracmecertificatednschallengeoutputreferenceparametercomplexobjectisfromset)<span title="Required">*</span> | `boolean` | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="@cdktf/provider-acme.CertificateDnsChallengeOutputReference.parameter.terraformResource" id="cdktfprovideracmecertificatednschallengeoutputreferenceparameterterraformresource"></a>
+
+- *Type:* [`cdktf.IInterpolatingParent`](#cdktf.IInterpolatingParent)
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="@cdktf/provider-acme.CertificateDnsChallengeOutputReference.parameter.terraformAttribute" id="cdktfprovideracmecertificatednschallengeoutputreferenceparameterterraformattribute"></a>
+
+- *Type:* `string`
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `complexObjectIndex`<sup>Required</sup> <a name="@cdktf/provider-acme.CertificateDnsChallengeOutputReference.parameter.complexObjectIndex" id="cdktfprovideracmecertificatednschallengeoutputreferenceparametercomplexobjectindex"></a>
+
+- *Type:* `number`
+
+the index of this item in the list.
+
+---
+
+##### `complexObjectIsFromSet`<sup>Required</sup> <a name="@cdktf/provider-acme.CertificateDnsChallengeOutputReference.parameter.complexObjectIsFromSet" id="cdktfprovideracmecertificatednschallengeoutputreferenceparametercomplexobjectisfromset"></a>
+
+- *Type:* `boolean`
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| [`resetConfig`](#cdktfprovideracmecertificatednschallengeoutputreferenceresetconfig) | *No description.* |
+
+---
+
+##### `resetConfig` <a name="@cdktf/provider-acme.CertificateDnsChallengeOutputReference.resetConfig" id="cdktfprovideracmecertificatednschallengeoutputreferenceresetconfig"></a>
+
+```typescript
+public resetConfig()
+```
+
+
+#### Properties <a name="Properties" id="properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| [`configInput`](#cdktfprovideracmecertificatednschallengeoutputreferencepropertyconfiginput) | {[ key: string ]: `string`} | *No description.* |
+| [`providerInput`](#cdktfprovideracmecertificatednschallengeoutputreferencepropertyproviderinput) | `string` | *No description.* |
+| [`config`](#cdktfprovideracmecertificatednschallengeoutputreferencepropertyconfig)<span title="Required">*</span> | {[ key: string ]: `string`} | *No description.* |
+| [`provider`](#cdktfprovideracmecertificatednschallengeoutputreferencepropertyprovider)<span title="Required">*</span> | `string` | *No description.* |
+| [`internalValue`](#cdktfprovideracmecertificatednschallengeoutputreferencepropertyinternalvalue) | [`cdktf.IResolvable`](#cdktf.IResolvable) \| [`@cdktf/provider-acme.CertificateDnsChallenge`](#@cdktf/provider-acme.CertificateDnsChallenge) | *No description.* |
+
+---
+
+##### `configInput`<sup>Optional</sup> <a name="@cdktf/provider-acme.CertificateDnsChallengeOutputReference.property.configInput" id="cdktfprovideracmecertificatednschallengeoutputreferencepropertyconfiginput"></a>
+
+```typescript
+public readonly configInput: {[ key: string ]: string};
+```
+
+- *Type:* {[ key: string ]: `string`}
+
+---
+
+##### `providerInput`<sup>Optional</sup> <a name="@cdktf/provider-acme.CertificateDnsChallengeOutputReference.property.providerInput" id="cdktfprovideracmecertificatednschallengeoutputreferencepropertyproviderinput"></a>
+
+```typescript
+public readonly providerInput: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `config`<sup>Required</sup> <a name="@cdktf/provider-acme.CertificateDnsChallengeOutputReference.property.config" id="cdktfprovideracmecertificatednschallengeoutputreferencepropertyconfig"></a>
+
+```typescript
+public readonly config: {[ key: string ]: string};
+```
+
+- *Type:* {[ key: string ]: `string`}
+
+---
+
+##### `provider`<sup>Required</sup> <a name="@cdktf/provider-acme.CertificateDnsChallengeOutputReference.property.provider" id="cdktfprovideracmecertificatednschallengeoutputreferencepropertyprovider"></a>
+
+```typescript
+public readonly provider: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="@cdktf/provider-acme.CertificateDnsChallengeOutputReference.property.internalValue" id="cdktfprovideracmecertificatednschallengeoutputreferencepropertyinternalvalue"></a>
+
+```typescript
+public readonly internalValue: IResolvable | CertificateDnsChallenge;
+```
+
+- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-acme.CertificateDnsChallenge`](#@cdktf/provider-acme.CertificateDnsChallenge)
+
+---
+
 
 ### CertificateHttpChallengeOutputReference <a name="@cdktf/provider-acme.CertificateHttpChallengeOutputReference" id="cdktfprovideracmecertificatehttpchallengeoutputreference"></a>
 
