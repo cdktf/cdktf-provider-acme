@@ -45,7 +45,7 @@ export class AcmeProvider extends cdktf.TerraformProvider {
       terraformResourceType: 'acme',
       terraformGeneratorMetadata: {
         providerName: 'acme',
-        providerVersion: '2.8.0',
+        providerVersion: '2.9.0',
         providerVersionConstraint: '~> 2.7'
       },
       terraformProviderSource: 'vancluever/acme'
