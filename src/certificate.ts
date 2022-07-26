@@ -323,7 +323,7 @@ export function certificateHttpMemcachedChallengeToTerraform(struct?: Certificat
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    hosts: cdktf.listMapper(cdktf.stringToTerraform)(struct!.hosts),
+    hosts: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.hosts),
   }
 }
 
@@ -532,7 +532,10 @@ export class Certificate extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._accountKeyPem = config.accountKeyPem;
     this._certificateP12Password = config.certificateP12Password;
@@ -907,10 +910,10 @@ export class Certificate extends cdktf.TerraformResource {
       must_staple: cdktf.booleanToTerraform(this._mustStaple),
       pre_check_delay: cdktf.numberToTerraform(this._preCheckDelay),
       preferred_chain: cdktf.stringToTerraform(this._preferredChain),
-      recursive_nameservers: cdktf.listMapper(cdktf.stringToTerraform)(this._recursiveNameservers),
+      recursive_nameservers: cdktf.listMapper(cdktf.stringToTerraform, false)(this._recursiveNameservers),
       revoke_certificate_on_destroy: cdktf.booleanToTerraform(this._revokeCertificateOnDestroy),
-      subject_alternative_names: cdktf.listMapper(cdktf.stringToTerraform)(this._subjectAlternativeNames),
-      dns_challenge: cdktf.listMapper(certificateDnsChallengeToTerraform)(this._dnsChallenge.internalValue),
+      subject_alternative_names: cdktf.listMapper(cdktf.stringToTerraform, false)(this._subjectAlternativeNames),
+      dns_challenge: cdktf.listMapper(certificateDnsChallengeToTerraform, true)(this._dnsChallenge.internalValue),
       http_challenge: certificateHttpChallengeToTerraform(this._httpChallenge.internalValue),
       http_memcached_challenge: certificateHttpMemcachedChallengeToTerraform(this._httpMemcachedChallenge.internalValue),
       http_webroot_challenge: certificateHttpWebrootChallengeToTerraform(this._httpWebrootChallenge.internalValue),

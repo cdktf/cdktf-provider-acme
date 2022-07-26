@@ -1134,10 +1134,13 @@ const certificateConfig: CertificateConfig = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
+| [`connection`](#cdktfprovideracmecertificateconfigpropertyconnection) | [`cdktf.ISSHProvisionerConnection`](#cdktf.ISSHProvisionerConnection) \| [`cdktf.IWinrmProvisionerConnection`](#cdktf.IWinrmProvisionerConnection) | *No description.* |
 | [`count`](#cdktfprovideracmecertificateconfigpropertycount) | `number` | *No description.* |
 | [`dependsOn`](#cdktfprovideracmecertificateconfigpropertydependson) | [`cdktf.ITerraformDependable`](#cdktf.ITerraformDependable)[] | *No description.* |
+| [`forEach`](#cdktfprovideracmecertificateconfigpropertyforeach) | [`cdktf.ITerraformIterator`](#cdktf.ITerraformIterator) | *No description.* |
 | [`lifecycle`](#cdktfprovideracmecertificateconfigpropertylifecycle) | [`cdktf.TerraformResourceLifecycle`](#cdktf.TerraformResourceLifecycle) | *No description.* |
 | [`provider`](#cdktfprovideracmecertificateconfigpropertyprovider) | [`cdktf.TerraformProvider`](#cdktf.TerraformProvider) | *No description.* |
+| [`provisioners`](#cdktfprovideracmecertificateconfigpropertyprovisioners) | [`cdktf.IFileProvisioner`](#cdktf.IFileProvisioner) \| [`cdktf.ILocalExecProvisioner`](#cdktf.ILocalExecProvisioner) \| [`cdktf.IRemoteExecProvisioner`](#cdktf.IRemoteExecProvisioner)[] | *No description.* |
 | [`accountKeyPem`](#cdktfprovideracmecertificateconfigpropertyaccountkeypem)<span title="Required">*</span> | `string` | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#account_key_pem Certificate#account_key_pem}. |
 | [`certificateP12Password`](#cdktfprovideracmecertificateconfigpropertycertificatep12password) | `string` | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#certificate_p12_password Certificate#certificate_p12_password}. |
 | [`certificateRequestPem`](#cdktfprovideracmecertificateconfigpropertycertificaterequestpem) | `string` | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#certificate_request_pem Certificate#certificate_request_pem}. |
@@ -1157,6 +1160,16 @@ const certificateConfig: CertificateConfig = { ... }
 | [`revokeCertificateOnDestroy`](#cdktfprovideracmecertificateconfigpropertyrevokecertificateondestroy) | `boolean` \| [`cdktf.IResolvable`](#cdktf.IResolvable) | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#revoke_certificate_on_destroy Certificate#revoke_certificate_on_destroy}. |
 | [`subjectAlternativeNames`](#cdktfprovideracmecertificateconfigpropertysubjectalternativenames) | `string`[] | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#subject_alternative_names Certificate#subject_alternative_names}. |
 | [`tlsChallenge`](#cdktfprovideracmecertificateconfigpropertytlschallenge) | [`@cdktf/provider-acme.CertificateTlsChallenge`](#@cdktf/provider-acme.CertificateTlsChallenge) | tls_challenge block. |
+
+---
+
+##### `connection`<sup>Optional</sup> <a name="@cdktf/provider-acme.CertificateConfig.property.connection" id="cdktfprovideracmecertificateconfigpropertyconnection"></a>
+
+```typescript
+public readonly connection: ISSHProvisionerConnection | IWinrmProvisionerConnection;
+```
+
+- *Type:* [`cdktf.ISSHProvisionerConnection`](#cdktf.ISSHProvisionerConnection) | [`cdktf.IWinrmProvisionerConnection`](#cdktf.IWinrmProvisionerConnection)
 
 ---
 
@@ -1180,6 +1193,16 @@ public readonly dependsOn: ITerraformDependable[];
 
 ---
 
+##### `forEach`<sup>Optional</sup> <a name="@cdktf/provider-acme.CertificateConfig.property.forEach" id="cdktfprovideracmecertificateconfigpropertyforeach"></a>
+
+```typescript
+public readonly forEach: ITerraformIterator;
+```
+
+- *Type:* [`cdktf.ITerraformIterator`](#cdktf.ITerraformIterator)
+
+---
+
 ##### `lifecycle`<sup>Optional</sup> <a name="@cdktf/provider-acme.CertificateConfig.property.lifecycle" id="cdktfprovideracmecertificateconfigpropertylifecycle"></a>
 
 ```typescript
@@ -1197,6 +1220,16 @@ public readonly provider: TerraformProvider;
 ```
 
 - *Type:* [`cdktf.TerraformProvider`](#cdktf.TerraformProvider)
+
+---
+
+##### `provisioners`<sup>Optional</sup> <a name="@cdktf/provider-acme.CertificateConfig.property.provisioners" id="cdktfprovideracmecertificateconfigpropertyprovisioners"></a>
+
+```typescript
+public readonly provisioners: IFileProvisioner | ILocalExecProvisioner | IRemoteExecProvisioner[];
+```
+
+- *Type:* [`cdktf.IFileProvisioner`](#cdktf.IFileProvisioner) | [`cdktf.ILocalExecProvisioner`](#cdktf.ILocalExecProvisioner) | [`cdktf.IRemoteExecProvisioner`](#cdktf.IRemoteExecProvisioner)[]
 
 ---
 
@@ -1630,14 +1663,27 @@ const registrationConfig: RegistrationConfig = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
+| [`connection`](#cdktfprovideracmeregistrationconfigpropertyconnection) | [`cdktf.ISSHProvisionerConnection`](#cdktf.ISSHProvisionerConnection) \| [`cdktf.IWinrmProvisionerConnection`](#cdktf.IWinrmProvisionerConnection) | *No description.* |
 | [`count`](#cdktfprovideracmeregistrationconfigpropertycount) | `number` | *No description.* |
 | [`dependsOn`](#cdktfprovideracmeregistrationconfigpropertydependson) | [`cdktf.ITerraformDependable`](#cdktf.ITerraformDependable)[] | *No description.* |
+| [`forEach`](#cdktfprovideracmeregistrationconfigpropertyforeach) | [`cdktf.ITerraformIterator`](#cdktf.ITerraformIterator) | *No description.* |
 | [`lifecycle`](#cdktfprovideracmeregistrationconfigpropertylifecycle) | [`cdktf.TerraformResourceLifecycle`](#cdktf.TerraformResourceLifecycle) | *No description.* |
 | [`provider`](#cdktfprovideracmeregistrationconfigpropertyprovider) | [`cdktf.TerraformProvider`](#cdktf.TerraformProvider) | *No description.* |
+| [`provisioners`](#cdktfprovideracmeregistrationconfigpropertyprovisioners) | [`cdktf.IFileProvisioner`](#cdktf.IFileProvisioner) \| [`cdktf.ILocalExecProvisioner`](#cdktf.ILocalExecProvisioner) \| [`cdktf.IRemoteExecProvisioner`](#cdktf.IRemoteExecProvisioner)[] | *No description.* |
 | [`accountKeyPem`](#cdktfprovideracmeregistrationconfigpropertyaccountkeypem)<span title="Required">*</span> | `string` | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/registration#account_key_pem Registration#account_key_pem}. |
 | [`emailAddress`](#cdktfprovideracmeregistrationconfigpropertyemailaddress)<span title="Required">*</span> | `string` | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/registration#email_address Registration#email_address}. |
 | [`externalAccountBinding`](#cdktfprovideracmeregistrationconfigpropertyexternalaccountbinding) | [`@cdktf/provider-acme.RegistrationExternalAccountBinding`](#@cdktf/provider-acme.RegistrationExternalAccountBinding) | external_account_binding block. |
 | [`id`](#cdktfprovideracmeregistrationconfigpropertyid) | `string` | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/registration#id Registration#id}. |
+
+---
+
+##### `connection`<sup>Optional</sup> <a name="@cdktf/provider-acme.RegistrationConfig.property.connection" id="cdktfprovideracmeregistrationconfigpropertyconnection"></a>
+
+```typescript
+public readonly connection: ISSHProvisionerConnection | IWinrmProvisionerConnection;
+```
+
+- *Type:* [`cdktf.ISSHProvisionerConnection`](#cdktf.ISSHProvisionerConnection) | [`cdktf.IWinrmProvisionerConnection`](#cdktf.IWinrmProvisionerConnection)
 
 ---
 
@@ -1661,6 +1707,16 @@ public readonly dependsOn: ITerraformDependable[];
 
 ---
 
+##### `forEach`<sup>Optional</sup> <a name="@cdktf/provider-acme.RegistrationConfig.property.forEach" id="cdktfprovideracmeregistrationconfigpropertyforeach"></a>
+
+```typescript
+public readonly forEach: ITerraformIterator;
+```
+
+- *Type:* [`cdktf.ITerraformIterator`](#cdktf.ITerraformIterator)
+
+---
+
 ##### `lifecycle`<sup>Optional</sup> <a name="@cdktf/provider-acme.RegistrationConfig.property.lifecycle" id="cdktfprovideracmeregistrationconfigpropertylifecycle"></a>
 
 ```typescript
@@ -1678,6 +1734,16 @@ public readonly provider: TerraformProvider;
 ```
 
 - *Type:* [`cdktf.TerraformProvider`](#cdktf.TerraformProvider)
+
+---
+
+##### `provisioners`<sup>Optional</sup> <a name="@cdktf/provider-acme.RegistrationConfig.property.provisioners" id="cdktfprovideracmeregistrationconfigpropertyprovisioners"></a>
+
+```typescript
+public readonly provisioners: IFileProvisioner | ILocalExecProvisioner | IRemoteExecProvisioner[];
+```
+
+- *Type:* [`cdktf.IFileProvisioner`](#cdktf.IFileProvisioner) | [`cdktf.ILocalExecProvisioner`](#cdktf.ILocalExecProvisioner) | [`cdktf.IRemoteExecProvisioner`](#cdktf.IRemoteExecProvisioner)[]
 
 ---
 
