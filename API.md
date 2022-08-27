@@ -1134,13 +1134,13 @@ const certificateConfig: CertificateConfig = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| [`connection`](#cdktfprovideracmecertificateconfigpropertyconnection) | [`cdktf.ISSHProvisionerConnection`](#cdktf.ISSHProvisionerConnection) \| [`cdktf.IWinrmProvisionerConnection`](#cdktf.IWinrmProvisionerConnection) | *No description.* |
+| [`connection`](#cdktfprovideracmecertificateconfigpropertyconnection) | [`cdktf.SSHProvisionerConnection`](#cdktf.SSHProvisionerConnection) \| [`cdktf.WinrmProvisionerConnection`](#cdktf.WinrmProvisionerConnection) | *No description.* |
 | [`count`](#cdktfprovideracmecertificateconfigpropertycount) | `number` | *No description.* |
 | [`dependsOn`](#cdktfprovideracmecertificateconfigpropertydependson) | [`cdktf.ITerraformDependable`](#cdktf.ITerraformDependable)[] | *No description.* |
 | [`forEach`](#cdktfprovideracmecertificateconfigpropertyforeach) | [`cdktf.ITerraformIterator`](#cdktf.ITerraformIterator) | *No description.* |
 | [`lifecycle`](#cdktfprovideracmecertificateconfigpropertylifecycle) | [`cdktf.TerraformResourceLifecycle`](#cdktf.TerraformResourceLifecycle) | *No description.* |
 | [`provider`](#cdktfprovideracmecertificateconfigpropertyprovider) | [`cdktf.TerraformProvider`](#cdktf.TerraformProvider) | *No description.* |
-| [`provisioners`](#cdktfprovideracmecertificateconfigpropertyprovisioners) | [`cdktf.IFileProvisioner`](#cdktf.IFileProvisioner) \| [`cdktf.ILocalExecProvisioner`](#cdktf.ILocalExecProvisioner) \| [`cdktf.IRemoteExecProvisioner`](#cdktf.IRemoteExecProvisioner)[] | *No description.* |
+| [`provisioners`](#cdktfprovideracmecertificateconfigpropertyprovisioners) | [`cdktf.FileProvisioner`](#cdktf.FileProvisioner) \| [`cdktf.LocalExecProvisioner`](#cdktf.LocalExecProvisioner) \| [`cdktf.RemoteExecProvisioner`](#cdktf.RemoteExecProvisioner)[] | *No description.* |
 | [`accountKeyPem`](#cdktfprovideracmecertificateconfigpropertyaccountkeypem)<span title="Required">*</span> | `string` | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#account_key_pem Certificate#account_key_pem}. |
 | [`certificateP12Password`](#cdktfprovideracmecertificateconfigpropertycertificatep12password) | `string` | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#certificate_p12_password Certificate#certificate_p12_password}. |
 | [`certificateRequestPem`](#cdktfprovideracmecertificateconfigpropertycertificaterequestpem) | `string` | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#certificate_request_pem Certificate#certificate_request_pem}. |
@@ -1166,10 +1166,10 @@ const certificateConfig: CertificateConfig = { ... }
 ##### `connection`<sup>Optional</sup> <a name="@cdktf/provider-acme.CertificateConfig.property.connection" id="cdktfprovideracmecertificateconfigpropertyconnection"></a>
 
 ```typescript
-public readonly connection: ISSHProvisionerConnection | IWinrmProvisionerConnection;
+public readonly connection: SSHProvisionerConnection | WinrmProvisionerConnection;
 ```
 
-- *Type:* [`cdktf.ISSHProvisionerConnection`](#cdktf.ISSHProvisionerConnection) | [`cdktf.IWinrmProvisionerConnection`](#cdktf.IWinrmProvisionerConnection)
+- *Type:* [`cdktf.SSHProvisionerConnection`](#cdktf.SSHProvisionerConnection) | [`cdktf.WinrmProvisionerConnection`](#cdktf.WinrmProvisionerConnection)
 
 ---
 
@@ -1226,10 +1226,10 @@ public readonly provider: TerraformProvider;
 ##### `provisioners`<sup>Optional</sup> <a name="@cdktf/provider-acme.CertificateConfig.property.provisioners" id="cdktfprovideracmecertificateconfigpropertyprovisioners"></a>
 
 ```typescript
-public readonly provisioners: IFileProvisioner | ILocalExecProvisioner | IRemoteExecProvisioner[];
+public readonly provisioners: FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner[];
 ```
 
-- *Type:* [`cdktf.IFileProvisioner`](#cdktf.IFileProvisioner) | [`cdktf.ILocalExecProvisioner`](#cdktf.ILocalExecProvisioner) | [`cdktf.IRemoteExecProvisioner`](#cdktf.IRemoteExecProvisioner)[]
+- *Type:* [`cdktf.FileProvisioner`](#cdktf.FileProvisioner) | [`cdktf.LocalExecProvisioner`](#cdktf.LocalExecProvisioner) | [`cdktf.RemoteExecProvisioner`](#cdktf.RemoteExecProvisioner)[]
 
 ---
 
@@ -1663,13 +1663,13 @@ const registrationConfig: RegistrationConfig = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| [`connection`](#cdktfprovideracmeregistrationconfigpropertyconnection) | [`cdktf.ISSHProvisionerConnection`](#cdktf.ISSHProvisionerConnection) \| [`cdktf.IWinrmProvisionerConnection`](#cdktf.IWinrmProvisionerConnection) | *No description.* |
+| [`connection`](#cdktfprovideracmeregistrationconfigpropertyconnection) | [`cdktf.SSHProvisionerConnection`](#cdktf.SSHProvisionerConnection) \| [`cdktf.WinrmProvisionerConnection`](#cdktf.WinrmProvisionerConnection) | *No description.* |
 | [`count`](#cdktfprovideracmeregistrationconfigpropertycount) | `number` | *No description.* |
 | [`dependsOn`](#cdktfprovideracmeregistrationconfigpropertydependson) | [`cdktf.ITerraformDependable`](#cdktf.ITerraformDependable)[] | *No description.* |
 | [`forEach`](#cdktfprovideracmeregistrationconfigpropertyforeach) | [`cdktf.ITerraformIterator`](#cdktf.ITerraformIterator) | *No description.* |
 | [`lifecycle`](#cdktfprovideracmeregistrationconfigpropertylifecycle) | [`cdktf.TerraformResourceLifecycle`](#cdktf.TerraformResourceLifecycle) | *No description.* |
 | [`provider`](#cdktfprovideracmeregistrationconfigpropertyprovider) | [`cdktf.TerraformProvider`](#cdktf.TerraformProvider) | *No description.* |
-| [`provisioners`](#cdktfprovideracmeregistrationconfigpropertyprovisioners) | [`cdktf.IFileProvisioner`](#cdktf.IFileProvisioner) \| [`cdktf.ILocalExecProvisioner`](#cdktf.ILocalExecProvisioner) \| [`cdktf.IRemoteExecProvisioner`](#cdktf.IRemoteExecProvisioner)[] | *No description.* |
+| [`provisioners`](#cdktfprovideracmeregistrationconfigpropertyprovisioners) | [`cdktf.FileProvisioner`](#cdktf.FileProvisioner) \| [`cdktf.LocalExecProvisioner`](#cdktf.LocalExecProvisioner) \| [`cdktf.RemoteExecProvisioner`](#cdktf.RemoteExecProvisioner)[] | *No description.* |
 | [`accountKeyPem`](#cdktfprovideracmeregistrationconfigpropertyaccountkeypem)<span title="Required">*</span> | `string` | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/registration#account_key_pem Registration#account_key_pem}. |
 | [`emailAddress`](#cdktfprovideracmeregistrationconfigpropertyemailaddress)<span title="Required">*</span> | `string` | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/registration#email_address Registration#email_address}. |
 | [`externalAccountBinding`](#cdktfprovideracmeregistrationconfigpropertyexternalaccountbinding) | [`@cdktf/provider-acme.RegistrationExternalAccountBinding`](#@cdktf/provider-acme.RegistrationExternalAccountBinding) | external_account_binding block. |
@@ -1680,10 +1680,10 @@ const registrationConfig: RegistrationConfig = { ... }
 ##### `connection`<sup>Optional</sup> <a name="@cdktf/provider-acme.RegistrationConfig.property.connection" id="cdktfprovideracmeregistrationconfigpropertyconnection"></a>
 
 ```typescript
-public readonly connection: ISSHProvisionerConnection | IWinrmProvisionerConnection;
+public readonly connection: SSHProvisionerConnection | WinrmProvisionerConnection;
 ```
 
-- *Type:* [`cdktf.ISSHProvisionerConnection`](#cdktf.ISSHProvisionerConnection) | [`cdktf.IWinrmProvisionerConnection`](#cdktf.IWinrmProvisionerConnection)
+- *Type:* [`cdktf.SSHProvisionerConnection`](#cdktf.SSHProvisionerConnection) | [`cdktf.WinrmProvisionerConnection`](#cdktf.WinrmProvisionerConnection)
 
 ---
 
@@ -1740,10 +1740,10 @@ public readonly provider: TerraformProvider;
 ##### `provisioners`<sup>Optional</sup> <a name="@cdktf/provider-acme.RegistrationConfig.property.provisioners" id="cdktfprovideracmeregistrationconfigpropertyprovisioners"></a>
 
 ```typescript
-public readonly provisioners: IFileProvisioner | ILocalExecProvisioner | IRemoteExecProvisioner[];
+public readonly provisioners: FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner[];
 ```
 
-- *Type:* [`cdktf.IFileProvisioner`](#cdktf.IFileProvisioner) | [`cdktf.ILocalExecProvisioner`](#cdktf.ILocalExecProvisioner) | [`cdktf.IRemoteExecProvisioner`](#cdktf.IRemoteExecProvisioner)[]
+- *Type:* [`cdktf.FileProvisioner`](#cdktf.FileProvisioner) | [`cdktf.LocalExecProvisioner`](#cdktf.LocalExecProvisioner) | [`cdktf.RemoteExecProvisioner`](#cdktf.RemoteExecProvisioner)[]
 
 ---
 
