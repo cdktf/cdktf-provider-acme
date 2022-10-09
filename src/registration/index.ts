@@ -142,7 +142,7 @@ export class Registration extends cdktf.TerraformResource {
       terraformResourceType: 'acme_registration',
       terraformGeneratorMetadata: {
         providerName: 'acme',
-        providerVersion: '2.10.0',
+        providerVersion: '2.11.1',
         providerVersionConstraint: '~> 2.10'
       },
       provider: config.provider,
