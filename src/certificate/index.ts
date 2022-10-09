@@ -526,7 +526,7 @@ export class Certificate extends cdktf.TerraformResource {
       terraformResourceType: 'acme_certificate',
       terraformGeneratorMetadata: {
         providerName: 'acme',
-        providerVersion: '2.10.0',
+        providerVersion: '2.11.1',
         providerVersionConstraint: '~> 2.10'
       },
       provider: config.provider,
@@ -578,6 +578,11 @@ export class Certificate extends cdktf.TerraformResource {
   // certificate_domain - computed: true, optional: false, required: false
   public get certificateDomain() {
     return this.getStringAttribute('certificate_domain');
+  }
+
+  // certificate_not_after - computed: true, optional: false, required: false
+  public get certificateNotAfter() {
+    return this.getStringAttribute('certificate_not_after');
   }
 
   // certificate_p12 - computed: true, optional: false, required: false
