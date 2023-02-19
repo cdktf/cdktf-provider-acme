@@ -526,7 +526,7 @@ export class Certificate extends cdktf.TerraformResource {
       terraformResourceType: 'acme_certificate',
       terraformGeneratorMetadata: {
         providerName: 'acme',
-        providerVersion: '2.12.0',
+        providerVersion: '2.13.0',
         providerVersionConstraint: '~> 2.10'
       },
       provider: config.provider,
