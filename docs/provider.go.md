@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/acme acme}.
 #### Initializers <a name="Initializers" id="@cdktf/provider-acme.provider.AcmeProvider.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-acme-go/acme/v5/provider"
+import "github.com/cdktf/cdktf-provider-acme-go/acme/provider"
 
 provider.NewAcmeProvider(scope Construct, id *string, config AcmeProviderConfig) AcmeProvider
 ```
@@ -143,7 +143,7 @@ func ResetAlias()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-acme.provider.AcmeProvider.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-acme-go/acme/v5/provider"
+import "github.com/cdktf/cdktf-provider-acme-go/acme/provider"
 
 provider.AcmeProvider_IsConstruct(x interface{}) *bool
 ```
@@ -175,7 +175,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-acme.provider.AcmeProvider.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-acme-go/acme/v5/provider"
+import "github.com/cdktf/cdktf-provider-acme-go/acme/provider"
 
 provider.AcmeProvider_IsTerraformElement(x interface{}) *bool
 ```
@@ -189,7 +189,7 @@ provider.AcmeProvider_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformProvider` <a name="IsTerraformProvider" id="@cdktf/provider-acme.provider.AcmeProvider.isTerraformProvider"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-acme-go/acme/v5/provider"
+import "github.com/cdktf/cdktf-provider-acme-go/acme/provider"
 
 provider.AcmeProvider_IsTerraformProvider(x interface{}) *bool
 ```
@@ -366,7 +366,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-acme.provider.AcmeProviderConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-acme-go/acme/v5/provider"
+import "github.com/cdktf/cdktf-provider-acme-go/acme/provider"
 
 &provider.AcmeProviderConfig {
 	ServerUrl: *string,
