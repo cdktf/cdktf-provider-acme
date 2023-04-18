@@ -1,6 +1,6 @@
 # `provider`
 
-Refer to the Terraform Registory for docs: [`acme`](https://www.terraform.io/docs/providers/acme).
+Refer to the Terraform Registory for docs: [`acme`](https://registry.terraform.io/providers/vancluever/acme/2.13.1/docs).
 
 # `provider` Submodule <a name="`provider` Submodule" id="@cdktf/provider-acme.provider"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`acme`](https://www.terraform.io/doc
 
 ### AcmeProvider <a name="AcmeProvider" id="@cdktf/provider-acme.provider.AcmeProvider"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/acme acme}.
+Represents a {@link https://registry.terraform.io/providers/vancluever/acme/2.13.1/docs acme}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-acme.provider.AcmeProvider.Initializer"></a>
 
@@ -379,7 +379,7 @@ const acmeProviderConfig: provider.AcmeProviderConfig = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-acme.provider.AcmeProviderConfig.property.serverUrl">serverUrl</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme#server_url AcmeProvider#server_url}. |
+| <code><a href="#@cdktf/provider-acme.provider.AcmeProviderConfig.property.serverUrl">serverUrl</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.13.1/docs#server_url AcmeProvider#server_url}. |
 | <code><a href="#@cdktf/provider-acme.provider.AcmeProviderConfig.property.alias">alias</a></code> | <code>string</code> | Alias name. |
 
 ---
@@ -392,7 +392,7 @@ public readonly serverUrl: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme#server_url AcmeProvider#server_url}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.13.1/docs#server_url AcmeProvider#server_url}.
 
 ---
 
@@ -406,7 +406,7 @@ public readonly alias: string;
 
 Alias name.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme#alias AcmeProvider#alias}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.13.1/docs#alias AcmeProvider#alias}
 
 ---
 

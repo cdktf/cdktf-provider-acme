@@ -1,6 +1,6 @@
 # `provider`
 
-Refer to the Terraform Registory for docs: [`acme`](https://www.terraform.io/docs/providers/acme).
+Refer to the Terraform Registory for docs: [`acme`](https://registry.terraform.io/providers/vancluever/acme/2.13.1/docs).
 
 # `provider` Submodule <a name="`provider` Submodule" id="@cdktf/provider-acme.provider"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`acme`](https://www.terraform.io/doc
 
 ### AcmeProvider <a name="AcmeProvider" id="@cdktf/provider-acme.provider.AcmeProvider"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/acme acme}.
+Represents a {@link https://registry.terraform.io/providers/vancluever/acme/2.13.1/docs acme}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-acme.provider.AcmeProvider.Initializer"></a>
 
@@ -27,7 +27,7 @@ provider.AcmeProvider(
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-acme.provider.AcmeProvider.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-acme.provider.AcmeProvider.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
-| <code><a href="#@cdktf/provider-acme.provider.AcmeProvider.Initializer.parameter.serverUrl">server_url</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme#server_url AcmeProvider#server_url}. |
+| <code><a href="#@cdktf/provider-acme.provider.AcmeProvider.Initializer.parameter.serverUrl">server_url</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.13.1/docs#server_url AcmeProvider#server_url}. |
 | <code><a href="#@cdktf/provider-acme.provider.AcmeProvider.Initializer.parameter.alias">alias</a></code> | <code>str</code> | Alias name. |
 
 ---
@@ -54,7 +54,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme#server_url AcmeProvider#server_url}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.13.1/docs#server_url AcmeProvider#server_url}.
 
 ---
 
@@ -64,7 +64,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme#
 
 Alias name.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme#alias AcmeProvider#alias}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.13.1/docs#alias AcmeProvider#alias}
 
 ---
 
@@ -411,7 +411,7 @@ provider.AcmeProviderConfig(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-acme.provider.AcmeProviderConfig.property.serverUrl">server_url</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme#server_url AcmeProvider#server_url}. |
+| <code><a href="#@cdktf/provider-acme.provider.AcmeProviderConfig.property.serverUrl">server_url</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.13.1/docs#server_url AcmeProvider#server_url}. |
 | <code><a href="#@cdktf/provider-acme.provider.AcmeProviderConfig.property.alias">alias</a></code> | <code>str</code> | Alias name. |
 
 ---
@@ -424,7 +424,7 @@ server_url: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme#server_url AcmeProvider#server_url}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.13.1/docs#server_url AcmeProvider#server_url}.
 
 ---
 
@@ -438,7 +438,7 @@ alias: str
 
 Alias name.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme#alias AcmeProvider#alias}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.13.1/docs#alias AcmeProvider#alias}
 
 ---
 
