@@ -1,3 +1,7 @@
+# `acme_registration`
+
+Refer to the Terraform Registory for docs: [`acme_registration`](https://www.terraform.io/docs/providers/acme/r/registration).
+
 # `registration` Submodule <a name="`registration` Submodule" id="@cdktf/provider-acme.registration"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
