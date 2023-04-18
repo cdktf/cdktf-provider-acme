@@ -1,6 +1,6 @@
 # `acme_registration`
 
-Refer to the Terraform Registory for docs: [`acme_registration`](https://www.terraform.io/docs/providers/acme/r/registration).
+Refer to the Terraform Registory for docs: [`acme_registration`](https://registry.terraform.io/providers/vancluever/acme/2.13.1/docs/resources/registration).
 
 # `registration` Submodule <a name="`registration` Submodule" id="@cdktf/provider-acme.registration"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`acme_registration`](https://www.ter
 
 ### Registration <a name="Registration" id="@cdktf/provider-acme.registration.Registration"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/acme/r/registration acme_registration}.
+Represents a {@link https://registry.terraform.io/providers/vancluever/acme/2.13.1/docs/resources/registration acme_registration}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-acme.registration.Registration.Initializer"></a>
 
@@ -19,7 +19,7 @@ registration.Registration(
   scope: Construct,
   id: str,
   connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[int, float] = None,
+  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
@@ -37,16 +37,16 @@ registration.Registration(
 | <code><a href="#@cdktf/provider-acme.registration.Registration.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-acme.registration.Registration.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
 | <code><a href="#@cdktf/provider-acme.registration.Registration.Initializer.parameter.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.registration.Registration.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.registration.Registration.Initializer.parameter.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.registration.Registration.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.registration.Registration.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.registration.Registration.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.registration.Registration.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.registration.Registration.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.registration.Registration.Initializer.parameter.accountKeyPem">account_key_pem</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/registration#account_key_pem Registration#account_key_pem}. |
-| <code><a href="#@cdktf/provider-acme.registration.Registration.Initializer.parameter.emailAddress">email_address</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/registration#email_address Registration#email_address}. |
+| <code><a href="#@cdktf/provider-acme.registration.Registration.Initializer.parameter.accountKeyPem">account_key_pem</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.13.1/docs/resources/registration#account_key_pem Registration#account_key_pem}. |
+| <code><a href="#@cdktf/provider-acme.registration.Registration.Initializer.parameter.emailAddress">email_address</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.13.1/docs/resources/registration#email_address Registration#email_address}. |
 | <code><a href="#@cdktf/provider-acme.registration.Registration.Initializer.parameter.externalAccountBinding">external_account_binding</a></code> | <code><a href="#@cdktf/provider-acme.registration.RegistrationExternalAccountBinding">RegistrationExternalAccountBinding</a></code> | external_account_binding block. |
-| <code><a href="#@cdktf/provider-acme.registration.Registration.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/registration#id Registration#id}. |
+| <code><a href="#@cdktf/provider-acme.registration.Registration.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.13.1/docs/resources/registration#id Registration#id}. |
 
 ---
 
@@ -76,7 +76,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-acme.registration.Registration.Initializer.parameter.count"></a>
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -114,7 +114,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/registration#account_key_pem Registration#account_key_pem}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.13.1/docs/resources/registration#account_key_pem Registration#account_key_pem}.
 
 ---
 
@@ -122,7 +122,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/registration#email_address Registration#email_address}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.13.1/docs/resources/registration#email_address Registration#email_address}.
 
 ---
 
@@ -132,7 +132,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/
 
 external_account_binding block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/registration#external_account_binding Registration#external_account_binding}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.13.1/docs/resources/registration#external_account_binding Registration#external_account_binding}
 
 ---
 
@@ -140,7 +140,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/registration#id Registration#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.13.1/docs/resources/registration#id Registration#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -395,7 +395,7 @@ def put_external_account_binding(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/registration#hmac_base64 Registration#hmac_base64}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.13.1/docs/resources/registration#hmac_base64 Registration#hmac_base64}.
 
 ---
 
@@ -403,7 +403,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/registration#key_id Registration#key_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.13.1/docs/resources/registration#key_id Registration#key_id}.
 
 ---
 
@@ -507,7 +507,7 @@ registration.Registration.is_terraform_resource(
 | <code><a href="#@cdktf/provider-acme.registration.Registration.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.registration.Registration.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.registration.Registration.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.registration.Registration.property.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.registration.Registration.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.registration.Registration.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.registration.Registration.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.registration.Registration.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -610,10 +610,10 @@ connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-acme.registration.Registration.property.count"></a>
 
 ```python
-count: typing.Union[int, float]
+count: typing.Union[typing.Union[int, float], TerraformCount]
 ```
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -786,7 +786,7 @@ from cdktf_cdktf_provider_acme import registration
 
 registration.RegistrationConfig(
   connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[int, float] = None,
+  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
@@ -804,16 +804,16 @@ registration.RegistrationConfig(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-acme.registration.RegistrationConfig.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.registration.RegistrationConfig.property.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.registration.RegistrationConfig.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.registration.RegistrationConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.registration.RegistrationConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.registration.RegistrationConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.registration.RegistrationConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.registration.RegistrationConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.registration.RegistrationConfig.property.accountKeyPem">account_key_pem</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/registration#account_key_pem Registration#account_key_pem}. |
-| <code><a href="#@cdktf/provider-acme.registration.RegistrationConfig.property.emailAddress">email_address</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/registration#email_address Registration#email_address}. |
+| <code><a href="#@cdktf/provider-acme.registration.RegistrationConfig.property.accountKeyPem">account_key_pem</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.13.1/docs/resources/registration#account_key_pem Registration#account_key_pem}. |
+| <code><a href="#@cdktf/provider-acme.registration.RegistrationConfig.property.emailAddress">email_address</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.13.1/docs/resources/registration#email_address Registration#email_address}. |
 | <code><a href="#@cdktf/provider-acme.registration.RegistrationConfig.property.externalAccountBinding">external_account_binding</a></code> | <code><a href="#@cdktf/provider-acme.registration.RegistrationExternalAccountBinding">RegistrationExternalAccountBinding</a></code> | external_account_binding block. |
-| <code><a href="#@cdktf/provider-acme.registration.RegistrationConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/registration#id Registration#id}. |
+| <code><a href="#@cdktf/provider-acme.registration.RegistrationConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.13.1/docs/resources/registration#id Registration#id}. |
 
 ---
 
@@ -830,10 +830,10 @@ connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-acme.registration.RegistrationConfig.property.count"></a>
 
 ```python
-count: typing.Union[int, float]
+count: typing.Union[typing.Union[int, float], TerraformCount]
 ```
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -895,7 +895,7 @@ account_key_pem: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/registration#account_key_pem Registration#account_key_pem}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.13.1/docs/resources/registration#account_key_pem Registration#account_key_pem}.
 
 ---
 
@@ -907,7 +907,7 @@ email_address: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/registration#email_address Registration#email_address}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.13.1/docs/resources/registration#email_address Registration#email_address}.
 
 ---
 
@@ -921,7 +921,7 @@ external_account_binding: RegistrationExternalAccountBinding
 
 external_account_binding block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/registration#external_account_binding Registration#external_account_binding}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.13.1/docs/resources/registration#external_account_binding Registration#external_account_binding}
 
 ---
 
@@ -933,7 +933,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/registration#id Registration#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.13.1/docs/resources/registration#id Registration#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -957,8 +957,8 @@ registration.RegistrationExternalAccountBinding(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-acme.registration.RegistrationExternalAccountBinding.property.hmacBase64">hmac_base64</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/registration#hmac_base64 Registration#hmac_base64}. |
-| <code><a href="#@cdktf/provider-acme.registration.RegistrationExternalAccountBinding.property.keyId">key_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/registration#key_id Registration#key_id}. |
+| <code><a href="#@cdktf/provider-acme.registration.RegistrationExternalAccountBinding.property.hmacBase64">hmac_base64</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.13.1/docs/resources/registration#hmac_base64 Registration#hmac_base64}. |
+| <code><a href="#@cdktf/provider-acme.registration.RegistrationExternalAccountBinding.property.keyId">key_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.13.1/docs/resources/registration#key_id Registration#key_id}. |
 
 ---
 
@@ -970,7 +970,7 @@ hmac_base64: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/registration#hmac_base64 Registration#hmac_base64}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.13.1/docs/resources/registration#hmac_base64 Registration#hmac_base64}.
 
 ---
 
@@ -982,7 +982,7 @@ key_id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/registration#key_id Registration#key_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.13.1/docs/resources/registration#key_id Registration#key_id}.
 
 ---
 
