@@ -1,4 +1,4 @@
-// https://registry.terraform.io/providers/vancluever/acme/2.13.1/docs
+// https://registry.terraform.io/providers/vancluever/acme/2.14.0/docs
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,19 +8,19 @@ import * as cdktf from 'cdktf';
 
 export interface AcmeProviderConfig {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.13.1/docs#server_url AcmeProvider#server_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.14.0/docs#server_url AcmeProvider#server_url}
   */
   readonly serverUrl: string;
   /**
   * Alias name
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.13.1/docs#alias AcmeProvider#alias}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.14.0/docs#alias AcmeProvider#alias}
   */
   readonly alias?: string;
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/vancluever/acme/2.13.1/docs acme}
+* Represents a {@link https://registry.terraform.io/providers/vancluever/acme/2.14.0/docs acme}
 */
 export class AcmeProvider extends cdktf.TerraformProvider {
 
@@ -34,7 +34,7 @@ export class AcmeProvider extends cdktf.TerraformProvider {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.13.1/docs acme} Resource
+  * Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.14.0/docs acme} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -45,7 +45,7 @@ export class AcmeProvider extends cdktf.TerraformProvider {
       terraformResourceType: 'acme',
       terraformGeneratorMetadata: {
         providerName: 'acme',
-        providerVersion: '2.13.1',
+        providerVersion: '2.14.0',
         providerVersionConstraint: '~> 2.10'
       },
       terraformProviderSource: 'vancluever/acme'
