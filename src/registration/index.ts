@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/vancluever/acme/2.15.1/docs/resources/registration
 // generated from terraform resource schema
 
@@ -29,7 +24,7 @@ export interface RegistrationConfig extends cdktf.TerraformMetaArguments {
   readonly id?: string;
   /**
   * external_account_binding block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.15.1/docs/resources/registration#external_account_binding Registration#external_account_binding}
   */
   readonly externalAccountBinding?: RegistrationExternalAccountBinding;
