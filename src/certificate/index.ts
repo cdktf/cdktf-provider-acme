@@ -73,31 +73,31 @@ export interface CertificateConfig extends cdktf.TerraformMetaArguments {
   readonly subjectAlternativeNames?: string[];
   /**
   * dns_challenge block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.15.1/docs/resources/certificate#dns_challenge Certificate#dns_challenge}
   */
   readonly dnsChallenge?: CertificateDnsChallenge[] | cdktf.IResolvable;
   /**
   * http_challenge block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.15.1/docs/resources/certificate#http_challenge Certificate#http_challenge}
   */
   readonly httpChallenge?: CertificateHttpChallenge;
   /**
   * http_memcached_challenge block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.15.1/docs/resources/certificate#http_memcached_challenge Certificate#http_memcached_challenge}
   */
   readonly httpMemcachedChallenge?: CertificateHttpMemcachedChallenge;
   /**
   * http_webroot_challenge block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.15.1/docs/resources/certificate#http_webroot_challenge Certificate#http_webroot_challenge}
   */
   readonly httpWebrootChallenge?: CertificateHttpWebrootChallenge;
   /**
   * tls_challenge block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.15.1/docs/resources/certificate#tls_challenge Certificate#tls_challenge}
   */
   readonly tlsChallenge?: CertificateTlsChallenge;

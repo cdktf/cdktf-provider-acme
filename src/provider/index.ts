@@ -18,7 +18,7 @@ export interface AcmeProviderConfig {
   readonly serverUrl: string;
   /**
   * Alias name
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.15.1/docs#alias AcmeProvider#alias}
   */
   readonly alias?: string;
