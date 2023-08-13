@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/vancluever/acme/2.15.1/docs/resources/registration
+// https://registry.terraform.io/providers/vancluever/acme/2.16.1/docs/resources/registration
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,15 +8,15 @@ import * as cdktf from 'cdktf';
 
 export interface RegistrationConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.15.1/docs/resources/registration#account_key_pem Registration#account_key_pem}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.16.1/docs/resources/registration#account_key_pem Registration#account_key_pem}
   */
   readonly accountKeyPem: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.15.1/docs/resources/registration#email_address Registration#email_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.16.1/docs/resources/registration#email_address Registration#email_address}
   */
   readonly emailAddress: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.15.1/docs/resources/registration#id Registration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.16.1/docs/resources/registration#id Registration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -30,17 +25,17 @@ export interface RegistrationConfig extends cdktf.TerraformMetaArguments {
   /**
   * external_account_binding block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.15.1/docs/resources/registration#external_account_binding Registration#external_account_binding}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.16.1/docs/resources/registration#external_account_binding Registration#external_account_binding}
   */
   readonly externalAccountBinding?: RegistrationExternalAccountBinding;
 }
 export interface RegistrationExternalAccountBinding {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.15.1/docs/resources/registration#hmac_base64 Registration#hmac_base64}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.16.1/docs/resources/registration#hmac_base64 Registration#hmac_base64}
   */
   readonly hmacBase64: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.15.1/docs/resources/registration#key_id Registration#key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.16.1/docs/resources/registration#key_id Registration#key_id}
   */
   readonly keyId: string;
 }
@@ -122,7 +117,7 @@ export class RegistrationExternalAccountBindingOutputReference extends cdktf.Com
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/vancluever/acme/2.15.1/docs/resources/registration acme_registration}
+* Represents a {@link https://registry.terraform.io/providers/vancluever/acme/2.16.1/docs/resources/registration acme_registration}
 */
 export class Registration extends cdktf.TerraformResource {
 
@@ -136,7 +131,7 @@ export class Registration extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.15.1/docs/resources/registration acme_registration} Resource
+  * Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.16.1/docs/resources/registration acme_registration} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -147,7 +142,7 @@ export class Registration extends cdktf.TerraformResource {
       terraformResourceType: 'acme_registration',
       terraformGeneratorMetadata: {
         providerName: 'acme',
-        providerVersion: '2.15.1',
+        providerVersion: '2.16.1',
         providerVersionConstraint: '~> 2.10'
       },
       provider: config.provider,
