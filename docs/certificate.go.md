@@ -1,6 +1,6 @@
 # `acme_certificate`
 
-Refer to the Terraform Registory for docs: [`acme_certificate`](https://registry.terraform.io/providers/vancluever/acme/2.16.1/docs/resources/certificate).
+Refer to the Terraform Registory for docs: [`acme_certificate`](https://registry.terraform.io/providers/vancluever/acme/2.17.0/docs/resources/certificate).
 
 # `certificate` Submodule <a name="`certificate` Submodule" id="@cdktf/provider-acme.certificate"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`acme_certificate`](https://registry
 
 ### Certificate <a name="Certificate" id="@cdktf/provider-acme.certificate.Certificate"></a>
 
-Represents a {@link https://registry.terraform.io/providers/vancluever/acme/2.16.1/docs/resources/certificate acme_certificate}.
+Represents a {@link https://registry.terraform.io/providers/vancluever/acme/2.17.0/docs/resources/certificate acme_certificate}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-acme.certificate.Certificate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-acme-go/acme/v8/certificate"
+import "github.com/cdktf/cdktf-provider-acme-go/acme/certificate"
 
 certificate.NewCertificate(scope Construct, id *string, config CertificateConfig) Certificate
 ```
@@ -73,6 +73,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.putDnsChallenge">PutDnsChallenge</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.putHttpChallenge">PutHttpChallenge</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.putHttpMemcachedChallenge">PutHttpMemcachedChallenge</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.putHttpS3Challenge">PutHttpS3Challenge</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.putHttpWebrootChallenge">PutHttpWebrootChallenge</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.putTlsChallenge">PutTlsChallenge</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.resetCertificateP12Password">ResetCertificateP12Password</a></code> | *No description.* |
@@ -82,6 +83,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.resetDnsChallenge">ResetDnsChallenge</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.resetHttpChallenge">ResetHttpChallenge</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.resetHttpMemcachedChallenge">ResetHttpMemcachedChallenge</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.resetHttpS3Challenge">ResetHttpS3Challenge</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.resetHttpWebrootChallenge">ResetHttpWebrootChallenge</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.resetId">ResetId</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.resetKeyType">ResetKeyType</a></code> | *No description.* |
@@ -316,6 +318,18 @@ func PutHttpMemcachedChallenge(value CertificateHttpMemcachedChallenge)
 
 ---
 
+##### `PutHttpS3Challenge` <a name="PutHttpS3Challenge" id="@cdktf/provider-acme.certificate.Certificate.putHttpS3Challenge"></a>
+
+```go
+func PutHttpS3Challenge(value CertificateHttpS3Challenge)
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-acme.certificate.Certificate.putHttpS3Challenge.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-acme.certificate.CertificateHttpS3Challenge">CertificateHttpS3Challenge</a>
+
+---
+
 ##### `PutHttpWebrootChallenge` <a name="PutHttpWebrootChallenge" id="@cdktf/provider-acme.certificate.Certificate.putHttpWebrootChallenge"></a>
 
 ```go
@@ -380,6 +394,12 @@ func ResetHttpChallenge()
 
 ```go
 func ResetHttpMemcachedChallenge()
+```
+
+##### `ResetHttpS3Challenge` <a name="ResetHttpS3Challenge" id="@cdktf/provider-acme.certificate.Certificate.resetHttpS3Challenge"></a>
+
+```go
+func ResetHttpS3Challenge()
 ```
 
 ##### `ResetHttpWebrootChallenge` <a name="ResetHttpWebrootChallenge" id="@cdktf/provider-acme.certificate.Certificate.resetHttpWebrootChallenge"></a>
@@ -461,7 +481,7 @@ func ResetTlsChallenge()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-acme.certificate.Certificate.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-acme-go/acme/v8/certificate"
+import "github.com/cdktf/cdktf-provider-acme-go/acme/certificate"
 
 certificate.Certificate_IsConstruct(x interface{}) *bool
 ```
@@ -493,7 +513,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-acme.certificate.Certificate.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-acme-go/acme/v8/certificate"
+import "github.com/cdktf/cdktf-provider-acme-go/acme/certificate"
 
 certificate.Certificate_IsTerraformElement(x interface{}) *bool
 ```
@@ -507,7 +527,7 @@ certificate.Certificate_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-acme.certificate.Certificate.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-acme-go/acme/v8/certificate"
+import "github.com/cdktf/cdktf-provider-acme-go/acme/certificate"
 
 certificate.Certificate_IsTerraformResource(x interface{}) *bool
 ```
@@ -544,6 +564,7 @@ certificate.Certificate_IsTerraformResource(x interface{}) *bool
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.dnsChallenge">DnsChallenge</a></code> | <code><a href="#@cdktf/provider-acme.certificate.CertificateDnsChallengeList">CertificateDnsChallengeList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.httpChallenge">HttpChallenge</a></code> | <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpChallengeOutputReference">CertificateHttpChallengeOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.httpMemcachedChallenge">HttpMemcachedChallenge</a></code> | <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpMemcachedChallengeOutputReference">CertificateHttpMemcachedChallengeOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.httpS3Challenge">HttpS3Challenge</a></code> | <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpS3ChallengeOutputReference">CertificateHttpS3ChallengeOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.httpWebrootChallenge">HttpWebrootChallenge</a></code> | <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpWebrootChallengeOutputReference">CertificateHttpWebrootChallengeOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.issuerPem">IssuerPem</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.privateKeyPem">PrivateKeyPem</a></code> | <code>*string</code> | *No description.* |
@@ -556,6 +577,7 @@ certificate.Certificate_IsTerraformResource(x interface{}) *bool
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.dnsChallengeInput">DnsChallengeInput</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.httpChallengeInput">HttpChallengeInput</a></code> | <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpChallenge">CertificateHttpChallenge</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.httpMemcachedChallengeInput">HttpMemcachedChallengeInput</a></code> | <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpMemcachedChallenge">CertificateHttpMemcachedChallenge</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.httpS3ChallengeInput">HttpS3ChallengeInput</a></code> | <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpS3Challenge">CertificateHttpS3Challenge</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.httpWebrootChallengeInput">HttpWebrootChallengeInput</a></code> | <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpWebrootChallenge">CertificateHttpWebrootChallenge</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.idInput">IdInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.keyTypeInput">KeyTypeInput</a></code> | <code>*string</code> | *No description.* |
@@ -806,6 +828,16 @@ func HttpMemcachedChallenge() CertificateHttpMemcachedChallengeOutputReference
 
 ---
 
+##### `HttpS3Challenge`<sup>Required</sup> <a name="HttpS3Challenge" id="@cdktf/provider-acme.certificate.Certificate.property.httpS3Challenge"></a>
+
+```go
+func HttpS3Challenge() CertificateHttpS3ChallengeOutputReference
+```
+
+- *Type:* <a href="#@cdktf/provider-acme.certificate.CertificateHttpS3ChallengeOutputReference">CertificateHttpS3ChallengeOutputReference</a>
+
+---
+
 ##### `HttpWebrootChallenge`<sup>Required</sup> <a name="HttpWebrootChallenge" id="@cdktf/provider-acme.certificate.Certificate.property.httpWebrootChallenge"></a>
 
 ```go
@@ -923,6 +955,16 @@ func HttpMemcachedChallengeInput() CertificateHttpMemcachedChallenge
 ```
 
 - *Type:* <a href="#@cdktf/provider-acme.certificate.CertificateHttpMemcachedChallenge">CertificateHttpMemcachedChallenge</a>
+
+---
+
+##### `HttpS3ChallengeInput`<sup>Optional</sup> <a name="HttpS3ChallengeInput" id="@cdktf/provider-acme.certificate.Certificate.property.httpS3ChallengeInput"></a>
+
+```go
+func HttpS3ChallengeInput() CertificateHttpS3Challenge
+```
+
+- *Type:* <a href="#@cdktf/provider-acme.certificate.CertificateHttpS3Challenge">CertificateHttpS3Challenge</a>
 
 ---
 
@@ -1201,7 +1243,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-acme.certificate.CertificateConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-acme-go/acme/v8/certificate"
+import "github.com/cdktf/cdktf-provider-acme-go/acme/certificate"
 
 &certificate.CertificateConfig {
 	Connection: interface{},
@@ -1217,9 +1259,10 @@ import "github.com/cdktf/cdktf-provider-acme-go/acme/v8/certificate"
 	CommonName: *string,
 	DisableCompletePropagation: interface{},
 	DnsChallenge: interface{},
-	HttpChallenge: github.com/cdktf/cdktf-provider-acme-go/acme/v8.certificate.CertificateHttpChallenge,
-	HttpMemcachedChallenge: github.com/cdktf/cdktf-provider-acme-go/acme/v8.certificate.CertificateHttpMemcachedChallenge,
-	HttpWebrootChallenge: github.com/cdktf/cdktf-provider-acme-go/acme/v8.certificate.CertificateHttpWebrootChallenge,
+	HttpChallenge: github.com/cdktf/cdktf-provider-acme-go/acme.certificate.CertificateHttpChallenge,
+	HttpMemcachedChallenge: github.com/cdktf/cdktf-provider-acme-go/acme.certificate.CertificateHttpMemcachedChallenge,
+	HttpS3Challenge: github.com/cdktf/cdktf-provider-acme-go/acme.certificate.CertificateHttpS3Challenge,
+	HttpWebrootChallenge: github.com/cdktf/cdktf-provider-acme-go/acme.certificate.CertificateHttpWebrootChallenge,
 	Id: *string,
 	KeyType: *string,
 	MinDaysRemaining: *f64,
@@ -1229,7 +1272,7 @@ import "github.com/cdktf/cdktf-provider-acme-go/acme/v8/certificate"
 	RecursiveNameservers: *[]*string,
 	RevokeCertificateOnDestroy: interface{},
 	SubjectAlternativeNames: *[]*string,
-	TlsChallenge: github.com/cdktf/cdktf-provider-acme-go/acme/v8.certificate.CertificateTlsChallenge,
+	TlsChallenge: github.com/cdktf/cdktf-provider-acme-go/acme.certificate.CertificateTlsChallenge,
 }
 ```
 
@@ -1244,24 +1287,25 @@ import "github.com/cdktf/cdktf-provider-acme-go/acme/v8/certificate"
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.accountKeyPem">AccountKeyPem</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.16.1/docs/resources/certificate#account_key_pem Certificate#account_key_pem}. |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.certificateP12Password">CertificateP12Password</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.16.1/docs/resources/certificate#certificate_p12_password Certificate#certificate_p12_password}. |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.certificateRequestPem">CertificateRequestPem</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.16.1/docs/resources/certificate#certificate_request_pem Certificate#certificate_request_pem}. |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.commonName">CommonName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.16.1/docs/resources/certificate#common_name Certificate#common_name}. |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.disableCompletePropagation">DisableCompletePropagation</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.16.1/docs/resources/certificate#disable_complete_propagation Certificate#disable_complete_propagation}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.accountKeyPem">AccountKeyPem</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.17.0/docs/resources/certificate#account_key_pem Certificate#account_key_pem}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.certificateP12Password">CertificateP12Password</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.17.0/docs/resources/certificate#certificate_p12_password Certificate#certificate_p12_password}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.certificateRequestPem">CertificateRequestPem</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.17.0/docs/resources/certificate#certificate_request_pem Certificate#certificate_request_pem}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.commonName">CommonName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.17.0/docs/resources/certificate#common_name Certificate#common_name}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.disableCompletePropagation">DisableCompletePropagation</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.17.0/docs/resources/certificate#disable_complete_propagation Certificate#disable_complete_propagation}. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.dnsChallenge">DnsChallenge</a></code> | <code>interface{}</code> | dns_challenge block. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.httpChallenge">HttpChallenge</a></code> | <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpChallenge">CertificateHttpChallenge</a></code> | http_challenge block. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.httpMemcachedChallenge">HttpMemcachedChallenge</a></code> | <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpMemcachedChallenge">CertificateHttpMemcachedChallenge</a></code> | http_memcached_challenge block. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.httpS3Challenge">HttpS3Challenge</a></code> | <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpS3Challenge">CertificateHttpS3Challenge</a></code> | http_s3_challenge block. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.httpWebrootChallenge">HttpWebrootChallenge</a></code> | <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpWebrootChallenge">CertificateHttpWebrootChallenge</a></code> | http_webroot_challenge block. |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.16.1/docs/resources/certificate#id Certificate#id}. |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.keyType">KeyType</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.16.1/docs/resources/certificate#key_type Certificate#key_type}. |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.minDaysRemaining">MinDaysRemaining</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.16.1/docs/resources/certificate#min_days_remaining Certificate#min_days_remaining}. |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.mustStaple">MustStaple</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.16.1/docs/resources/certificate#must_staple Certificate#must_staple}. |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.preCheckDelay">PreCheckDelay</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.16.1/docs/resources/certificate#pre_check_delay Certificate#pre_check_delay}. |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.preferredChain">PreferredChain</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.16.1/docs/resources/certificate#preferred_chain Certificate#preferred_chain}. |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.recursiveNameservers">RecursiveNameservers</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.16.1/docs/resources/certificate#recursive_nameservers Certificate#recursive_nameservers}. |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.revokeCertificateOnDestroy">RevokeCertificateOnDestroy</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.16.1/docs/resources/certificate#revoke_certificate_on_destroy Certificate#revoke_certificate_on_destroy}. |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.subjectAlternativeNames">SubjectAlternativeNames</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.16.1/docs/resources/certificate#subject_alternative_names Certificate#subject_alternative_names}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.17.0/docs/resources/certificate#id Certificate#id}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.keyType">KeyType</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.17.0/docs/resources/certificate#key_type Certificate#key_type}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.minDaysRemaining">MinDaysRemaining</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.17.0/docs/resources/certificate#min_days_remaining Certificate#min_days_remaining}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.mustStaple">MustStaple</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.17.0/docs/resources/certificate#must_staple Certificate#must_staple}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.preCheckDelay">PreCheckDelay</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.17.0/docs/resources/certificate#pre_check_delay Certificate#pre_check_delay}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.preferredChain">PreferredChain</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.17.0/docs/resources/certificate#preferred_chain Certificate#preferred_chain}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.recursiveNameservers">RecursiveNameservers</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.17.0/docs/resources/certificate#recursive_nameservers Certificate#recursive_nameservers}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.revokeCertificateOnDestroy">RevokeCertificateOnDestroy</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.17.0/docs/resources/certificate#revoke_certificate_on_destroy Certificate#revoke_certificate_on_destroy}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.subjectAlternativeNames">SubjectAlternativeNames</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.17.0/docs/resources/certificate#subject_alternative_names Certificate#subject_alternative_names}. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.tlsChallenge">TlsChallenge</a></code> | <code><a href="#@cdktf/provider-acme.certificate.CertificateTlsChallenge">CertificateTlsChallenge</a></code> | tls_challenge block. |
 
 ---
@@ -1344,7 +1388,7 @@ AccountKeyPem *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.16.1/docs/resources/certificate#account_key_pem Certificate#account_key_pem}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.17.0/docs/resources/certificate#account_key_pem Certificate#account_key_pem}.
 
 ---
 
@@ -1356,7 +1400,7 @@ CertificateP12Password *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.16.1/docs/resources/certificate#certificate_p12_password Certificate#certificate_p12_password}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.17.0/docs/resources/certificate#certificate_p12_password Certificate#certificate_p12_password}.
 
 ---
 
@@ -1368,7 +1412,7 @@ CertificateRequestPem *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.16.1/docs/resources/certificate#certificate_request_pem Certificate#certificate_request_pem}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.17.0/docs/resources/certificate#certificate_request_pem Certificate#certificate_request_pem}.
 
 ---
 
@@ -1380,7 +1424,7 @@ CommonName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.16.1/docs/resources/certificate#common_name Certificate#common_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.17.0/docs/resources/certificate#common_name Certificate#common_name}.
 
 ---
 
@@ -1392,7 +1436,7 @@ DisableCompletePropagation interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.16.1/docs/resources/certificate#disable_complete_propagation Certificate#disable_complete_propagation}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.17.0/docs/resources/certificate#disable_complete_propagation Certificate#disable_complete_propagation}.
 
 ---
 
@@ -1406,7 +1450,7 @@ DnsChallenge interface{}
 
 dns_challenge block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.16.1/docs/resources/certificate#dns_challenge Certificate#dns_challenge}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.17.0/docs/resources/certificate#dns_challenge Certificate#dns_challenge}
 
 ---
 
@@ -1420,7 +1464,7 @@ HttpChallenge CertificateHttpChallenge
 
 http_challenge block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.16.1/docs/resources/certificate#http_challenge Certificate#http_challenge}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.17.0/docs/resources/certificate#http_challenge Certificate#http_challenge}
 
 ---
 
@@ -1434,7 +1478,21 @@ HttpMemcachedChallenge CertificateHttpMemcachedChallenge
 
 http_memcached_challenge block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.16.1/docs/resources/certificate#http_memcached_challenge Certificate#http_memcached_challenge}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.17.0/docs/resources/certificate#http_memcached_challenge Certificate#http_memcached_challenge}
+
+---
+
+##### `HttpS3Challenge`<sup>Optional</sup> <a name="HttpS3Challenge" id="@cdktf/provider-acme.certificate.CertificateConfig.property.httpS3Challenge"></a>
+
+```go
+HttpS3Challenge CertificateHttpS3Challenge
+```
+
+- *Type:* <a href="#@cdktf/provider-acme.certificate.CertificateHttpS3Challenge">CertificateHttpS3Challenge</a>
+
+http_s3_challenge block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.17.0/docs/resources/certificate#http_s3_challenge Certificate#http_s3_challenge}
 
 ---
 
@@ -1448,7 +1506,7 @@ HttpWebrootChallenge CertificateHttpWebrootChallenge
 
 http_webroot_challenge block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.16.1/docs/resources/certificate#http_webroot_challenge Certificate#http_webroot_challenge}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.17.0/docs/resources/certificate#http_webroot_challenge Certificate#http_webroot_challenge}
 
 ---
 
@@ -1460,7 +1518,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.16.1/docs/resources/certificate#id Certificate#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.17.0/docs/resources/certificate#id Certificate#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1475,7 +1533,7 @@ KeyType *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.16.1/docs/resources/certificate#key_type Certificate#key_type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.17.0/docs/resources/certificate#key_type Certificate#key_type}.
 
 ---
 
@@ -1487,7 +1545,7 @@ MinDaysRemaining *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.16.1/docs/resources/certificate#min_days_remaining Certificate#min_days_remaining}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.17.0/docs/resources/certificate#min_days_remaining Certificate#min_days_remaining}.
 
 ---
 
@@ -1499,7 +1557,7 @@ MustStaple interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.16.1/docs/resources/certificate#must_staple Certificate#must_staple}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.17.0/docs/resources/certificate#must_staple Certificate#must_staple}.
 
 ---
 
@@ -1511,7 +1569,7 @@ PreCheckDelay *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.16.1/docs/resources/certificate#pre_check_delay Certificate#pre_check_delay}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.17.0/docs/resources/certificate#pre_check_delay Certificate#pre_check_delay}.
 
 ---
 
@@ -1523,7 +1581,7 @@ PreferredChain *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.16.1/docs/resources/certificate#preferred_chain Certificate#preferred_chain}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.17.0/docs/resources/certificate#preferred_chain Certificate#preferred_chain}.
 
 ---
 
@@ -1535,7 +1593,7 @@ RecursiveNameservers *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.16.1/docs/resources/certificate#recursive_nameservers Certificate#recursive_nameservers}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.17.0/docs/resources/certificate#recursive_nameservers Certificate#recursive_nameservers}.
 
 ---
 
@@ -1547,7 +1605,7 @@ RevokeCertificateOnDestroy interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.16.1/docs/resources/certificate#revoke_certificate_on_destroy Certificate#revoke_certificate_on_destroy}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.17.0/docs/resources/certificate#revoke_certificate_on_destroy Certificate#revoke_certificate_on_destroy}.
 
 ---
 
@@ -1559,7 +1617,7 @@ SubjectAlternativeNames *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.16.1/docs/resources/certificate#subject_alternative_names Certificate#subject_alternative_names}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.17.0/docs/resources/certificate#subject_alternative_names Certificate#subject_alternative_names}.
 
 ---
 
@@ -1573,7 +1631,7 @@ TlsChallenge CertificateTlsChallenge
 
 tls_challenge block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.16.1/docs/resources/certificate#tls_challenge Certificate#tls_challenge}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.17.0/docs/resources/certificate#tls_challenge Certificate#tls_challenge}
 
 ---
 
@@ -1582,7 +1640,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancl
 #### Initializer <a name="Initializer" id="@cdktf/provider-acme.certificate.CertificateDnsChallenge.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-acme-go/acme/v8/certificate"
+import "github.com/cdktf/cdktf-provider-acme-go/acme/certificate"
 
 &certificate.CertificateDnsChallenge {
 	Provider: *string,
@@ -1594,8 +1652,8 @@ import "github.com/cdktf/cdktf-provider-acme-go/acme/v8/certificate"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateDnsChallenge.property.provider">Provider</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.16.1/docs/resources/certificate#provider Certificate#provider}. |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateDnsChallenge.property.config">Config</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.16.1/docs/resources/certificate#config Certificate#config}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateDnsChallenge.property.provider">Provider</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.17.0/docs/resources/certificate#provider Certificate#provider}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateDnsChallenge.property.config">Config</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.17.0/docs/resources/certificate#config Certificate#config}. |
 
 ---
 
@@ -1607,7 +1665,7 @@ Provider *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.16.1/docs/resources/certificate#provider Certificate#provider}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.17.0/docs/resources/certificate#provider Certificate#provider}.
 
 ---
 
@@ -1619,7 +1677,7 @@ Config *map[string]*string
 
 - *Type:* *map[string]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.16.1/docs/resources/certificate#config Certificate#config}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.17.0/docs/resources/certificate#config Certificate#config}.
 
 ---
 
@@ -1628,7 +1686,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancl
 #### Initializer <a name="Initializer" id="@cdktf/provider-acme.certificate.CertificateHttpChallenge.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-acme-go/acme/v8/certificate"
+import "github.com/cdktf/cdktf-provider-acme-go/acme/certificate"
 
 &certificate.CertificateHttpChallenge {
 	Port: *f64,
@@ -1640,8 +1698,8 @@ import "github.com/cdktf/cdktf-provider-acme-go/acme/v8/certificate"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpChallenge.property.port">Port</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.16.1/docs/resources/certificate#port Certificate#port}. |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpChallenge.property.proxyHeader">ProxyHeader</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.16.1/docs/resources/certificate#proxy_header Certificate#proxy_header}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpChallenge.property.port">Port</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.17.0/docs/resources/certificate#port Certificate#port}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpChallenge.property.proxyHeader">ProxyHeader</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.17.0/docs/resources/certificate#proxy_header Certificate#proxy_header}. |
 
 ---
 
@@ -1653,7 +1711,7 @@ Port *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.16.1/docs/resources/certificate#port Certificate#port}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.17.0/docs/resources/certificate#port Certificate#port}.
 
 ---
 
@@ -1665,7 +1723,7 @@ ProxyHeader *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.16.1/docs/resources/certificate#proxy_header Certificate#proxy_header}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.17.0/docs/resources/certificate#proxy_header Certificate#proxy_header}.
 
 ---
 
@@ -1674,7 +1732,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancl
 #### Initializer <a name="Initializer" id="@cdktf/provider-acme.certificate.CertificateHttpMemcachedChallenge.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-acme-go/acme/v8/certificate"
+import "github.com/cdktf/cdktf-provider-acme-go/acme/certificate"
 
 &certificate.CertificateHttpMemcachedChallenge {
 	Hosts: *[]*string,
@@ -1685,7 +1743,7 @@ import "github.com/cdktf/cdktf-provider-acme-go/acme/v8/certificate"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpMemcachedChallenge.property.hosts">Hosts</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.16.1/docs/resources/certificate#hosts Certificate#hosts}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpMemcachedChallenge.property.hosts">Hosts</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.17.0/docs/resources/certificate#hosts Certificate#hosts}. |
 
 ---
 
@@ -1697,7 +1755,39 @@ Hosts *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.16.1/docs/resources/certificate#hosts Certificate#hosts}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.17.0/docs/resources/certificate#hosts Certificate#hosts}.
+
+---
+
+### CertificateHttpS3Challenge <a name="CertificateHttpS3Challenge" id="@cdktf/provider-acme.certificate.CertificateHttpS3Challenge"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-acme.certificate.CertificateHttpS3Challenge.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-acme-go/acme/certificate"
+
+&certificate.CertificateHttpS3Challenge {
+	S3Bucket: *string,
+}
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpS3Challenge.property.s3Bucket">S3Bucket</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.17.0/docs/resources/certificate#s3_bucket Certificate#s3_bucket}. |
+
+---
+
+##### `S3Bucket`<sup>Required</sup> <a name="S3Bucket" id="@cdktf/provider-acme.certificate.CertificateHttpS3Challenge.property.s3Bucket"></a>
+
+```go
+S3Bucket *string
+```
+
+- *Type:* *string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.17.0/docs/resources/certificate#s3_bucket Certificate#s3_bucket}.
 
 ---
 
@@ -1706,7 +1796,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancl
 #### Initializer <a name="Initializer" id="@cdktf/provider-acme.certificate.CertificateHttpWebrootChallenge.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-acme-go/acme/v8/certificate"
+import "github.com/cdktf/cdktf-provider-acme-go/acme/certificate"
 
 &certificate.CertificateHttpWebrootChallenge {
 	Directory: *string,
@@ -1717,7 +1807,7 @@ import "github.com/cdktf/cdktf-provider-acme-go/acme/v8/certificate"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpWebrootChallenge.property.directory">Directory</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.16.1/docs/resources/certificate#directory Certificate#directory}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpWebrootChallenge.property.directory">Directory</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.17.0/docs/resources/certificate#directory Certificate#directory}. |
 
 ---
 
@@ -1729,7 +1819,7 @@ Directory *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.16.1/docs/resources/certificate#directory Certificate#directory}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.17.0/docs/resources/certificate#directory Certificate#directory}.
 
 ---
 
@@ -1738,7 +1828,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancl
 #### Initializer <a name="Initializer" id="@cdktf/provider-acme.certificate.CertificateTlsChallenge.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-acme-go/acme/v8/certificate"
+import "github.com/cdktf/cdktf-provider-acme-go/acme/certificate"
 
 &certificate.CertificateTlsChallenge {
 	Port: *f64,
@@ -1749,7 +1839,7 @@ import "github.com/cdktf/cdktf-provider-acme-go/acme/v8/certificate"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateTlsChallenge.property.port">Port</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.16.1/docs/resources/certificate#port Certificate#port}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateTlsChallenge.property.port">Port</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.17.0/docs/resources/certificate#port Certificate#port}. |
 
 ---
 
@@ -1761,7 +1851,7 @@ Port *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.16.1/docs/resources/certificate#port Certificate#port}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.17.0/docs/resources/certificate#port Certificate#port}.
 
 ---
 
@@ -1772,7 +1862,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancl
 #### Initializers <a name="Initializers" id="@cdktf/provider-acme.certificate.CertificateDnsChallengeList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-acme-go/acme/v8/certificate"
+import "github.com/cdktf/cdktf-provider-acme-go/acme/certificate"
 
 certificate.NewCertificateDnsChallengeList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CertificateDnsChallengeList
 ```
@@ -1915,7 +2005,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-acme.certificate.CertificateDnsChallengeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-acme-go/acme/v8/certificate"
+import "github.com/cdktf/cdktf-provider-acme-go/acme/certificate"
 
 certificate.NewCertificateDnsChallengeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CertificateDnsChallengeOutputReference
 ```
@@ -2233,7 +2323,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-acme.certificate.CertificateHttpChallengeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-acme-go/acme/v8/certificate"
+import "github.com/cdktf/cdktf-provider-acme-go/acme/certificate"
 
 certificate.NewCertificateHttpChallengeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CertificateHttpChallengeOutputReference
 ```
@@ -2540,7 +2630,7 @@ func InternalValue() CertificateHttpChallenge
 #### Initializers <a name="Initializers" id="@cdktf/provider-acme.certificate.CertificateHttpMemcachedChallengeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-acme-go/acme/v8/certificate"
+import "github.com/cdktf/cdktf-provider-acme-go/acme/certificate"
 
 certificate.NewCertificateHttpMemcachedChallengeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CertificateHttpMemcachedChallengeOutputReference
 ```
@@ -2806,12 +2896,283 @@ func InternalValue() CertificateHttpMemcachedChallenge
 ---
 
 
+### CertificateHttpS3ChallengeOutputReference <a name="CertificateHttpS3ChallengeOutputReference" id="@cdktf/provider-acme.certificate.CertificateHttpS3ChallengeOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-acme.certificate.CertificateHttpS3ChallengeOutputReference.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-acme-go/acme/certificate"
+
+certificate.NewCertificateHttpS3ChallengeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CertificateHttpS3ChallengeOutputReference
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpS3ChallengeOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpS3ChallengeOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-acme.certificate.CertificateHttpS3ChallengeOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-acme.certificate.CertificateHttpS3ChallengeOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpS3ChallengeOutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpS3ChallengeOutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpS3ChallengeOutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpS3ChallengeOutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpS3ChallengeOutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpS3ChallengeOutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpS3ChallengeOutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpS3ChallengeOutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpS3ChallengeOutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpS3ChallengeOutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpS3ChallengeOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpS3ChallengeOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpS3ChallengeOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-acme.certificate.CertificateHttpS3ChallengeOutputReference.computeFqn"></a>
+
+```go
+func ComputeFqn() *string
+```
+
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-acme.certificate.CertificateHttpS3ChallengeOutputReference.getAnyMapAttribute"></a>
+
+```go
+func GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-acme.certificate.CertificateHttpS3ChallengeOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-acme.certificate.CertificateHttpS3ChallengeOutputReference.getBooleanAttribute"></a>
+
+```go
+func GetBooleanAttribute(terraformAttribute *string) IResolvable
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-acme.certificate.CertificateHttpS3ChallengeOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-acme.certificate.CertificateHttpS3ChallengeOutputReference.getBooleanMapAttribute"></a>
+
+```go
+func GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-acme.certificate.CertificateHttpS3ChallengeOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-acme.certificate.CertificateHttpS3ChallengeOutputReference.getListAttribute"></a>
+
+```go
+func GetListAttribute(terraformAttribute *string) *[]*string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-acme.certificate.CertificateHttpS3ChallengeOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-acme.certificate.CertificateHttpS3ChallengeOutputReference.getNumberAttribute"></a>
+
+```go
+func GetNumberAttribute(terraformAttribute *string) *f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-acme.certificate.CertificateHttpS3ChallengeOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-acme.certificate.CertificateHttpS3ChallengeOutputReference.getNumberListAttribute"></a>
+
+```go
+func GetNumberListAttribute(terraformAttribute *string) *[]*f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-acme.certificate.CertificateHttpS3ChallengeOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-acme.certificate.CertificateHttpS3ChallengeOutputReference.getNumberMapAttribute"></a>
+
+```go
+func GetNumberMapAttribute(terraformAttribute *string) *map[string]*f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-acme.certificate.CertificateHttpS3ChallengeOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-acme.certificate.CertificateHttpS3ChallengeOutputReference.getStringAttribute"></a>
+
+```go
+func GetStringAttribute(terraformAttribute *string) *string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-acme.certificate.CertificateHttpS3ChallengeOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-acme.certificate.CertificateHttpS3ChallengeOutputReference.getStringMapAttribute"></a>
+
+```go
+func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-acme.certificate.CertificateHttpS3ChallengeOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-acme.certificate.CertificateHttpS3ChallengeOutputReference.interpolationForAttribute"></a>
+
+```go
+func InterpolationForAttribute(property *string) IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-acme.certificate.CertificateHttpS3ChallengeOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* *string
+
+---
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-acme.certificate.CertificateHttpS3ChallengeOutputReference.resolve"></a>
+
+```go
+func Resolve(_context IResolveContext) interface{}
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-acme.certificate.CertificateHttpS3ChallengeOutputReference.resolve.parameter._context"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-acme.certificate.CertificateHttpS3ChallengeOutputReference.toString"></a>
+
+```go
+func ToString() *string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpS3ChallengeOutputReference.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpS3ChallengeOutputReference.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpS3ChallengeOutputReference.property.s3BucketInput">S3BucketInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpS3ChallengeOutputReference.property.s3Bucket">S3Bucket</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpS3ChallengeOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpS3Challenge">CertificateHttpS3Challenge</a></code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-acme.certificate.CertificateHttpS3ChallengeOutputReference.property.creationStack"></a>
+
+```go
+func CreationStack() *[]*string
+```
+
+- *Type:* *[]*string
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-acme.certificate.CertificateHttpS3ChallengeOutputReference.property.fqn"></a>
+
+```go
+func Fqn() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `S3BucketInput`<sup>Optional</sup> <a name="S3BucketInput" id="@cdktf/provider-acme.certificate.CertificateHttpS3ChallengeOutputReference.property.s3BucketInput"></a>
+
+```go
+func S3BucketInput() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `S3Bucket`<sup>Required</sup> <a name="S3Bucket" id="@cdktf/provider-acme.certificate.CertificateHttpS3ChallengeOutputReference.property.s3Bucket"></a>
+
+```go
+func S3Bucket() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-acme.certificate.CertificateHttpS3ChallengeOutputReference.property.internalValue"></a>
+
+```go
+func InternalValue() CertificateHttpS3Challenge
+```
+
+- *Type:* <a href="#@cdktf/provider-acme.certificate.CertificateHttpS3Challenge">CertificateHttpS3Challenge</a>
+
+---
+
+
 ### CertificateHttpWebrootChallengeOutputReference <a name="CertificateHttpWebrootChallengeOutputReference" id="@cdktf/provider-acme.certificate.CertificateHttpWebrootChallengeOutputReference"></a>
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-acme.certificate.CertificateHttpWebrootChallengeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-acme-go/acme/v8/certificate"
+import "github.com/cdktf/cdktf-provider-acme-go/acme/certificate"
 
 certificate.NewCertificateHttpWebrootChallengeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CertificateHttpWebrootChallengeOutputReference
 ```
@@ -3082,7 +3443,7 @@ func InternalValue() CertificateHttpWebrootChallenge
 #### Initializers <a name="Initializers" id="@cdktf/provider-acme.certificate.CertificateTlsChallengeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-acme-go/acme/v8/certificate"
+import "github.com/cdktf/cdktf-provider-acme-go/acme/certificate"
 
 certificate.NewCertificateTlsChallengeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CertificateTlsChallengeOutputReference
 ```
