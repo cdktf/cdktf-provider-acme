@@ -1,6 +1,6 @@
 # `provider`
 
-Refer to the Terraform Registory for docs: [`acme`](https://registry.terraform.io/providers/vancluever/acme/2.17.1/docs).
+Refer to the Terraform Registory for docs: [`acme`](https://registry.terraform.io/providers/vancluever/acme/2.17.2/docs).
 
 # `provider` Submodule <a name="`provider` Submodule" id="@cdktf/provider-acme.provider"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`acme`](https://registry.terraform.i
 
 ### AcmeProvider <a name="AcmeProvider" id="@cdktf/provider-acme.provider.AcmeProvider"></a>
 
-Represents a {@link https://registry.terraform.io/providers/vancluever/acme/2.17.1/docs acme}.
+Represents a {@link https://registry.terraform.io/providers/vancluever/acme/2.17.2/docs acme}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-acme.provider.AcmeProvider.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-acme-go/acme/v9/provider"
+import "github.com/cdktf/cdktf-provider-acme-go/acme/provider"
 
 provider.NewAcmeProvider(scope Construct, id *string, config AcmeProviderConfig) AcmeProvider
 ```
@@ -147,7 +147,7 @@ func ResetAlias()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-acme.provider.AcmeProvider.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-acme-go/acme/v9/provider"
+import "github.com/cdktf/cdktf-provider-acme-go/acme/provider"
 
 provider.AcmeProvider_IsConstruct(x interface{}) *bool
 ```
@@ -179,7 +179,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-acme.provider.AcmeProvider.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-acme-go/acme/v9/provider"
+import "github.com/cdktf/cdktf-provider-acme-go/acme/provider"
 
 provider.AcmeProvider_IsTerraformElement(x interface{}) *bool
 ```
@@ -193,7 +193,7 @@ provider.AcmeProvider_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformProvider` <a name="IsTerraformProvider" id="@cdktf/provider-acme.provider.AcmeProvider.isTerraformProvider"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-acme-go/acme/v9/provider"
+import "github.com/cdktf/cdktf-provider-acme-go/acme/provider"
 
 provider.AcmeProvider_IsTerraformProvider(x interface{}) *bool
 ```
@@ -370,7 +370,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-acme.provider.AcmeProviderConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-acme-go/acme/v9/provider"
+import "github.com/cdktf/cdktf-provider-acme-go/acme/provider"
 
 &provider.AcmeProviderConfig {
 	ServerUrl: *string,
@@ -382,7 +382,7 @@ import "github.com/cdktf/cdktf-provider-acme-go/acme/v9/provider"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-acme.provider.AcmeProviderConfig.property.serverUrl">ServerUrl</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.17.1/docs#server_url AcmeProvider#server_url}. |
+| <code><a href="#@cdktf/provider-acme.provider.AcmeProviderConfig.property.serverUrl">ServerUrl</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.17.2/docs#server_url AcmeProvider#server_url}. |
 | <code><a href="#@cdktf/provider-acme.provider.AcmeProviderConfig.property.alias">Alias</a></code> | <code>*string</code> | Alias name. |
 
 ---
@@ -395,7 +395,7 @@ ServerUrl *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.17.1/docs#server_url AcmeProvider#server_url}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.17.2/docs#server_url AcmeProvider#server_url}.
 
 ---
 
@@ -409,7 +409,7 @@ Alias *string
 
 Alias name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.17.1/docs#alias AcmeProvider#alias}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.17.2/docs#alias AcmeProvider#alias}
 
 ---
 
