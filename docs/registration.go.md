@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/vancluever/acme/2.18
 #### Initializers <a name="Initializers" id="@cdktf/provider-acme.registration.Registration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-acme-go/acme/registration"
+import "github.com/cdktf/cdktf-provider-acme-go/acme/v9/registration"
 
 registration.NewRegistration(scope Construct, id *string, config RegistrationConfig) Registration
 ```
@@ -297,7 +297,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-acme.registration.Registration.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-acme-go/acme/registration"
+import "github.com/cdktf/cdktf-provider-acme-go/acme/v9/registration"
 
 registration.Registration_IsConstruct(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-acme.registration.Registration.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-acme-go/acme/registration"
+import "github.com/cdktf/cdktf-provider-acme-go/acme/v9/registration"
 
 registration.Registration_IsTerraformElement(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ registration.Registration_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-acme.registration.Registration.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-acme-go/acme/registration"
+import "github.com/cdktf/cdktf-provider-acme-go/acme/v9/registration"
 
 registration.Registration_IsTerraformResource(x interface{}) *bool
 ```
@@ -641,7 +641,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-acme.registration.RegistrationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-acme-go/acme/registration"
+import "github.com/cdktf/cdktf-provider-acme-go/acme/v9/registration"
 
 &registration.RegistrationConfig {
 	Connection: interface{},
@@ -653,7 +653,7 @@ import "github.com/cdktf/cdktf-provider-acme-go/acme/registration"
 	Provisioners: *[]interface{},
 	AccountKeyPem: *string,
 	EmailAddress: *string,
-	ExternalAccountBinding: github.com/cdktf/cdktf-provider-acme-go/acme.registration.RegistrationExternalAccountBinding,
+	ExternalAccountBinding: github.com/cdktf/cdktf-provider-acme-go/acme/v9.registration.RegistrationExternalAccountBinding,
 	Id: *string,
 }
 ```
@@ -804,7 +804,7 @@ If you experience problems setting this value it might not be settable. Please t
 #### Initializer <a name="Initializer" id="@cdktf/provider-acme.registration.RegistrationExternalAccountBinding.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-acme-go/acme/registration"
+import "github.com/cdktf/cdktf-provider-acme-go/acme/v9/registration"
 
 &registration.RegistrationExternalAccountBinding {
 	HmacBase64: *string,
@@ -852,7 +852,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancl
 #### Initializers <a name="Initializers" id="@cdktf/provider-acme.registration.RegistrationExternalAccountBindingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-acme-go/acme/registration"
+import "github.com/cdktf/cdktf-provider-acme-go/acme/v9/registration"
 
 registration.NewRegistrationExternalAccountBindingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) RegistrationExternalAccountBindingOutputReference
 ```
