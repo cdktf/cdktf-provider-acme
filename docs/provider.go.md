@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/vancluever/acme/2.18
 #### Initializers <a name="Initializers" id="@cdktf/provider-acme.provider.AcmeProvider.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-acme-go/acme/v10/provider"
+import "github.com/cdktf/cdktf-provider-acme-go/acme/provider"
 
 provider.NewAcmeProvider(scope Construct, id *string, config AcmeProviderConfig) AcmeProvider
 ```
@@ -141,13 +141,14 @@ func ResetAlias()
 | <code><a href="#@cdktf/provider-acme.provider.AcmeProvider.isConstruct">IsConstruct</a></code> | Checks if `x` is a construct. |
 | <code><a href="#@cdktf/provider-acme.provider.AcmeProvider.isTerraformElement">IsTerraformElement</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.provider.AcmeProvider.isTerraformProvider">IsTerraformProvider</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.provider.AcmeProvider.generateConfigForImport">GenerateConfigForImport</a></code> | Generates CDKTF code for importing a AcmeProvider resource upon running "cdktf plan <stack-name>". |
 
 ---
 
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-acme.provider.AcmeProvider.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-acme-go/acme/v10/provider"
+import "github.com/cdktf/cdktf-provider-acme-go/acme/provider"
 
 provider.AcmeProvider_IsConstruct(x interface{}) *bool
 ```
@@ -179,7 +180,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-acme.provider.AcmeProvider.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-acme-go/acme/v10/provider"
+import "github.com/cdktf/cdktf-provider-acme-go/acme/provider"
 
 provider.AcmeProvider_IsTerraformElement(x interface{}) *bool
 ```
@@ -193,7 +194,7 @@ provider.AcmeProvider_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformProvider` <a name="IsTerraformProvider" id="@cdktf/provider-acme.provider.AcmeProvider.isTerraformProvider"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-acme-go/acme/v10/provider"
+import "github.com/cdktf/cdktf-provider-acme-go/acme/provider"
 
 provider.AcmeProvider_IsTerraformProvider(x interface{}) *bool
 ```
@@ -201,6 +202,50 @@ provider.AcmeProvider_IsTerraformProvider(x interface{}) *bool
 ###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-acme.provider.AcmeProvider.isTerraformProvider.parameter.x"></a>
 
 - *Type:* interface{}
+
+---
+
+##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-acme.provider.AcmeProvider.generateConfigForImport"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-acme-go/acme/provider"
+
+provider.AcmeProvider_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
+```
+
+Generates CDKTF code for importing a AcmeProvider resource upon running "cdktf plan <stack-name>".
+
+###### `scope`<sup>Required</sup> <a name="scope" id="@cdktf/provider-acme.provider.AcmeProvider.generateConfigForImport.parameter.scope"></a>
+
+- *Type:* github.com/aws/constructs-go/constructs/v10.Construct
+
+The scope in which to define this construct.
+
+---
+
+###### `importToId`<sup>Required</sup> <a name="importToId" id="@cdktf/provider-acme.provider.AcmeProvider.generateConfigForImport.parameter.importToId"></a>
+
+- *Type:* *string
+
+The construct id used in the generated config for the AcmeProvider to import.
+
+---
+
+###### `importFromId`<sup>Required</sup> <a name="importFromId" id="@cdktf/provider-acme.provider.AcmeProvider.generateConfigForImport.parameter.importFromId"></a>
+
+- *Type:* *string
+
+The id of the existing AcmeProvider that should be imported.
+
+Refer to the {@link https://registry.terraform.io/providers/vancluever/acme/2.18.0/docs#import import section} in the documentation of this resource for the id to use
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-acme.provider.AcmeProvider.generateConfigForImport.parameter.provider"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider
+
+? Optional instance of the provider where the AcmeProvider to import is found.
 
 ---
 
@@ -370,7 +415,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-acme.provider.AcmeProviderConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-acme-go/acme/v10/provider"
+import "github.com/cdktf/cdktf-provider-acme-go/acme/provider"
 
 &provider.AcmeProviderConfig {
 	ServerUrl: *string,
