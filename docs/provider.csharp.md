@@ -1,7 +1,3 @@
-# `provider`
-
-Refer to the Terraform Registory for docs: [`acme`](https://registry.terraform.io/providers/vancluever/acme/2.18.0/docs).
-
 # `provider` Submodule <a name="`provider` Submodule" id="@cdktf/provider-acme.provider"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
