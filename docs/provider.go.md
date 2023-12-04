@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/vancluever/acme/2.18
 #### Initializers <a name="Initializers" id="@cdktf/provider-acme.provider.AcmeProvider.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-acme-go/acme/v10/provider"
+import "github.com/cdktf/cdktf-provider-acme-go/acme/provider"
 
 provider.NewAcmeProvider(scope Construct, id *string, config AcmeProviderConfig) AcmeProvider
 ```
@@ -144,7 +144,7 @@ func ResetAlias()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-acme.provider.AcmeProvider.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-acme-go/acme/v10/provider"
+import "github.com/cdktf/cdktf-provider-acme-go/acme/provider"
 
 provider.AcmeProvider_IsConstruct(x interface{}) *bool
 ```
@@ -176,7 +176,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-acme.provider.AcmeProvider.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-acme-go/acme/v10/provider"
+import "github.com/cdktf/cdktf-provider-acme-go/acme/provider"
 
 provider.AcmeProvider_IsTerraformElement(x interface{}) *bool
 ```
@@ -190,7 +190,7 @@ provider.AcmeProvider_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformProvider` <a name="IsTerraformProvider" id="@cdktf/provider-acme.provider.AcmeProvider.isTerraformProvider"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-acme-go/acme/v10/provider"
+import "github.com/cdktf/cdktf-provider-acme-go/acme/provider"
 
 provider.AcmeProvider_IsTerraformProvider(x interface{}) *bool
 ```
@@ -204,7 +204,7 @@ provider.AcmeProvider_IsTerraformProvider(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-acme.provider.AcmeProvider.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-acme-go/acme/v10/provider"
+import "github.com/cdktf/cdktf-provider-acme-go/acme/provider"
 
 provider.AcmeProvider_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -411,7 +411,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-acme.provider.AcmeProviderConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-acme-go/acme/v10/provider"
+import "github.com/cdktf/cdktf-provider-acme-go/acme/provider"
 
 &provider.AcmeProviderConfig {
 	ServerUrl: *string,
