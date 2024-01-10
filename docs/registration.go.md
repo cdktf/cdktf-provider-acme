@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/vancluever/acme/2.19
 #### Initializers <a name="Initializers" id="@cdktf/provider-acme.registration.Registration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-acme-go/acme/v10/registration"
+import "github.com/cdktf/cdktf-provider-acme-go/acme/registration"
 
 registration.NewRegistration(scope Construct, id *string, config RegistrationConfig) Registration
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-acme.registration.Registration.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.registration.Registration.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-acme.registration.Registration.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-acme.registration.Registration.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.registration.Registration.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.registration.Registration.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-acme.registration.Registration.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -127,6 +128,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-acme.registration.Registration.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-acme.registration.Registration.toMetadata"></a>
 
@@ -398,7 +405,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-acme.registration.Registration.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-acme-go/acme/v10/registration"
+import "github.com/cdktf/cdktf-provider-acme-go/acme/registration"
 
 registration.Registration_IsConstruct(x interface{}) *bool
 ```
@@ -430,7 +437,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-acme.registration.Registration.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-acme-go/acme/v10/registration"
+import "github.com/cdktf/cdktf-provider-acme-go/acme/registration"
 
 registration.Registration_IsTerraformElement(x interface{}) *bool
 ```
@@ -444,7 +451,7 @@ registration.Registration_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-acme.registration.Registration.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-acme-go/acme/v10/registration"
+import "github.com/cdktf/cdktf-provider-acme-go/acme/registration"
 
 registration.Registration_IsTerraformResource(x interface{}) *bool
 ```
@@ -458,7 +465,7 @@ registration.Registration_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-acme.registration.Registration.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-acme-go/acme/v10/registration"
+import "github.com/cdktf/cdktf-provider-acme-go/acme/registration"
 
 registration.Registration_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -786,7 +793,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-acme.registration.RegistrationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-acme-go/acme/v10/registration"
+import "github.com/cdktf/cdktf-provider-acme-go/acme/registration"
 
 &registration.RegistrationConfig {
 	Connection: interface{},
@@ -798,7 +805,7 @@ import "github.com/cdktf/cdktf-provider-acme-go/acme/v10/registration"
 	Provisioners: *[]interface{},
 	AccountKeyPem: *string,
 	EmailAddress: *string,
-	ExternalAccountBinding: github.com/cdktf/cdktf-provider-acme-go/acme/v10.registration.RegistrationExternalAccountBinding,
+	ExternalAccountBinding: github.com/cdktf/cdktf-provider-acme-go/acme.registration.RegistrationExternalAccountBinding,
 	Id: *string,
 }
 ```
@@ -949,7 +956,7 @@ If you experience problems setting this value it might not be settable. Please t
 #### Initializer <a name="Initializer" id="@cdktf/provider-acme.registration.RegistrationExternalAccountBinding.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-acme-go/acme/v10/registration"
+import "github.com/cdktf/cdktf-provider-acme-go/acme/registration"
 
 &registration.RegistrationExternalAccountBinding {
 	HmacBase64: *string,
@@ -997,7 +1004,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancl
 #### Initializers <a name="Initializers" id="@cdktf/provider-acme.registration.RegistrationExternalAccountBindingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-acme-go/acme/v10/registration"
+import "github.com/cdktf/cdktf-provider-acme-go/acme/registration"
 
 registration.NewRegistrationExternalAccountBindingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) RegistrationExternalAccountBindingOutputReference
 ```

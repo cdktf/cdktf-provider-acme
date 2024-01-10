@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/vancluever/acme/2.19.0/docs/resources/registration
 // generated from terraform resource schema
 
@@ -54,6 +49,31 @@ export function registrationExternalAccountBindingToTerraform(struct?: Registrat
     hmac_base64: cdktf.stringToTerraform(struct!.hmacBase64),
     key_id: cdktf.stringToTerraform(struct!.keyId),
   }
+}
+
+
+export function registrationExternalAccountBindingToHclTerraform(struct?: RegistrationExternalAccountBindingOutputReference | RegistrationExternalAccountBinding): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    hmac_base64: {
+      value: cdktf.stringToHclTerraform(struct!.hmacBase64),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    key_id: {
+      value: cdktf.stringToHclTerraform(struct!.keyId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class RegistrationExternalAccountBindingOutputReference extends cdktf.ComplexObject {
@@ -256,5 +276,37 @@ export class Registration extends cdktf.TerraformResource {
       id: cdktf.stringToTerraform(this._id),
       external_account_binding: registrationExternalAccountBindingToTerraform(this._externalAccountBinding.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      account_key_pem: {
+        value: cdktf.stringToHclTerraform(this._accountKeyPem),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      email_address: {
+        value: cdktf.stringToHclTerraform(this._emailAddress),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      external_account_binding: {
+        value: registrationExternalAccountBindingToHclTerraform(this._externalAccountBinding.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "RegistrationExternalAccountBindingList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }
