@@ -5,6 +5,7 @@
 The following submodules are available:
 
 - [certificate](./certificate.typescript.md)
+- [dataAcmeServerUrl](./dataAcmeServerUrl.typescript.md)
 - [provider](./provider.typescript.md)
 - [registration](./registration.typescript.md)
 
