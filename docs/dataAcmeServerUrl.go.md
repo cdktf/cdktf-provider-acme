@@ -4,12 +4,12 @@
 
 ### DataAcmeServerUrl <a name="DataAcmeServerUrl" id="@cdktf/provider-acme.dataAcmeServerUrl.DataAcmeServerUrl"></a>
 
-Represents a {@link https://registry.terraform.io/providers/vancluever/acme/2.23.2/docs/data-sources/server_url acme_server_url}.
+Represents a {@link https://registry.terraform.io/providers/vancluever/acme/2.24.0/docs/data-sources/server_url acme_server_url}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-acme.dataAcmeServerUrl.DataAcmeServerUrl.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-acme-go/acme/v11/dataacmeserverurl"
+import "github.com/cdktf/cdktf-provider-acme-go/acme/dataacmeserverurl"
 
 dataacmeserverurl.NewDataAcmeServerUrl(scope Construct, id *string, config DataAcmeServerUrlConfig) DataAcmeServerUrl
 ```
@@ -283,7 +283,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-acme.dataAcmeServerUrl.DataAcmeServerUrl.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-acme-go/acme/v11/dataacmeserverurl"
+import "github.com/cdktf/cdktf-provider-acme-go/acme/dataacmeserverurl"
 
 dataacmeserverurl.DataAcmeServerUrl_IsConstruct(x interface{}) *bool
 ```
@@ -315,7 +315,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-acme.dataAcmeServerUrl.DataAcmeServerUrl.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-acme-go/acme/v11/dataacmeserverurl"
+import "github.com/cdktf/cdktf-provider-acme-go/acme/dataacmeserverurl"
 
 dataacmeserverurl.DataAcmeServerUrl_IsTerraformElement(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ dataacmeserverurl.DataAcmeServerUrl_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-acme.dataAcmeServerUrl.DataAcmeServerUrl.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-acme-go/acme/v11/dataacmeserverurl"
+import "github.com/cdktf/cdktf-provider-acme-go/acme/dataacmeserverurl"
 
 dataacmeserverurl.DataAcmeServerUrl_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ dataacmeserverurl.DataAcmeServerUrl_IsTerraformDataSource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-acme.dataAcmeServerUrl.DataAcmeServerUrl.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-acme-go/acme/v11/dataacmeserverurl"
+import "github.com/cdktf/cdktf-provider-acme-go/acme/dataacmeserverurl"
 
 dataacmeserverurl.DataAcmeServerUrl_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -372,7 +372,7 @@ The construct id used in the generated config for the DataAcmeServerUrl to impor
 
 The id of the existing DataAcmeServerUrl that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/vancluever/acme/2.23.2/docs/data-sources/server_url#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/vancluever/acme/2.24.0/docs/data-sources/server_url#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -583,7 +583,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-acme.dataAcmeServerUrl.DataAcmeServerUrlConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-acme-go/acme/v11/dataacmeserverurl"
+import "github.com/cdktf/cdktf-provider-acme-go/acme/dataacmeserverurl"
 
 &dataacmeserverurl.DataAcmeServerUrlConfig {
 	Connection: interface{},
@@ -608,7 +608,7 @@ import "github.com/cdktf/cdktf-provider-acme-go/acme/v11/dataacmeserverurl"
 | <code><a href="#@cdktf/provider-acme.dataAcmeServerUrl.DataAcmeServerUrlConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.dataAcmeServerUrl.DataAcmeServerUrlConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.dataAcmeServerUrl.DataAcmeServerUrlConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.dataAcmeServerUrl.DataAcmeServerUrlConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.23.2/docs/data-sources/server_url#id DataAcmeServerUrl#id}. |
+| <code><a href="#@cdktf/provider-acme.dataAcmeServerUrl.DataAcmeServerUrlConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.24.0/docs/data-sources/server_url#id DataAcmeServerUrl#id}. |
 
 ---
 
@@ -690,7 +690,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.23.2/docs/data-sources/server_url#id DataAcmeServerUrl#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.24.0/docs/data-sources/server_url#id DataAcmeServerUrl#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
