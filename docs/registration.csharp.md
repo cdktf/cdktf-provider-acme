@@ -4,7 +4,7 @@
 
 ### Registration <a name="Registration" id="@cdktf/provider-acme.registration.Registration"></a>
 
-Represents a {@link https://registry.terraform.io/providers/vancluever/acme/2.23.2/docs/resources/registration acme_registration}.
+Represents a {@link https://registry.terraform.io/providers/vancluever/acme/2.24.0/docs/resources/registration acme_registration}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-acme.registration.Registration.Initializer"></a>
 
@@ -74,6 +74,10 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-acme.registration.Registration.moveTo">MoveTo</a></code> | Moves this resource to the target resource given by moveTarget. |
 | <code><a href="#@cdktf/provider-acme.registration.Registration.moveToId">MoveToId</a></code> | Moves this resource to the resource corresponding to "id". |
 | <code><a href="#@cdktf/provider-acme.registration.Registration.putExternalAccountBinding">PutExternalAccountBinding</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.registration.Registration.resetAccountKeyAlgorithm">ResetAccountKeyAlgorithm</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.registration.Registration.resetAccountKeyEcdsaCurve">ResetAccountKeyEcdsaCurve</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.registration.Registration.resetAccountKeyPem">ResetAccountKeyPem</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.registration.Registration.resetAccountKeyRsaBits">ResetAccountKeyRsaBits</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.registration.Registration.resetExternalAccountBinding">ResetExternalAccountBinding</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.registration.Registration.resetId">ResetId</a></code> | *No description.* |
 
@@ -379,6 +383,30 @@ private void PutExternalAccountBinding(RegistrationExternalAccountBinding Value)
 
 ---
 
+##### `ResetAccountKeyAlgorithm` <a name="ResetAccountKeyAlgorithm" id="@cdktf/provider-acme.registration.Registration.resetAccountKeyAlgorithm"></a>
+
+```csharp
+private void ResetAccountKeyAlgorithm()
+```
+
+##### `ResetAccountKeyEcdsaCurve` <a name="ResetAccountKeyEcdsaCurve" id="@cdktf/provider-acme.registration.Registration.resetAccountKeyEcdsaCurve"></a>
+
+```csharp
+private void ResetAccountKeyEcdsaCurve()
+```
+
+##### `ResetAccountKeyPem` <a name="ResetAccountKeyPem" id="@cdktf/provider-acme.registration.Registration.resetAccountKeyPem"></a>
+
+```csharp
+private void ResetAccountKeyPem()
+```
+
+##### `ResetAccountKeyRsaBits` <a name="ResetAccountKeyRsaBits" id="@cdktf/provider-acme.registration.Registration.resetAccountKeyRsaBits"></a>
+
+```csharp
+private void ResetAccountKeyRsaBits()
+```
+
 ##### `ResetExternalAccountBinding` <a name="ResetExternalAccountBinding" id="@cdktf/provider-acme.registration.Registration.resetExternalAccountBinding"></a>
 
 ```csharp
@@ -494,7 +522,7 @@ The construct id used in the generated config for the Registration to import.
 
 The id of the existing Registration that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/vancluever/acme/2.23.2/docs/resources/registration#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/vancluever/acme/2.24.0/docs/resources/registration#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -526,11 +554,17 @@ Refer to the {@link https://registry.terraform.io/providers/vancluever/acme/2.23
 | <code><a href="#@cdktf/provider-acme.registration.Registration.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.registration.Registration.property.externalAccountBinding">ExternalAccountBinding</a></code> | <code><a href="#@cdktf/provider-acme.registration.RegistrationExternalAccountBindingOutputReference">RegistrationExternalAccountBindingOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.registration.Registration.property.registrationUrl">RegistrationUrl</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.registration.Registration.property.accountKeyAlgorithmInput">AccountKeyAlgorithmInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.registration.Registration.property.accountKeyEcdsaCurveInput">AccountKeyEcdsaCurveInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.registration.Registration.property.accountKeyPemInput">AccountKeyPemInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.registration.Registration.property.accountKeyRsaBitsInput">AccountKeyRsaBitsInput</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.registration.Registration.property.emailAddressInput">EmailAddressInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.registration.Registration.property.externalAccountBindingInput">ExternalAccountBindingInput</a></code> | <code><a href="#@cdktf/provider-acme.registration.RegistrationExternalAccountBinding">RegistrationExternalAccountBinding</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.registration.Registration.property.idInput">IdInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.registration.Registration.property.accountKeyAlgorithm">AccountKeyAlgorithm</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.registration.Registration.property.accountKeyEcdsaCurve">AccountKeyEcdsaCurve</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.registration.Registration.property.accountKeyPem">AccountKeyPem</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.registration.Registration.property.accountKeyRsaBits">AccountKeyRsaBits</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.registration.Registration.property.emailAddress">EmailAddress</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.registration.Registration.property.id">Id</a></code> | <code>string</code> | *No description.* |
 
@@ -698,6 +732,26 @@ public string RegistrationUrl { get; }
 
 ---
 
+##### `AccountKeyAlgorithmInput`<sup>Optional</sup> <a name="AccountKeyAlgorithmInput" id="@cdktf/provider-acme.registration.Registration.property.accountKeyAlgorithmInput"></a>
+
+```csharp
+public string AccountKeyAlgorithmInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `AccountKeyEcdsaCurveInput`<sup>Optional</sup> <a name="AccountKeyEcdsaCurveInput" id="@cdktf/provider-acme.registration.Registration.property.accountKeyEcdsaCurveInput"></a>
+
+```csharp
+public string AccountKeyEcdsaCurveInput { get; }
+```
+
+- *Type:* string
+
+---
+
 ##### `AccountKeyPemInput`<sup>Optional</sup> <a name="AccountKeyPemInput" id="@cdktf/provider-acme.registration.Registration.property.accountKeyPemInput"></a>
 
 ```csharp
@@ -705,6 +759,16 @@ public string AccountKeyPemInput { get; }
 ```
 
 - *Type:* string
+
+---
+
+##### `AccountKeyRsaBitsInput`<sup>Optional</sup> <a name="AccountKeyRsaBitsInput" id="@cdktf/provider-acme.registration.Registration.property.accountKeyRsaBitsInput"></a>
+
+```csharp
+public double AccountKeyRsaBitsInput { get; }
+```
+
+- *Type:* double
 
 ---
 
@@ -738,6 +802,26 @@ public string IdInput { get; }
 
 ---
 
+##### `AccountKeyAlgorithm`<sup>Required</sup> <a name="AccountKeyAlgorithm" id="@cdktf/provider-acme.registration.Registration.property.accountKeyAlgorithm"></a>
+
+```csharp
+public string AccountKeyAlgorithm { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `AccountKeyEcdsaCurve`<sup>Required</sup> <a name="AccountKeyEcdsaCurve" id="@cdktf/provider-acme.registration.Registration.property.accountKeyEcdsaCurve"></a>
+
+```csharp
+public string AccountKeyEcdsaCurve { get; }
+```
+
+- *Type:* string
+
+---
+
 ##### `AccountKeyPem`<sup>Required</sup> <a name="AccountKeyPem" id="@cdktf/provider-acme.registration.Registration.property.accountKeyPem"></a>
 
 ```csharp
@@ -745,6 +829,16 @@ public string AccountKeyPem { get; }
 ```
 
 - *Type:* string
+
+---
+
+##### `AccountKeyRsaBits`<sup>Required</sup> <a name="AccountKeyRsaBits" id="@cdktf/provider-acme.registration.Registration.property.accountKeyRsaBits"></a>
+
+```csharp
+public double AccountKeyRsaBits { get; }
+```
+
+- *Type:* double
 
 ---
 
@@ -803,8 +897,11 @@ new RegistrationConfig {
     TerraformResourceLifecycle Lifecycle = null,
     TerraformProvider Provider = null,
     object[] Provisioners = null,
-    string AccountKeyPem,
     string EmailAddress,
+    string AccountKeyAlgorithm = null,
+    string AccountKeyEcdsaCurve = null,
+    string AccountKeyPem = null,
+    double AccountKeyRsaBits = null,
     RegistrationExternalAccountBinding ExternalAccountBinding = null,
     string Id = null
 };
@@ -821,10 +918,13 @@ new RegistrationConfig {
 | <code><a href="#@cdktf/provider-acme.registration.RegistrationConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.registration.RegistrationConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.registration.RegistrationConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.registration.RegistrationConfig.property.accountKeyPem">AccountKeyPem</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.23.2/docs/resources/registration#account_key_pem Registration#account_key_pem}. |
-| <code><a href="#@cdktf/provider-acme.registration.RegistrationConfig.property.emailAddress">EmailAddress</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.23.2/docs/resources/registration#email_address Registration#email_address}. |
+| <code><a href="#@cdktf/provider-acme.registration.RegistrationConfig.property.emailAddress">EmailAddress</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.24.0/docs/resources/registration#email_address Registration#email_address}. |
+| <code><a href="#@cdktf/provider-acme.registration.RegistrationConfig.property.accountKeyAlgorithm">AccountKeyAlgorithm</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.24.0/docs/resources/registration#account_key_algorithm Registration#account_key_algorithm}. |
+| <code><a href="#@cdktf/provider-acme.registration.RegistrationConfig.property.accountKeyEcdsaCurve">AccountKeyEcdsaCurve</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.24.0/docs/resources/registration#account_key_ecdsa_curve Registration#account_key_ecdsa_curve}. |
+| <code><a href="#@cdktf/provider-acme.registration.RegistrationConfig.property.accountKeyPem">AccountKeyPem</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.24.0/docs/resources/registration#account_key_pem Registration#account_key_pem}. |
+| <code><a href="#@cdktf/provider-acme.registration.RegistrationConfig.property.accountKeyRsaBits">AccountKeyRsaBits</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.24.0/docs/resources/registration#account_key_rsa_bits Registration#account_key_rsa_bits}. |
 | <code><a href="#@cdktf/provider-acme.registration.RegistrationConfig.property.externalAccountBinding">ExternalAccountBinding</a></code> | <code><a href="#@cdktf/provider-acme.registration.RegistrationExternalAccountBinding">RegistrationExternalAccountBinding</a></code> | external_account_binding block. |
-| <code><a href="#@cdktf/provider-acme.registration.RegistrationConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.23.2/docs/resources/registration#id Registration#id}. |
+| <code><a href="#@cdktf/provider-acme.registration.RegistrationConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.24.0/docs/resources/registration#id Registration#id}. |
 
 ---
 
@@ -898,18 +998,6 @@ public object[] Provisioners { get; set; }
 
 ---
 
-##### `AccountKeyPem`<sup>Required</sup> <a name="AccountKeyPem" id="@cdktf/provider-acme.registration.RegistrationConfig.property.accountKeyPem"></a>
-
-```csharp
-public string AccountKeyPem { get; set; }
-```
-
-- *Type:* string
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.23.2/docs/resources/registration#account_key_pem Registration#account_key_pem}.
-
----
-
 ##### `EmailAddress`<sup>Required</sup> <a name="EmailAddress" id="@cdktf/provider-acme.registration.RegistrationConfig.property.emailAddress"></a>
 
 ```csharp
@@ -918,7 +1006,55 @@ public string EmailAddress { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.23.2/docs/resources/registration#email_address Registration#email_address}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.24.0/docs/resources/registration#email_address Registration#email_address}.
+
+---
+
+##### `AccountKeyAlgorithm`<sup>Optional</sup> <a name="AccountKeyAlgorithm" id="@cdktf/provider-acme.registration.RegistrationConfig.property.accountKeyAlgorithm"></a>
+
+```csharp
+public string AccountKeyAlgorithm { get; set; }
+```
+
+- *Type:* string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.24.0/docs/resources/registration#account_key_algorithm Registration#account_key_algorithm}.
+
+---
+
+##### `AccountKeyEcdsaCurve`<sup>Optional</sup> <a name="AccountKeyEcdsaCurve" id="@cdktf/provider-acme.registration.RegistrationConfig.property.accountKeyEcdsaCurve"></a>
+
+```csharp
+public string AccountKeyEcdsaCurve { get; set; }
+```
+
+- *Type:* string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.24.0/docs/resources/registration#account_key_ecdsa_curve Registration#account_key_ecdsa_curve}.
+
+---
+
+##### `AccountKeyPem`<sup>Optional</sup> <a name="AccountKeyPem" id="@cdktf/provider-acme.registration.RegistrationConfig.property.accountKeyPem"></a>
+
+```csharp
+public string AccountKeyPem { get; set; }
+```
+
+- *Type:* string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.24.0/docs/resources/registration#account_key_pem Registration#account_key_pem}.
+
+---
+
+##### `AccountKeyRsaBits`<sup>Optional</sup> <a name="AccountKeyRsaBits" id="@cdktf/provider-acme.registration.RegistrationConfig.property.accountKeyRsaBits"></a>
+
+```csharp
+public double AccountKeyRsaBits { get; set; }
+```
+
+- *Type:* double
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.24.0/docs/resources/registration#account_key_rsa_bits Registration#account_key_rsa_bits}.
 
 ---
 
@@ -932,7 +1068,7 @@ public RegistrationExternalAccountBinding ExternalAccountBinding { get; set; }
 
 external_account_binding block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.23.2/docs/resources/registration#external_account_binding Registration#external_account_binding}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.24.0/docs/resources/registration#external_account_binding Registration#external_account_binding}
 
 ---
 
@@ -944,7 +1080,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.23.2/docs/resources/registration#id Registration#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.24.0/docs/resources/registration#id Registration#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -968,8 +1104,8 @@ new RegistrationExternalAccountBinding {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-acme.registration.RegistrationExternalAccountBinding.property.hmacBase64">HmacBase64</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.23.2/docs/resources/registration#hmac_base64 Registration#hmac_base64}. |
-| <code><a href="#@cdktf/provider-acme.registration.RegistrationExternalAccountBinding.property.keyId">KeyId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.23.2/docs/resources/registration#key_id Registration#key_id}. |
+| <code><a href="#@cdktf/provider-acme.registration.RegistrationExternalAccountBinding.property.hmacBase64">HmacBase64</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.24.0/docs/resources/registration#hmac_base64 Registration#hmac_base64}. |
+| <code><a href="#@cdktf/provider-acme.registration.RegistrationExternalAccountBinding.property.keyId">KeyId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.24.0/docs/resources/registration#key_id Registration#key_id}. |
 
 ---
 
@@ -981,7 +1117,7 @@ public string HmacBase64 { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.23.2/docs/resources/registration#hmac_base64 Registration#hmac_base64}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.24.0/docs/resources/registration#hmac_base64 Registration#hmac_base64}.
 
 ---
 
@@ -993,7 +1129,7 @@ public string KeyId { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.23.2/docs/resources/registration#key_id Registration#key_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.24.0/docs/resources/registration#key_id Registration#key_id}.
 
 ---
 
