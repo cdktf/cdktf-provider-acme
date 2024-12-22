@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/vancluever/acme/2.28.3/docs/data-sources/server_url
 // generated from terraform resource schema
 
