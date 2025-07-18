@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate
+// https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,120 +13,132 @@ import * as cdktf from 'cdktf';
 
 export interface CertificateConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#account_key_pem Certificate#account_key_pem}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#account_key_pem Certificate#account_key_pem}
   */
   readonly accountKeyPem: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#cert_timeout Certificate#cert_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#cert_timeout Certificate#cert_timeout}
   */
   readonly certTimeout?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#certificate_p12_password Certificate#certificate_p12_password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#certificate_p12_password Certificate#certificate_p12_password}
   */
   readonly certificateP12Password?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#certificate_request_pem Certificate#certificate_request_pem}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#certificate_request_pem Certificate#certificate_request_pem}
   */
   readonly certificateRequestPem?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#common_name Certificate#common_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#common_name Certificate#common_name}
   */
   readonly commonName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#disable_complete_propagation Certificate#disable_complete_propagation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#disable_complete_propagation Certificate#disable_complete_propagation}
   */
   readonly disableCompletePropagation?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#id Certificate#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#id Certificate#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#key_type Certificate#key_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#key_type Certificate#key_type}
   */
   readonly keyType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#min_days_remaining Certificate#min_days_remaining}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#min_days_remaining Certificate#min_days_remaining}
   */
   readonly minDaysRemaining?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#must_staple Certificate#must_staple}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#must_staple Certificate#must_staple}
   */
   readonly mustStaple?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#pre_check_delay Certificate#pre_check_delay}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#pre_check_delay Certificate#pre_check_delay}
   */
   readonly preCheckDelay?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#preferred_chain Certificate#preferred_chain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#preferred_chain Certificate#preferred_chain}
   */
   readonly preferredChain?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#profile Certificate#profile}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#profile Certificate#profile}
   */
   readonly profile?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#recursive_nameservers Certificate#recursive_nameservers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#recursive_nameservers Certificate#recursive_nameservers}
   */
   readonly recursiveNameservers?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#revoke_certificate_on_destroy Certificate#revoke_certificate_on_destroy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#renewal_info_ignore_retry_after Certificate#renewal_info_ignore_retry_after}
+  */
+  readonly renewalInfoIgnoreRetryAfter?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#renewal_info_max_sleep Certificate#renewal_info_max_sleep}
+  */
+  readonly renewalInfoMaxSleep?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#revoke_certificate_on_destroy Certificate#revoke_certificate_on_destroy}
   */
   readonly revokeCertificateOnDestroy?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#revoke_certificate_reason Certificate#revoke_certificate_reason}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#revoke_certificate_reason Certificate#revoke_certificate_reason}
   */
   readonly revokeCertificateReason?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#subject_alternative_names Certificate#subject_alternative_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#subject_alternative_names Certificate#subject_alternative_names}
   */
   readonly subjectAlternativeNames?: string[];
   /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#use_renewal_info Certificate#use_renewal_info}
+  */
+  readonly useRenewalInfo?: boolean | cdktf.IResolvable;
+  /**
   * dns_challenge block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#dns_challenge Certificate#dns_challenge}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#dns_challenge Certificate#dns_challenge}
   */
   readonly dnsChallenge?: CertificateDnsChallenge[] | cdktf.IResolvable;
   /**
   * http_challenge block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#http_challenge Certificate#http_challenge}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#http_challenge Certificate#http_challenge}
   */
   readonly httpChallenge?: CertificateHttpChallenge;
   /**
   * http_memcached_challenge block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#http_memcached_challenge Certificate#http_memcached_challenge}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#http_memcached_challenge Certificate#http_memcached_challenge}
   */
   readonly httpMemcachedChallenge?: CertificateHttpMemcachedChallenge;
   /**
   * http_s3_challenge block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#http_s3_challenge Certificate#http_s3_challenge}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#http_s3_challenge Certificate#http_s3_challenge}
   */
   readonly httpS3Challenge?: CertificateHttpS3Challenge;
   /**
   * http_webroot_challenge block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#http_webroot_challenge Certificate#http_webroot_challenge}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#http_webroot_challenge Certificate#http_webroot_challenge}
   */
   readonly httpWebrootChallenge?: CertificateHttpWebrootChallenge;
   /**
   * tls_challenge block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#tls_challenge Certificate#tls_challenge}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#tls_challenge Certificate#tls_challenge}
   */
   readonly tlsChallenge?: CertificateTlsChallenge;
 }
 export interface CertificateDnsChallenge {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#config Certificate#config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#config Certificate#config}
   */
   readonly config?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#provider Certificate#provider}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#provider Certificate#provider}
   */
   readonly provider: string;
 }
@@ -268,11 +280,11 @@ export class CertificateDnsChallengeList extends cdktf.ComplexList {
 }
 export interface CertificateHttpChallenge {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#port Certificate#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#port Certificate#port}
   */
   readonly port?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#proxy_header Certificate#proxy_header}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#proxy_header Certificate#proxy_header}
   */
   readonly proxyHeader?: string;
 }
@@ -385,7 +397,7 @@ export class CertificateHttpChallengeOutputReference extends cdktf.ComplexObject
 }
 export interface CertificateHttpMemcachedChallenge {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#hosts Certificate#hosts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#hosts Certificate#hosts}
   */
   readonly hosts: string[];
 }
@@ -466,7 +478,7 @@ export class CertificateHttpMemcachedChallengeOutputReference extends cdktf.Comp
 }
 export interface CertificateHttpS3Challenge {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#s3_bucket Certificate#s3_bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#s3_bucket Certificate#s3_bucket}
   */
   readonly s3Bucket: string;
 }
@@ -547,7 +559,7 @@ export class CertificateHttpS3ChallengeOutputReference extends cdktf.ComplexObje
 }
 export interface CertificateHttpWebrootChallenge {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#directory Certificate#directory}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#directory Certificate#directory}
   */
   readonly directory: string;
 }
@@ -628,7 +640,7 @@ export class CertificateHttpWebrootChallengeOutputReference extends cdktf.Comple
 }
 export interface CertificateTlsChallenge {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#port Certificate#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#port Certificate#port}
   */
   readonly port?: number;
 }
@@ -712,7 +724,7 @@ export class CertificateTlsChallengeOutputReference extends cdktf.ComplexObject 
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate acme_certificate}
+* Represents a {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate acme_certificate}
 */
 export class Certificate extends cdktf.TerraformResource {
 
@@ -728,7 +740,7 @@ export class Certificate extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a Certificate resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the Certificate to import
-  * @param importFromId The id of the existing Certificate that should be imported. Refer to the {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing Certificate that should be imported. Refer to the {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the Certificate to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -740,7 +752,7 @@ export class Certificate extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate acme_certificate} Resource
+  * Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate acme_certificate} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -751,7 +763,7 @@ export class Certificate extends cdktf.TerraformResource {
       terraformResourceType: 'acme_certificate',
       terraformGeneratorMetadata: {
         providerName: 'acme',
-        providerVersion: '2.33.0',
+        providerVersion: '2.34.0',
         providerVersionConstraint: '~> 2.10'
       },
       provider: config.provider,
@@ -776,9 +788,12 @@ export class Certificate extends cdktf.TerraformResource {
     this._preferredChain = config.preferredChain;
     this._profile = config.profile;
     this._recursiveNameservers = config.recursiveNameservers;
+    this._renewalInfoIgnoreRetryAfter = config.renewalInfoIgnoreRetryAfter;
+    this._renewalInfoMaxSleep = config.renewalInfoMaxSleep;
     this._revokeCertificateOnDestroy = config.revokeCertificateOnDestroy;
     this._revokeCertificateReason = config.revokeCertificateReason;
     this._subjectAlternativeNames = config.subjectAlternativeNames;
+    this._useRenewalInfo = config.useRenewalInfo;
     this._dnsChallenge.internalValue = config.dnsChallenge;
     this._httpChallenge.internalValue = config.httpChallenge;
     this._httpMemcachedChallenge.internalValue = config.httpMemcachedChallenge;
@@ -1052,6 +1067,63 @@ export class Certificate extends cdktf.TerraformResource {
     return this._recursiveNameservers;
   }
 
+  // renewal_info_explanation_url - computed: true, optional: false, required: false
+  public get renewalInfoExplanationUrl() {
+    return this.getStringAttribute('renewal_info_explanation_url');
+  }
+
+  // renewal_info_ignore_retry_after - computed: false, optional: true, required: false
+  private _renewalInfoIgnoreRetryAfter?: boolean | cdktf.IResolvable; 
+  public get renewalInfoIgnoreRetryAfter() {
+    return this.getBooleanAttribute('renewal_info_ignore_retry_after');
+  }
+  public set renewalInfoIgnoreRetryAfter(value: boolean | cdktf.IResolvable) {
+    this._renewalInfoIgnoreRetryAfter = value;
+  }
+  public resetRenewalInfoIgnoreRetryAfter() {
+    this._renewalInfoIgnoreRetryAfter = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get renewalInfoIgnoreRetryAfterInput() {
+    return this._renewalInfoIgnoreRetryAfter;
+  }
+
+  // renewal_info_max_sleep - computed: false, optional: true, required: false
+  private _renewalInfoMaxSleep?: number; 
+  public get renewalInfoMaxSleep() {
+    return this.getNumberAttribute('renewal_info_max_sleep');
+  }
+  public set renewalInfoMaxSleep(value: number) {
+    this._renewalInfoMaxSleep = value;
+  }
+  public resetRenewalInfoMaxSleep() {
+    this._renewalInfoMaxSleep = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get renewalInfoMaxSleepInput() {
+    return this._renewalInfoMaxSleep;
+  }
+
+  // renewal_info_retry_after - computed: true, optional: false, required: false
+  public get renewalInfoRetryAfter() {
+    return this.getStringAttribute('renewal_info_retry_after');
+  }
+
+  // renewal_info_window_end - computed: true, optional: false, required: false
+  public get renewalInfoWindowEnd() {
+    return this.getStringAttribute('renewal_info_window_end');
+  }
+
+  // renewal_info_window_selected - computed: true, optional: false, required: false
+  public get renewalInfoWindowSelected() {
+    return this.getStringAttribute('renewal_info_window_selected');
+  }
+
+  // renewal_info_window_start - computed: true, optional: false, required: false
+  public get renewalInfoWindowStart() {
+    return this.getStringAttribute('renewal_info_window_start');
+  }
+
   // revoke_certificate_on_destroy - computed: false, optional: true, required: false
   private _revokeCertificateOnDestroy?: boolean | cdktf.IResolvable; 
   public get revokeCertificateOnDestroy() {
@@ -1098,6 +1170,22 @@ export class Certificate extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get subjectAlternativeNamesInput() {
     return this._subjectAlternativeNames;
+  }
+
+  // use_renewal_info - computed: false, optional: true, required: false
+  private _useRenewalInfo?: boolean | cdktf.IResolvable; 
+  public get useRenewalInfo() {
+    return this.getBooleanAttribute('use_renewal_info');
+  }
+  public set useRenewalInfo(value: boolean | cdktf.IResolvable) {
+    this._useRenewalInfo = value;
+  }
+  public resetUseRenewalInfo() {
+    this._useRenewalInfo = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get useRenewalInfoInput() {
+    return this._useRenewalInfo;
   }
 
   // dns_challenge - computed: false, optional: true, required: false
@@ -1216,9 +1304,12 @@ export class Certificate extends cdktf.TerraformResource {
       preferred_chain: cdktf.stringToTerraform(this._preferredChain),
       profile: cdktf.stringToTerraform(this._profile),
       recursive_nameservers: cdktf.listMapper(cdktf.stringToTerraform, false)(this._recursiveNameservers),
+      renewal_info_ignore_retry_after: cdktf.booleanToTerraform(this._renewalInfoIgnoreRetryAfter),
+      renewal_info_max_sleep: cdktf.numberToTerraform(this._renewalInfoMaxSleep),
       revoke_certificate_on_destroy: cdktf.booleanToTerraform(this._revokeCertificateOnDestroy),
       revoke_certificate_reason: cdktf.stringToTerraform(this._revokeCertificateReason),
       subject_alternative_names: cdktf.listMapper(cdktf.stringToTerraform, false)(this._subjectAlternativeNames),
+      use_renewal_info: cdktf.booleanToTerraform(this._useRenewalInfo),
       dns_challenge: cdktf.listMapper(certificateDnsChallengeToTerraform, true)(this._dnsChallenge.internalValue),
       http_challenge: certificateHttpChallengeToTerraform(this._httpChallenge.internalValue),
       http_memcached_challenge: certificateHttpMemcachedChallengeToTerraform(this._httpMemcachedChallenge.internalValue),
@@ -1314,6 +1405,18 @@ export class Certificate extends cdktf.TerraformResource {
         type: "list",
         storageClassType: "stringList",
       },
+      renewal_info_ignore_retry_after: {
+        value: cdktf.booleanToHclTerraform(this._renewalInfoIgnoreRetryAfter),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      renewal_info_max_sleep: {
+        value: cdktf.numberToHclTerraform(this._renewalInfoMaxSleep),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
       revoke_certificate_on_destroy: {
         value: cdktf.booleanToHclTerraform(this._revokeCertificateOnDestroy),
         isBlock: false,
@@ -1331,6 +1434,12 @@ export class Certificate extends cdktf.TerraformResource {
         isBlock: false,
         type: "set",
         storageClassType: "stringList",
+      },
+      use_renewal_info: {
+        value: cdktf.booleanToHclTerraform(this._useRenewalInfo),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
       },
       dns_challenge: {
         value: cdktf.listMapperHcl(certificateDnsChallengeToHclTerraform, true)(this._dnsChallenge.internalValue),
