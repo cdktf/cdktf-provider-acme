@@ -4,7 +4,7 @@
 
 ### Certificate <a name="Certificate" id="@cdktf/provider-acme.certificate.Certificate"></a>
 
-Represents a {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate acme_certificate}.
+Represents a {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate acme_certificate}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-acme.certificate.Certificate.Initializer"></a>
 
@@ -97,10 +97,13 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.resetPreferredChain">ResetPreferredChain</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.resetProfile">ResetProfile</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.resetRecursiveNameservers">ResetRecursiveNameservers</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.resetRenewalInfoIgnoreRetryAfter">ResetRenewalInfoIgnoreRetryAfter</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.resetRenewalInfoMaxSleep">ResetRenewalInfoMaxSleep</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.resetRevokeCertificateOnDestroy">ResetRevokeCertificateOnDestroy</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.resetRevokeCertificateReason">ResetRevokeCertificateReason</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.resetSubjectAlternativeNames">ResetSubjectAlternativeNames</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.resetTlsChallenge">ResetTlsChallenge</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.resetUseRenewalInfo">ResetUseRenewalInfo</a></code> | *No description.* |
 
 ---
 
@@ -572,6 +575,18 @@ private void ResetProfile()
 private void ResetRecursiveNameservers()
 ```
 
+##### `ResetRenewalInfoIgnoreRetryAfter` <a name="ResetRenewalInfoIgnoreRetryAfter" id="@cdktf/provider-acme.certificate.Certificate.resetRenewalInfoIgnoreRetryAfter"></a>
+
+```csharp
+private void ResetRenewalInfoIgnoreRetryAfter()
+```
+
+##### `ResetRenewalInfoMaxSleep` <a name="ResetRenewalInfoMaxSleep" id="@cdktf/provider-acme.certificate.Certificate.resetRenewalInfoMaxSleep"></a>
+
+```csharp
+private void ResetRenewalInfoMaxSleep()
+```
+
 ##### `ResetRevokeCertificateOnDestroy` <a name="ResetRevokeCertificateOnDestroy" id="@cdktf/provider-acme.certificate.Certificate.resetRevokeCertificateOnDestroy"></a>
 
 ```csharp
@@ -594,6 +609,12 @@ private void ResetSubjectAlternativeNames()
 
 ```csharp
 private void ResetTlsChallenge()
+```
+
+##### `ResetUseRenewalInfo` <a name="ResetUseRenewalInfo" id="@cdktf/provider-acme.certificate.Certificate.resetUseRenewalInfo"></a>
+
+```csharp
+private void ResetUseRenewalInfo()
 ```
 
 #### Static Functions <a name="Static Functions" id="Static Functions"></a>
@@ -699,7 +720,7 @@ The construct id used in the generated config for the Certificate to import.
 
 The id of the existing Certificate that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -742,6 +763,11 @@ Refer to the {@link https://registry.terraform.io/providers/vancluever/acme/2.33
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.httpWebrootChallenge">HttpWebrootChallenge</a></code> | <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpWebrootChallengeOutputReference">CertificateHttpWebrootChallengeOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.issuerPem">IssuerPem</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.privateKeyPem">PrivateKeyPem</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.renewalInfoExplanationUrl">RenewalInfoExplanationUrl</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.renewalInfoRetryAfter">RenewalInfoRetryAfter</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.renewalInfoWindowEnd">RenewalInfoWindowEnd</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.renewalInfoWindowSelected">RenewalInfoWindowSelected</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.renewalInfoWindowStart">RenewalInfoWindowStart</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.tlsChallenge">TlsChallenge</a></code> | <code><a href="#@cdktf/provider-acme.certificate.CertificateTlsChallengeOutputReference">CertificateTlsChallengeOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.accountKeyPemInput">AccountKeyPemInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.certificateP12PasswordInput">CertificateP12PasswordInput</a></code> | <code>string</code> | *No description.* |
@@ -762,10 +788,13 @@ Refer to the {@link https://registry.terraform.io/providers/vancluever/acme/2.33
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.preferredChainInput">PreferredChainInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.profileInput">ProfileInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.recursiveNameserversInput">RecursiveNameserversInput</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.renewalInfoIgnoreRetryAfterInput">RenewalInfoIgnoreRetryAfterInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.renewalInfoMaxSleepInput">RenewalInfoMaxSleepInput</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.revokeCertificateOnDestroyInput">RevokeCertificateOnDestroyInput</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.revokeCertificateReasonInput">RevokeCertificateReasonInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.subjectAlternativeNamesInput">SubjectAlternativeNamesInput</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.tlsChallengeInput">TlsChallengeInput</a></code> | <code><a href="#@cdktf/provider-acme.certificate.CertificateTlsChallenge">CertificateTlsChallenge</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.useRenewalInfoInput">UseRenewalInfoInput</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.accountKeyPem">AccountKeyPem</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.certificateP12Password">CertificateP12Password</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.certificateRequestPem">CertificateRequestPem</a></code> | <code>string</code> | *No description.* |
@@ -780,9 +809,12 @@ Refer to the {@link https://registry.terraform.io/providers/vancluever/acme/2.33
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.preferredChain">PreferredChain</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.profile">Profile</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.recursiveNameservers">RecursiveNameservers</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.renewalInfoIgnoreRetryAfter">RenewalInfoIgnoreRetryAfter</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.renewalInfoMaxSleep">RenewalInfoMaxSleep</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.revokeCertificateOnDestroy">RevokeCertificateOnDestroy</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.revokeCertificateReason">RevokeCertificateReason</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.subjectAlternativeNames">SubjectAlternativeNames</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.useRenewalInfo">UseRenewalInfo</a></code> | <code>object</code> | *No description.* |
 
 ---
 
@@ -1058,6 +1090,56 @@ public string PrivateKeyPem { get; }
 
 ---
 
+##### `RenewalInfoExplanationUrl`<sup>Required</sup> <a name="RenewalInfoExplanationUrl" id="@cdktf/provider-acme.certificate.Certificate.property.renewalInfoExplanationUrl"></a>
+
+```csharp
+public string RenewalInfoExplanationUrl { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `RenewalInfoRetryAfter`<sup>Required</sup> <a name="RenewalInfoRetryAfter" id="@cdktf/provider-acme.certificate.Certificate.property.renewalInfoRetryAfter"></a>
+
+```csharp
+public string RenewalInfoRetryAfter { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `RenewalInfoWindowEnd`<sup>Required</sup> <a name="RenewalInfoWindowEnd" id="@cdktf/provider-acme.certificate.Certificate.property.renewalInfoWindowEnd"></a>
+
+```csharp
+public string RenewalInfoWindowEnd { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `RenewalInfoWindowSelected`<sup>Required</sup> <a name="RenewalInfoWindowSelected" id="@cdktf/provider-acme.certificate.Certificate.property.renewalInfoWindowSelected"></a>
+
+```csharp
+public string RenewalInfoWindowSelected { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `RenewalInfoWindowStart`<sup>Required</sup> <a name="RenewalInfoWindowStart" id="@cdktf/provider-acme.certificate.Certificate.property.renewalInfoWindowStart"></a>
+
+```csharp
+public string RenewalInfoWindowStart { get; }
+```
+
+- *Type:* string
+
+---
+
 ##### `TlsChallenge`<sup>Required</sup> <a name="TlsChallenge" id="@cdktf/provider-acme.certificate.Certificate.property.tlsChallenge"></a>
 
 ```csharp
@@ -1258,6 +1340,26 @@ public string[] RecursiveNameserversInput { get; }
 
 ---
 
+##### `RenewalInfoIgnoreRetryAfterInput`<sup>Optional</sup> <a name="RenewalInfoIgnoreRetryAfterInput" id="@cdktf/provider-acme.certificate.Certificate.property.renewalInfoIgnoreRetryAfterInput"></a>
+
+```csharp
+public object RenewalInfoIgnoreRetryAfterInput { get; }
+```
+
+- *Type:* object
+
+---
+
+##### `RenewalInfoMaxSleepInput`<sup>Optional</sup> <a name="RenewalInfoMaxSleepInput" id="@cdktf/provider-acme.certificate.Certificate.property.renewalInfoMaxSleepInput"></a>
+
+```csharp
+public double RenewalInfoMaxSleepInput { get; }
+```
+
+- *Type:* double
+
+---
+
 ##### `RevokeCertificateOnDestroyInput`<sup>Optional</sup> <a name="RevokeCertificateOnDestroyInput" id="@cdktf/provider-acme.certificate.Certificate.property.revokeCertificateOnDestroyInput"></a>
 
 ```csharp
@@ -1295,6 +1397,16 @@ public CertificateTlsChallenge TlsChallengeInput { get; }
 ```
 
 - *Type:* <a href="#@cdktf/provider-acme.certificate.CertificateTlsChallenge">CertificateTlsChallenge</a>
+
+---
+
+##### `UseRenewalInfoInput`<sup>Optional</sup> <a name="UseRenewalInfoInput" id="@cdktf/provider-acme.certificate.Certificate.property.useRenewalInfoInput"></a>
+
+```csharp
+public object UseRenewalInfoInput { get; }
+```
+
+- *Type:* object
 
 ---
 
@@ -1438,6 +1550,26 @@ public string[] RecursiveNameservers { get; }
 
 ---
 
+##### `RenewalInfoIgnoreRetryAfter`<sup>Required</sup> <a name="RenewalInfoIgnoreRetryAfter" id="@cdktf/provider-acme.certificate.Certificate.property.renewalInfoIgnoreRetryAfter"></a>
+
+```csharp
+public object RenewalInfoIgnoreRetryAfter { get; }
+```
+
+- *Type:* object
+
+---
+
+##### `RenewalInfoMaxSleep`<sup>Required</sup> <a name="RenewalInfoMaxSleep" id="@cdktf/provider-acme.certificate.Certificate.property.renewalInfoMaxSleep"></a>
+
+```csharp
+public double RenewalInfoMaxSleep { get; }
+```
+
+- *Type:* double
+
+---
+
 ##### `RevokeCertificateOnDestroy`<sup>Required</sup> <a name="RevokeCertificateOnDestroy" id="@cdktf/provider-acme.certificate.Certificate.property.revokeCertificateOnDestroy"></a>
 
 ```csharp
@@ -1465,6 +1597,16 @@ public string[] SubjectAlternativeNames { get; }
 ```
 
 - *Type:* string[]
+
+---
+
+##### `UseRenewalInfo`<sup>Required</sup> <a name="UseRenewalInfo" id="@cdktf/provider-acme.certificate.Certificate.property.useRenewalInfo"></a>
+
+```csharp
+public object UseRenewalInfo { get; }
+```
+
+- *Type:* object
 
 ---
 
@@ -1522,10 +1664,13 @@ new CertificateConfig {
     string PreferredChain = null,
     string Profile = null,
     string[] RecursiveNameservers = null,
+    object RenewalInfoIgnoreRetryAfter = null,
+    double RenewalInfoMaxSleep = null,
     object RevokeCertificateOnDestroy = null,
     string RevokeCertificateReason = null,
     string[] SubjectAlternativeNames = null,
-    CertificateTlsChallenge TlsChallenge = null
+    CertificateTlsChallenge TlsChallenge = null,
+    object UseRenewalInfo = null
 };
 ```
 
@@ -1540,29 +1685,32 @@ new CertificateConfig {
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.accountKeyPem">AccountKeyPem</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#account_key_pem Certificate#account_key_pem}. |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.certificateP12Password">CertificateP12Password</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#certificate_p12_password Certificate#certificate_p12_password}. |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.certificateRequestPem">CertificateRequestPem</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#certificate_request_pem Certificate#certificate_request_pem}. |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.certTimeout">CertTimeout</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#cert_timeout Certificate#cert_timeout}. |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.commonName">CommonName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#common_name Certificate#common_name}. |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.disableCompletePropagation">DisableCompletePropagation</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#disable_complete_propagation Certificate#disable_complete_propagation}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.accountKeyPem">AccountKeyPem</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#account_key_pem Certificate#account_key_pem}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.certificateP12Password">CertificateP12Password</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#certificate_p12_password Certificate#certificate_p12_password}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.certificateRequestPem">CertificateRequestPem</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#certificate_request_pem Certificate#certificate_request_pem}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.certTimeout">CertTimeout</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#cert_timeout Certificate#cert_timeout}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.commonName">CommonName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#common_name Certificate#common_name}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.disableCompletePropagation">DisableCompletePropagation</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#disable_complete_propagation Certificate#disable_complete_propagation}. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.dnsChallenge">DnsChallenge</a></code> | <code>object</code> | dns_challenge block. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.httpChallenge">HttpChallenge</a></code> | <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpChallenge">CertificateHttpChallenge</a></code> | http_challenge block. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.httpMemcachedChallenge">HttpMemcachedChallenge</a></code> | <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpMemcachedChallenge">CertificateHttpMemcachedChallenge</a></code> | http_memcached_challenge block. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.httpS3Challenge">HttpS3Challenge</a></code> | <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpS3Challenge">CertificateHttpS3Challenge</a></code> | http_s3_challenge block. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.httpWebrootChallenge">HttpWebrootChallenge</a></code> | <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpWebrootChallenge">CertificateHttpWebrootChallenge</a></code> | http_webroot_challenge block. |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#id Certificate#id}. |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.keyType">KeyType</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#key_type Certificate#key_type}. |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.minDaysRemaining">MinDaysRemaining</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#min_days_remaining Certificate#min_days_remaining}. |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.mustStaple">MustStaple</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#must_staple Certificate#must_staple}. |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.preCheckDelay">PreCheckDelay</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#pre_check_delay Certificate#pre_check_delay}. |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.preferredChain">PreferredChain</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#preferred_chain Certificate#preferred_chain}. |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.profile">Profile</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#profile Certificate#profile}. |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.recursiveNameservers">RecursiveNameservers</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#recursive_nameservers Certificate#recursive_nameservers}. |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.revokeCertificateOnDestroy">RevokeCertificateOnDestroy</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#revoke_certificate_on_destroy Certificate#revoke_certificate_on_destroy}. |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.revokeCertificateReason">RevokeCertificateReason</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#revoke_certificate_reason Certificate#revoke_certificate_reason}. |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.subjectAlternativeNames">SubjectAlternativeNames</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#subject_alternative_names Certificate#subject_alternative_names}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#id Certificate#id}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.keyType">KeyType</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#key_type Certificate#key_type}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.minDaysRemaining">MinDaysRemaining</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#min_days_remaining Certificate#min_days_remaining}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.mustStaple">MustStaple</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#must_staple Certificate#must_staple}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.preCheckDelay">PreCheckDelay</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#pre_check_delay Certificate#pre_check_delay}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.preferredChain">PreferredChain</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#preferred_chain Certificate#preferred_chain}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.profile">Profile</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#profile Certificate#profile}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.recursiveNameservers">RecursiveNameservers</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#recursive_nameservers Certificate#recursive_nameservers}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.renewalInfoIgnoreRetryAfter">RenewalInfoIgnoreRetryAfter</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#renewal_info_ignore_retry_after Certificate#renewal_info_ignore_retry_after}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.renewalInfoMaxSleep">RenewalInfoMaxSleep</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#renewal_info_max_sleep Certificate#renewal_info_max_sleep}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.revokeCertificateOnDestroy">RevokeCertificateOnDestroy</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#revoke_certificate_on_destroy Certificate#revoke_certificate_on_destroy}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.revokeCertificateReason">RevokeCertificateReason</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#revoke_certificate_reason Certificate#revoke_certificate_reason}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.subjectAlternativeNames">SubjectAlternativeNames</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#subject_alternative_names Certificate#subject_alternative_names}. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.tlsChallenge">TlsChallenge</a></code> | <code><a href="#@cdktf/provider-acme.certificate.CertificateTlsChallenge">CertificateTlsChallenge</a></code> | tls_challenge block. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.useRenewalInfo">UseRenewalInfo</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#use_renewal_info Certificate#use_renewal_info}. |
 
 ---
 
@@ -1644,7 +1792,7 @@ public string AccountKeyPem { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#account_key_pem Certificate#account_key_pem}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#account_key_pem Certificate#account_key_pem}.
 
 ---
 
@@ -1656,7 +1804,7 @@ public string CertificateP12Password { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#certificate_p12_password Certificate#certificate_p12_password}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#certificate_p12_password Certificate#certificate_p12_password}.
 
 ---
 
@@ -1668,7 +1816,7 @@ public string CertificateRequestPem { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#certificate_request_pem Certificate#certificate_request_pem}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#certificate_request_pem Certificate#certificate_request_pem}.
 
 ---
 
@@ -1680,7 +1828,7 @@ public double CertTimeout { get; set; }
 
 - *Type:* double
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#cert_timeout Certificate#cert_timeout}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#cert_timeout Certificate#cert_timeout}.
 
 ---
 
@@ -1692,7 +1840,7 @@ public string CommonName { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#common_name Certificate#common_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#common_name Certificate#common_name}.
 
 ---
 
@@ -1704,7 +1852,7 @@ public object DisableCompletePropagation { get; set; }
 
 - *Type:* object
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#disable_complete_propagation Certificate#disable_complete_propagation}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#disable_complete_propagation Certificate#disable_complete_propagation}.
 
 ---
 
@@ -1718,7 +1866,7 @@ public object DnsChallenge { get; set; }
 
 dns_challenge block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#dns_challenge Certificate#dns_challenge}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#dns_challenge Certificate#dns_challenge}
 
 ---
 
@@ -1732,7 +1880,7 @@ public CertificateHttpChallenge HttpChallenge { get; set; }
 
 http_challenge block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#http_challenge Certificate#http_challenge}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#http_challenge Certificate#http_challenge}
 
 ---
 
@@ -1746,7 +1894,7 @@ public CertificateHttpMemcachedChallenge HttpMemcachedChallenge { get; set; }
 
 http_memcached_challenge block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#http_memcached_challenge Certificate#http_memcached_challenge}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#http_memcached_challenge Certificate#http_memcached_challenge}
 
 ---
 
@@ -1760,7 +1908,7 @@ public CertificateHttpS3Challenge HttpS3Challenge { get; set; }
 
 http_s3_challenge block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#http_s3_challenge Certificate#http_s3_challenge}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#http_s3_challenge Certificate#http_s3_challenge}
 
 ---
 
@@ -1774,7 +1922,7 @@ public CertificateHttpWebrootChallenge HttpWebrootChallenge { get; set; }
 
 http_webroot_challenge block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#http_webroot_challenge Certificate#http_webroot_challenge}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#http_webroot_challenge Certificate#http_webroot_challenge}
 
 ---
 
@@ -1786,7 +1934,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#id Certificate#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#id Certificate#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1801,7 +1949,7 @@ public string KeyType { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#key_type Certificate#key_type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#key_type Certificate#key_type}.
 
 ---
 
@@ -1813,7 +1961,7 @@ public double MinDaysRemaining { get; set; }
 
 - *Type:* double
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#min_days_remaining Certificate#min_days_remaining}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#min_days_remaining Certificate#min_days_remaining}.
 
 ---
 
@@ -1825,7 +1973,7 @@ public object MustStaple { get; set; }
 
 - *Type:* object
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#must_staple Certificate#must_staple}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#must_staple Certificate#must_staple}.
 
 ---
 
@@ -1837,7 +1985,7 @@ public double PreCheckDelay { get; set; }
 
 - *Type:* double
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#pre_check_delay Certificate#pre_check_delay}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#pre_check_delay Certificate#pre_check_delay}.
 
 ---
 
@@ -1849,7 +1997,7 @@ public string PreferredChain { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#preferred_chain Certificate#preferred_chain}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#preferred_chain Certificate#preferred_chain}.
 
 ---
 
@@ -1861,7 +2009,7 @@ public string Profile { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#profile Certificate#profile}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#profile Certificate#profile}.
 
 ---
 
@@ -1873,7 +2021,31 @@ public string[] RecursiveNameservers { get; set; }
 
 - *Type:* string[]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#recursive_nameservers Certificate#recursive_nameservers}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#recursive_nameservers Certificate#recursive_nameservers}.
+
+---
+
+##### `RenewalInfoIgnoreRetryAfter`<sup>Optional</sup> <a name="RenewalInfoIgnoreRetryAfter" id="@cdktf/provider-acme.certificate.CertificateConfig.property.renewalInfoIgnoreRetryAfter"></a>
+
+```csharp
+public object RenewalInfoIgnoreRetryAfter { get; set; }
+```
+
+- *Type:* object
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#renewal_info_ignore_retry_after Certificate#renewal_info_ignore_retry_after}.
+
+---
+
+##### `RenewalInfoMaxSleep`<sup>Optional</sup> <a name="RenewalInfoMaxSleep" id="@cdktf/provider-acme.certificate.CertificateConfig.property.renewalInfoMaxSleep"></a>
+
+```csharp
+public double RenewalInfoMaxSleep { get; set; }
+```
+
+- *Type:* double
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#renewal_info_max_sleep Certificate#renewal_info_max_sleep}.
 
 ---
 
@@ -1885,7 +2057,7 @@ public object RevokeCertificateOnDestroy { get; set; }
 
 - *Type:* object
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#revoke_certificate_on_destroy Certificate#revoke_certificate_on_destroy}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#revoke_certificate_on_destroy Certificate#revoke_certificate_on_destroy}.
 
 ---
 
@@ -1897,7 +2069,7 @@ public string RevokeCertificateReason { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#revoke_certificate_reason Certificate#revoke_certificate_reason}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#revoke_certificate_reason Certificate#revoke_certificate_reason}.
 
 ---
 
@@ -1909,7 +2081,7 @@ public string[] SubjectAlternativeNames { get; set; }
 
 - *Type:* string[]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#subject_alternative_names Certificate#subject_alternative_names}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#subject_alternative_names Certificate#subject_alternative_names}.
 
 ---
 
@@ -1923,7 +2095,19 @@ public CertificateTlsChallenge TlsChallenge { get; set; }
 
 tls_challenge block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#tls_challenge Certificate#tls_challenge}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#tls_challenge Certificate#tls_challenge}
+
+---
+
+##### `UseRenewalInfo`<sup>Optional</sup> <a name="UseRenewalInfo" id="@cdktf/provider-acme.certificate.CertificateConfig.property.useRenewalInfo"></a>
+
+```csharp
+public object UseRenewalInfo { get; set; }
+```
+
+- *Type:* object
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#use_renewal_info Certificate#use_renewal_info}.
 
 ---
 
@@ -1944,8 +2128,8 @@ new CertificateDnsChallenge {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateDnsChallenge.property.provider">Provider</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#provider Certificate#provider}. |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateDnsChallenge.property.config">Config</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#config Certificate#config}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateDnsChallenge.property.provider">Provider</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#provider Certificate#provider}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateDnsChallenge.property.config">Config</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#config Certificate#config}. |
 
 ---
 
@@ -1957,7 +2141,7 @@ public string Provider { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#provider Certificate#provider}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#provider Certificate#provider}.
 
 ---
 
@@ -1969,7 +2153,7 @@ public System.Collections.Generic.IDictionary<string, string> Config { get; set;
 
 - *Type:* System.Collections.Generic.IDictionary<string, string>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#config Certificate#config}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#config Certificate#config}.
 
 ---
 
@@ -1990,8 +2174,8 @@ new CertificateHttpChallenge {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpChallenge.property.port">Port</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#port Certificate#port}. |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpChallenge.property.proxyHeader">ProxyHeader</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#proxy_header Certificate#proxy_header}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpChallenge.property.port">Port</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#port Certificate#port}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpChallenge.property.proxyHeader">ProxyHeader</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#proxy_header Certificate#proxy_header}. |
 
 ---
 
@@ -2003,7 +2187,7 @@ public double Port { get; set; }
 
 - *Type:* double
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#port Certificate#port}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#port Certificate#port}.
 
 ---
 
@@ -2015,7 +2199,7 @@ public string ProxyHeader { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#proxy_header Certificate#proxy_header}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#proxy_header Certificate#proxy_header}.
 
 ---
 
@@ -2035,7 +2219,7 @@ new CertificateHttpMemcachedChallenge {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpMemcachedChallenge.property.hosts">Hosts</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#hosts Certificate#hosts}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpMemcachedChallenge.property.hosts">Hosts</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#hosts Certificate#hosts}. |
 
 ---
 
@@ -2047,7 +2231,7 @@ public string[] Hosts { get; set; }
 
 - *Type:* string[]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#hosts Certificate#hosts}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#hosts Certificate#hosts}.
 
 ---
 
@@ -2067,7 +2251,7 @@ new CertificateHttpS3Challenge {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpS3Challenge.property.s3Bucket">S3Bucket</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#s3_bucket Certificate#s3_bucket}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpS3Challenge.property.s3Bucket">S3Bucket</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#s3_bucket Certificate#s3_bucket}. |
 
 ---
 
@@ -2079,7 +2263,7 @@ public string S3Bucket { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#s3_bucket Certificate#s3_bucket}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#s3_bucket Certificate#s3_bucket}.
 
 ---
 
@@ -2099,7 +2283,7 @@ new CertificateHttpWebrootChallenge {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpWebrootChallenge.property.directory">Directory</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#directory Certificate#directory}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpWebrootChallenge.property.directory">Directory</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#directory Certificate#directory}. |
 
 ---
 
@@ -2111,7 +2295,7 @@ public string Directory { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#directory Certificate#directory}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#directory Certificate#directory}.
 
 ---
 
@@ -2131,7 +2315,7 @@ new CertificateTlsChallenge {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateTlsChallenge.property.port">Port</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#port Certificate#port}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateTlsChallenge.property.port">Port</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#port Certificate#port}. |
 
 ---
 
@@ -2143,7 +2327,7 @@ public double Port { get; set; }
 
 - *Type:* double
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate#port Certificate#port}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate#port Certificate#port}.
 
 ---
 
