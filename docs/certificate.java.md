@@ -12,26 +12,20 @@ Represents a {@link https://registry.terraform.io/providers/vancluever/acme/2.36
 import com.hashicorp.cdktf.providers.acme.certificate.Certificate;
 
 Certificate.Builder.create(Construct scope, java.lang.String id)
-//  .connection(SSHProvisionerConnection)
-//  .connection(WinrmProvisionerConnection)
-//  .count(java.lang.Number)
-//  .count(TerraformCount)
+//  .connection(SSHProvisionerConnection|WinrmProvisionerConnection)
+//  .count(java.lang.Number|TerraformCount)
 //  .dependsOn(java.util.List<ITerraformDependable>)
 //  .forEach(ITerraformIterator)
 //  .lifecycle(TerraformResourceLifecycle)
 //  .provider(TerraformProvider)
-//  .provisioners(java.util.List<FileProvisioner)
-//  .provisioners(LocalExecProvisioner)
-//  .provisioners(RemoteExecProvisioner>)
+//  .provisioners(java.util.List<FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner>)
     .accountKeyPem(java.lang.String)
 //  .certificateP12Password(java.lang.String)
 //  .certificateRequestPem(java.lang.String)
 //  .certTimeout(java.lang.Number)
 //  .commonName(java.lang.String)
-//  .disableCompletePropagation(java.lang.Boolean)
-//  .disableCompletePropagation(IResolvable)
-//  .dnsChallenge(IResolvable)
-//  .dnsChallenge(java.util.List<CertificateDnsChallenge>)
+//  .disableCompletePropagation(java.lang.Boolean|IResolvable)
+//  .dnsChallenge(IResolvable|java.util.List<CertificateDnsChallenge>)
 //  .httpChallenge(CertificateHttpChallenge)
 //  .httpMemcachedChallenge(CertificateHttpMemcachedChallenge)
 //  .httpS3Challenge(CertificateHttpS3Challenge)
@@ -39,22 +33,18 @@ Certificate.Builder.create(Construct scope, java.lang.String id)
 //  .id(java.lang.String)
 //  .keyType(java.lang.String)
 //  .minDaysRemaining(java.lang.Number)
-//  .mustStaple(java.lang.Boolean)
-//  .mustStaple(IResolvable)
+//  .mustStaple(java.lang.Boolean|IResolvable)
 //  .preCheckDelay(java.lang.Number)
 //  .preferredChain(java.lang.String)
 //  .profile(java.lang.String)
 //  .recursiveNameservers(java.util.List<java.lang.String>)
-//  .renewalInfoIgnoreRetryAfter(java.lang.Boolean)
-//  .renewalInfoIgnoreRetryAfter(IResolvable)
+//  .renewalInfoIgnoreRetryAfter(java.lang.Boolean|IResolvable)
 //  .renewalInfoMaxSleep(java.lang.Number)
-//  .revokeCertificateOnDestroy(java.lang.Boolean)
-//  .revokeCertificateOnDestroy(IResolvable)
+//  .revokeCertificateOnDestroy(java.lang.Boolean|IResolvable)
 //  .revokeCertificateReason(java.lang.String)
 //  .subjectAlternativeNames(java.util.List<java.lang.String>)
 //  .tlsChallenge(CertificateTlsChallenge)
-//  .useRenewalInfo(java.lang.Boolean)
-//  .useRenewalInfo(IResolvable)
+//  .useRenewalInfo(java.lang.Boolean|IResolvable)
     .build();
 ```
 
@@ -62,20 +52,20 @@ Certificate.Builder.create(Construct scope, java.lang.String id)
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.scope">scope</a></code> | <code>software.constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | The scoped construct ID. |
-| <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection\|com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.count">count</a></code> | <code>java.lang.Number\|com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.dependsOn">dependsOn</a></code> | <code>java.util.List<com.hashicorp.cdktf.ITerraformDependable></code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner\|com.hashicorp.cdktf.LocalExecProvisioner\|com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.accountKeyPem">accountKeyPem</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#account_key_pem Certificate#account_key_pem}. |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.certificateP12Password">certificateP12Password</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#certificate_p12_password Certificate#certificate_p12_password}. |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.certificateRequestPem">certificateRequestPem</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#certificate_request_pem Certificate#certificate_request_pem}. |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.certTimeout">certTimeout</a></code> | <code>java.lang.Number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#cert_timeout Certificate#cert_timeout}. |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.commonName">commonName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#common_name Certificate#common_name}. |
-| <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.disableCompletePropagation">disableCompletePropagation</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#disable_complete_propagation Certificate#disable_complete_propagation}. |
-| <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.dnsChallenge">dnsChallenge</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-acme.certificate.CertificateDnsChallenge">CertificateDnsChallenge</a>></code> | dns_challenge block. |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.disableCompletePropagation">disableCompletePropagation</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#disable_complete_propagation Certificate#disable_complete_propagation}. |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.dnsChallenge">dnsChallenge</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-acme.certificate.CertificateDnsChallenge">CertificateDnsChallenge</a>></code> | dns_challenge block. |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.httpChallenge">httpChallenge</a></code> | <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpChallenge">CertificateHttpChallenge</a></code> | http_challenge block. |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.httpMemcachedChallenge">httpMemcachedChallenge</a></code> | <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpMemcachedChallenge">CertificateHttpMemcachedChallenge</a></code> | http_memcached_challenge block. |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.httpS3Challenge">httpS3Challenge</a></code> | <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpS3Challenge">CertificateHttpS3Challenge</a></code> | http_s3_challenge block. |
@@ -83,18 +73,18 @@ Certificate.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#id Certificate#id}. |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.keyType">keyType</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#key_type Certificate#key_type}. |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.minDaysRemaining">minDaysRemaining</a></code> | <code>java.lang.Number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#min_days_remaining Certificate#min_days_remaining}. |
-| <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.mustStaple">mustStaple</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#must_staple Certificate#must_staple}. |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.mustStaple">mustStaple</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#must_staple Certificate#must_staple}. |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.preCheckDelay">preCheckDelay</a></code> | <code>java.lang.Number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#pre_check_delay Certificate#pre_check_delay}. |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.preferredChain">preferredChain</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#preferred_chain Certificate#preferred_chain}. |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.profile">profile</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#profile Certificate#profile}. |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.recursiveNameservers">recursiveNameservers</a></code> | <code>java.util.List<java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#recursive_nameservers Certificate#recursive_nameservers}. |
-| <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.renewalInfoIgnoreRetryAfter">renewalInfoIgnoreRetryAfter</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#renewal_info_ignore_retry_after Certificate#renewal_info_ignore_retry_after}. |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.renewalInfoIgnoreRetryAfter">renewalInfoIgnoreRetryAfter</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#renewal_info_ignore_retry_after Certificate#renewal_info_ignore_retry_after}. |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.renewalInfoMaxSleep">renewalInfoMaxSleep</a></code> | <code>java.lang.Number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#renewal_info_max_sleep Certificate#renewal_info_max_sleep}. |
-| <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.revokeCertificateOnDestroy">revokeCertificateOnDestroy</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#revoke_certificate_on_destroy Certificate#revoke_certificate_on_destroy}. |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.revokeCertificateOnDestroy">revokeCertificateOnDestroy</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#revoke_certificate_on_destroy Certificate#revoke_certificate_on_destroy}. |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.revokeCertificateReason">revokeCertificateReason</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#revoke_certificate_reason Certificate#revoke_certificate_reason}. |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.subjectAlternativeNames">subjectAlternativeNames</a></code> | <code>java.util.List<java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#subject_alternative_names Certificate#subject_alternative_names}. |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.tlsChallenge">tlsChallenge</a></code> | <code><a href="#@cdktf/provider-acme.certificate.CertificateTlsChallenge">CertificateTlsChallenge</a></code> | tls_challenge block. |
-| <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.useRenewalInfo">useRenewalInfo</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#use_renewal_info Certificate#use_renewal_info}. |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.useRenewalInfo">useRenewalInfo</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#use_renewal_info Certificate#use_renewal_info}. |
 
 ---
 
@@ -118,13 +108,13 @@ Must be unique amongst siblings in the same scope
 
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.connection"></a>
 
-- *Type:* com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection
+- *Type:* com.hashicorp.cdktf.SSHProvisionerConnection|com.hashicorp.cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.count"></a>
 
-- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
+- *Type:* java.lang.Number|com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -154,7 +144,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.provisioners"></a>
 
-- *Type:* java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner>
+- *Type:* java.util.List<com.hashicorp.cdktf.FileProvisioner|com.hashicorp.cdktf.LocalExecProvisioner|com.hashicorp.cdktf.RemoteExecProvisioner>
 
 ---
 
@@ -200,7 +190,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancl
 
 ##### `disableCompletePropagation`<sup>Optional</sup> <a name="disableCompletePropagation" id="@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.disableCompletePropagation"></a>
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#disable_complete_propagation Certificate#disable_complete_propagation}.
 
@@ -208,7 +198,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancl
 
 ##### `dnsChallenge`<sup>Optional</sup> <a name="dnsChallenge" id="@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.dnsChallenge"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-acme.certificate.CertificateDnsChallenge">CertificateDnsChallenge</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-acme.certificate.CertificateDnsChallenge">CertificateDnsChallenge</a>>
 
 dns_challenge block.
 
@@ -285,7 +275,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancl
 
 ##### `mustStaple`<sup>Optional</sup> <a name="mustStaple" id="@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.mustStaple"></a>
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#must_staple Certificate#must_staple}.
 
@@ -325,7 +315,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancl
 
 ##### `renewalInfoIgnoreRetryAfter`<sup>Optional</sup> <a name="renewalInfoIgnoreRetryAfter" id="@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.renewalInfoIgnoreRetryAfter"></a>
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#renewal_info_ignore_retry_after Certificate#renewal_info_ignore_retry_after}.
 
@@ -341,7 +331,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancl
 
 ##### `revokeCertificateOnDestroy`<sup>Optional</sup> <a name="revokeCertificateOnDestroy" id="@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.revokeCertificateOnDestroy"></a>
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#revoke_certificate_on_destroy Certificate#revoke_certificate_on_destroy}.
 
@@ -375,7 +365,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancl
 
 ##### `useRenewalInfo`<sup>Optional</sup> <a name="useRenewalInfo" id="@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.useRenewalInfo"></a>
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#use_renewal_info Certificate#use_renewal_info}.
 
@@ -639,7 +629,7 @@ public java.util.Map<java.lang.String, java.lang.String> getStringMapAttribute(j
 ##### `hasResourceMove` <a name="hasResourceMove" id="@cdktf/provider-acme.certificate.Certificate.hasResourceMove"></a>
 
 ```java
-public TerraformResourceMoveByTarget OR TerraformResourceMoveById hasResourceMove()
+public TerraformResourceMoveByTarget|TerraformResourceMoveById hasResourceMove()
 ```
 
 ##### `importFrom` <a name="importFrom" id="@cdktf/provider-acme.certificate.Certificate.importFrom"></a>
@@ -695,7 +685,7 @@ Full id of resource being moved from, e.g. "aws_s3_bucket.example".
 
 ```java
 public void moveTo(java.lang.String moveTarget)
-public void moveTo(java.lang.String moveTarget, java.lang.String OR java.lang.Number index)
+public void moveTo(java.lang.String moveTarget, java.lang.String|java.lang.Number index)
 ```
 
 Moves this resource to the target resource given by moveTarget.
@@ -710,7 +700,7 @@ The previously set user defined string set by .addMoveTarget() corresponding to 
 
 ###### `index`<sup>Optional</sup> <a name="index" id="@cdktf/provider-acme.certificate.Certificate.moveTo.parameter.index"></a>
 
-- *Type:* java.lang.String OR java.lang.Number
+- *Type:* java.lang.String|java.lang.Number
 
 Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
@@ -735,12 +725,12 @@ Full id of resource to move to, e.g. "aws_s3_bucket.example".
 ##### `putDnsChallenge` <a name="putDnsChallenge" id="@cdktf/provider-acme.certificate.Certificate.putDnsChallenge"></a>
 
 ```java
-public void putDnsChallenge(IResolvable OR java.util.List<CertificateDnsChallenge> value)
+public void putDnsChallenge(IResolvable|java.util.List<CertificateDnsChallenge> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-acme.certificate.Certificate.putDnsChallenge.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-acme.certificate.CertificateDnsChallenge">CertificateDnsChallenge</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-acme.certificate.CertificateDnsChallenge">CertificateDnsChallenge</a>>
 
 ---
 
@@ -1080,13 +1070,13 @@ Refer to the {@link https://registry.terraform.io/providers/vancluever/acme/2.36
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.terraformMetaArguments">terraformMetaArguments</a></code> | <code>java.util.Map<java.lang.String, java.lang.Object></code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.terraformResourceType">terraformResourceType</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.terraformGeneratorMetadata">terraformGeneratorMetadata</a></code> | <code>com.hashicorp.cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection\|com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.count">count</a></code> | <code>java.lang.Number\|com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.dependsOn">dependsOn</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner\|com.hashicorp.cdktf.LocalExecProvisioner\|com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.certificateDomain">certificateDomain</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.certificateNotAfter">certificateNotAfter</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.certificateP12">certificateP12</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -1111,8 +1101,8 @@ Refer to the {@link https://registry.terraform.io/providers/vancluever/acme/2.36
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.certificateRequestPemInput">certificateRequestPemInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.certTimeoutInput">certTimeoutInput</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.commonNameInput">commonNameInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.disableCompletePropagationInput">disableCompletePropagationInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.dnsChallengeInput">dnsChallengeInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-acme.certificate.CertificateDnsChallenge">CertificateDnsChallenge</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.disableCompletePropagationInput">disableCompletePropagationInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.dnsChallengeInput">dnsChallengeInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-acme.certificate.CertificateDnsChallenge">CertificateDnsChallenge</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.httpChallengeInput">httpChallengeInput</a></code> | <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpChallenge">CertificateHttpChallenge</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.httpMemcachedChallengeInput">httpMemcachedChallengeInput</a></code> | <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpMemcachedChallenge">CertificateHttpMemcachedChallenge</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.httpS3ChallengeInput">httpS3ChallengeInput</a></code> | <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpS3Challenge">CertificateHttpS3Challenge</a></code> | *No description.* |
@@ -1120,38 +1110,38 @@ Refer to the {@link https://registry.terraform.io/providers/vancluever/acme/2.36
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.idInput">idInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.keyTypeInput">keyTypeInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.minDaysRemainingInput">minDaysRemainingInput</a></code> | <code>java.lang.Number</code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.mustStapleInput">mustStapleInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.mustStapleInput">mustStapleInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.preCheckDelayInput">preCheckDelayInput</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.preferredChainInput">preferredChainInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.profileInput">profileInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.recursiveNameserversInput">recursiveNameserversInput</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.renewalInfoIgnoreRetryAfterInput">renewalInfoIgnoreRetryAfterInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.renewalInfoIgnoreRetryAfterInput">renewalInfoIgnoreRetryAfterInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.renewalInfoMaxSleepInput">renewalInfoMaxSleepInput</a></code> | <code>java.lang.Number</code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.revokeCertificateOnDestroyInput">revokeCertificateOnDestroyInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.revokeCertificateOnDestroyInput">revokeCertificateOnDestroyInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.revokeCertificateReasonInput">revokeCertificateReasonInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.subjectAlternativeNamesInput">subjectAlternativeNamesInput</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.tlsChallengeInput">tlsChallengeInput</a></code> | <code><a href="#@cdktf/provider-acme.certificate.CertificateTlsChallenge">CertificateTlsChallenge</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.useRenewalInfoInput">useRenewalInfoInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.useRenewalInfoInput">useRenewalInfoInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.accountKeyPem">accountKeyPem</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.certificateP12Password">certificateP12Password</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.certificateRequestPem">certificateRequestPem</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.certTimeout">certTimeout</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.commonName">commonName</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.disableCompletePropagation">disableCompletePropagation</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.disableCompletePropagation">disableCompletePropagation</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.id">id</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.keyType">keyType</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.minDaysRemaining">minDaysRemaining</a></code> | <code>java.lang.Number</code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.mustStaple">mustStaple</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.mustStaple">mustStaple</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.preCheckDelay">preCheckDelay</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.preferredChain">preferredChain</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.profile">profile</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.recursiveNameservers">recursiveNameservers</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.renewalInfoIgnoreRetryAfter">renewalInfoIgnoreRetryAfter</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.renewalInfoIgnoreRetryAfter">renewalInfoIgnoreRetryAfter</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.renewalInfoMaxSleep">renewalInfoMaxSleep</a></code> | <code>java.lang.Number</code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.revokeCertificateOnDestroy">revokeCertificateOnDestroy</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.revokeCertificateOnDestroy">revokeCertificateOnDestroy</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.revokeCertificateReason">revokeCertificateReason</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.subjectAlternativeNames">subjectAlternativeNames</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.useRenewalInfo">useRenewalInfo</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.useRenewalInfo">useRenewalInfo</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 
 ---
 
@@ -1230,20 +1220,20 @@ public TerraformProviderGeneratorMetadata getTerraformGeneratorMetadata();
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-acme.certificate.Certificate.property.connection"></a>
 
 ```java
-public java.lang.Object getConnection();
+public SSHProvisionerConnection|WinrmProvisionerConnection getConnection();
 ```
 
-- *Type:* com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection
+- *Type:* com.hashicorp.cdktf.SSHProvisionerConnection|com.hashicorp.cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-acme.certificate.Certificate.property.count"></a>
 
 ```java
-public java.lang.Object getCount();
+public java.lang.Number|TerraformCount getCount();
 ```
 
-- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
+- *Type:* java.lang.Number|com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -1290,10 +1280,10 @@ public TerraformProvider getProvider();
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-acme.certificate.Certificate.property.provisioners"></a>
 
 ```java
-public java.lang.Object getProvisioners();
+public java.util.List<FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner> getProvisioners();
 ```
 
-- *Type:* java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner>
+- *Type:* java.util.List<com.hashicorp.cdktf.FileProvisioner|com.hashicorp.cdktf.LocalExecProvisioner|com.hashicorp.cdktf.RemoteExecProvisioner>
 
 ---
 
@@ -1540,20 +1530,20 @@ public java.lang.String getCommonNameInput();
 ##### `disableCompletePropagationInput`<sup>Optional</sup> <a name="disableCompletePropagationInput" id="@cdktf/provider-acme.certificate.Certificate.property.disableCompletePropagationInput"></a>
 
 ```java
-public java.lang.Object getDisableCompletePropagationInput();
+public java.lang.Boolean|IResolvable getDisableCompletePropagationInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `dnsChallengeInput`<sup>Optional</sup> <a name="dnsChallengeInput" id="@cdktf/provider-acme.certificate.Certificate.property.dnsChallengeInput"></a>
 
 ```java
-public java.lang.Object getDnsChallengeInput();
+public IResolvable|java.util.List<CertificateDnsChallenge> getDnsChallengeInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-acme.certificate.CertificateDnsChallenge">CertificateDnsChallenge</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-acme.certificate.CertificateDnsChallenge">CertificateDnsChallenge</a>>
 
 ---
 
@@ -1630,10 +1620,10 @@ public java.lang.Number getMinDaysRemainingInput();
 ##### `mustStapleInput`<sup>Optional</sup> <a name="mustStapleInput" id="@cdktf/provider-acme.certificate.Certificate.property.mustStapleInput"></a>
 
 ```java
-public java.lang.Object getMustStapleInput();
+public java.lang.Boolean|IResolvable getMustStapleInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -1680,10 +1670,10 @@ public java.util.List<java.lang.String> getRecursiveNameserversInput();
 ##### `renewalInfoIgnoreRetryAfterInput`<sup>Optional</sup> <a name="renewalInfoIgnoreRetryAfterInput" id="@cdktf/provider-acme.certificate.Certificate.property.renewalInfoIgnoreRetryAfterInput"></a>
 
 ```java
-public java.lang.Object getRenewalInfoIgnoreRetryAfterInput();
+public java.lang.Boolean|IResolvable getRenewalInfoIgnoreRetryAfterInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -1700,10 +1690,10 @@ public java.lang.Number getRenewalInfoMaxSleepInput();
 ##### `revokeCertificateOnDestroyInput`<sup>Optional</sup> <a name="revokeCertificateOnDestroyInput" id="@cdktf/provider-acme.certificate.Certificate.property.revokeCertificateOnDestroyInput"></a>
 
 ```java
-public java.lang.Object getRevokeCertificateOnDestroyInput();
+public java.lang.Boolean|IResolvable getRevokeCertificateOnDestroyInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -1740,10 +1730,10 @@ public CertificateTlsChallenge getTlsChallengeInput();
 ##### `useRenewalInfoInput`<sup>Optional</sup> <a name="useRenewalInfoInput" id="@cdktf/provider-acme.certificate.Certificate.property.useRenewalInfoInput"></a>
 
 ```java
-public java.lang.Object getUseRenewalInfoInput();
+public java.lang.Boolean|IResolvable getUseRenewalInfoInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -1800,10 +1790,10 @@ public java.lang.String getCommonName();
 ##### `disableCompletePropagation`<sup>Required</sup> <a name="disableCompletePropagation" id="@cdktf/provider-acme.certificate.Certificate.property.disableCompletePropagation"></a>
 
 ```java
-public java.lang.Object getDisableCompletePropagation();
+public java.lang.Boolean|IResolvable getDisableCompletePropagation();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -1840,10 +1830,10 @@ public java.lang.Number getMinDaysRemaining();
 ##### `mustStaple`<sup>Required</sup> <a name="mustStaple" id="@cdktf/provider-acme.certificate.Certificate.property.mustStaple"></a>
 
 ```java
-public java.lang.Object getMustStaple();
+public java.lang.Boolean|IResolvable getMustStaple();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -1890,10 +1880,10 @@ public java.util.List<java.lang.String> getRecursiveNameservers();
 ##### `renewalInfoIgnoreRetryAfter`<sup>Required</sup> <a name="renewalInfoIgnoreRetryAfter" id="@cdktf/provider-acme.certificate.Certificate.property.renewalInfoIgnoreRetryAfter"></a>
 
 ```java
-public java.lang.Object getRenewalInfoIgnoreRetryAfter();
+public java.lang.Boolean|IResolvable getRenewalInfoIgnoreRetryAfter();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -1910,10 +1900,10 @@ public java.lang.Number getRenewalInfoMaxSleep();
 ##### `revokeCertificateOnDestroy`<sup>Required</sup> <a name="revokeCertificateOnDestroy" id="@cdktf/provider-acme.certificate.Certificate.property.revokeCertificateOnDestroy"></a>
 
 ```java
-public java.lang.Object getRevokeCertificateOnDestroy();
+public java.lang.Boolean|IResolvable getRevokeCertificateOnDestroy();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -1940,10 +1930,10 @@ public java.util.List<java.lang.String> getSubjectAlternativeNames();
 ##### `useRenewalInfo`<sup>Required</sup> <a name="useRenewalInfo" id="@cdktf/provider-acme.certificate.Certificate.property.useRenewalInfo"></a>
 
 ```java
-public java.lang.Object getUseRenewalInfo();
+public java.lang.Boolean|IResolvable getUseRenewalInfo();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -1975,26 +1965,20 @@ public java.lang.String getTfResourceType();
 import com.hashicorp.cdktf.providers.acme.certificate.CertificateConfig;
 
 CertificateConfig.builder()
-//  .connection(SSHProvisionerConnection)
-//  .connection(WinrmProvisionerConnection)
-//  .count(java.lang.Number)
-//  .count(TerraformCount)
+//  .connection(SSHProvisionerConnection|WinrmProvisionerConnection)
+//  .count(java.lang.Number|TerraformCount)
 //  .dependsOn(java.util.List<ITerraformDependable>)
 //  .forEach(ITerraformIterator)
 //  .lifecycle(TerraformResourceLifecycle)
 //  .provider(TerraformProvider)
-//  .provisioners(java.util.List<FileProvisioner)
-//  .provisioners(LocalExecProvisioner)
-//  .provisioners(RemoteExecProvisioner>)
+//  .provisioners(java.util.List<FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner>)
     .accountKeyPem(java.lang.String)
 //  .certificateP12Password(java.lang.String)
 //  .certificateRequestPem(java.lang.String)
 //  .certTimeout(java.lang.Number)
 //  .commonName(java.lang.String)
-//  .disableCompletePropagation(java.lang.Boolean)
-//  .disableCompletePropagation(IResolvable)
-//  .dnsChallenge(IResolvable)
-//  .dnsChallenge(java.util.List<CertificateDnsChallenge>)
+//  .disableCompletePropagation(java.lang.Boolean|IResolvable)
+//  .dnsChallenge(IResolvable|java.util.List<CertificateDnsChallenge>)
 //  .httpChallenge(CertificateHttpChallenge)
 //  .httpMemcachedChallenge(CertificateHttpMemcachedChallenge)
 //  .httpS3Challenge(CertificateHttpS3Challenge)
@@ -2002,22 +1986,18 @@ CertificateConfig.builder()
 //  .id(java.lang.String)
 //  .keyType(java.lang.String)
 //  .minDaysRemaining(java.lang.Number)
-//  .mustStaple(java.lang.Boolean)
-//  .mustStaple(IResolvable)
+//  .mustStaple(java.lang.Boolean|IResolvable)
 //  .preCheckDelay(java.lang.Number)
 //  .preferredChain(java.lang.String)
 //  .profile(java.lang.String)
 //  .recursiveNameservers(java.util.List<java.lang.String>)
-//  .renewalInfoIgnoreRetryAfter(java.lang.Boolean)
-//  .renewalInfoIgnoreRetryAfter(IResolvable)
+//  .renewalInfoIgnoreRetryAfter(java.lang.Boolean|IResolvable)
 //  .renewalInfoMaxSleep(java.lang.Number)
-//  .revokeCertificateOnDestroy(java.lang.Boolean)
-//  .revokeCertificateOnDestroy(IResolvable)
+//  .revokeCertificateOnDestroy(java.lang.Boolean|IResolvable)
 //  .revokeCertificateReason(java.lang.String)
 //  .subjectAlternativeNames(java.util.List<java.lang.String>)
 //  .tlsChallenge(CertificateTlsChallenge)
-//  .useRenewalInfo(java.lang.Boolean)
-//  .useRenewalInfo(IResolvable)
+//  .useRenewalInfo(java.lang.Boolean|IResolvable)
     .build();
 ```
 
@@ -2025,20 +2005,20 @@ CertificateConfig.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection\|com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.count">count</a></code> | <code>java.lang.Number\|com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.dependsOn">dependsOn</a></code> | <code>java.util.List<com.hashicorp.cdktf.ITerraformDependable></code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner\|com.hashicorp.cdktf.LocalExecProvisioner\|com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.accountKeyPem">accountKeyPem</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#account_key_pem Certificate#account_key_pem}. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.certificateP12Password">certificateP12Password</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#certificate_p12_password Certificate#certificate_p12_password}. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.certificateRequestPem">certificateRequestPem</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#certificate_request_pem Certificate#certificate_request_pem}. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.certTimeout">certTimeout</a></code> | <code>java.lang.Number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#cert_timeout Certificate#cert_timeout}. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.commonName">commonName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#common_name Certificate#common_name}. |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.disableCompletePropagation">disableCompletePropagation</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#disable_complete_propagation Certificate#disable_complete_propagation}. |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.dnsChallenge">dnsChallenge</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-acme.certificate.CertificateDnsChallenge">CertificateDnsChallenge</a>></code> | dns_challenge block. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.disableCompletePropagation">disableCompletePropagation</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#disable_complete_propagation Certificate#disable_complete_propagation}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.dnsChallenge">dnsChallenge</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-acme.certificate.CertificateDnsChallenge">CertificateDnsChallenge</a>></code> | dns_challenge block. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.httpChallenge">httpChallenge</a></code> | <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpChallenge">CertificateHttpChallenge</a></code> | http_challenge block. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.httpMemcachedChallenge">httpMemcachedChallenge</a></code> | <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpMemcachedChallenge">CertificateHttpMemcachedChallenge</a></code> | http_memcached_challenge block. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.httpS3Challenge">httpS3Challenge</a></code> | <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpS3Challenge">CertificateHttpS3Challenge</a></code> | http_s3_challenge block. |
@@ -2046,38 +2026,38 @@ CertificateConfig.builder()
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#id Certificate#id}. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.keyType">keyType</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#key_type Certificate#key_type}. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.minDaysRemaining">minDaysRemaining</a></code> | <code>java.lang.Number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#min_days_remaining Certificate#min_days_remaining}. |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.mustStaple">mustStaple</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#must_staple Certificate#must_staple}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.mustStaple">mustStaple</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#must_staple Certificate#must_staple}. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.preCheckDelay">preCheckDelay</a></code> | <code>java.lang.Number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#pre_check_delay Certificate#pre_check_delay}. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.preferredChain">preferredChain</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#preferred_chain Certificate#preferred_chain}. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.profile">profile</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#profile Certificate#profile}. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.recursiveNameservers">recursiveNameservers</a></code> | <code>java.util.List<java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#recursive_nameservers Certificate#recursive_nameservers}. |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.renewalInfoIgnoreRetryAfter">renewalInfoIgnoreRetryAfter</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#renewal_info_ignore_retry_after Certificate#renewal_info_ignore_retry_after}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.renewalInfoIgnoreRetryAfter">renewalInfoIgnoreRetryAfter</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#renewal_info_ignore_retry_after Certificate#renewal_info_ignore_retry_after}. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.renewalInfoMaxSleep">renewalInfoMaxSleep</a></code> | <code>java.lang.Number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#renewal_info_max_sleep Certificate#renewal_info_max_sleep}. |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.revokeCertificateOnDestroy">revokeCertificateOnDestroy</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#revoke_certificate_on_destroy Certificate#revoke_certificate_on_destroy}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.revokeCertificateOnDestroy">revokeCertificateOnDestroy</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#revoke_certificate_on_destroy Certificate#revoke_certificate_on_destroy}. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.revokeCertificateReason">revokeCertificateReason</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#revoke_certificate_reason Certificate#revoke_certificate_reason}. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.subjectAlternativeNames">subjectAlternativeNames</a></code> | <code>java.util.List<java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#subject_alternative_names Certificate#subject_alternative_names}. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.tlsChallenge">tlsChallenge</a></code> | <code><a href="#@cdktf/provider-acme.certificate.CertificateTlsChallenge">CertificateTlsChallenge</a></code> | tls_challenge block. |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.useRenewalInfo">useRenewalInfo</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#use_renewal_info Certificate#use_renewal_info}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.useRenewalInfo">useRenewalInfo</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#use_renewal_info Certificate#use_renewal_info}. |
 
 ---
 
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-acme.certificate.CertificateConfig.property.connection"></a>
 
 ```java
-public java.lang.Object getConnection();
+public SSHProvisionerConnection|WinrmProvisionerConnection getConnection();
 ```
 
-- *Type:* com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection
+- *Type:* com.hashicorp.cdktf.SSHProvisionerConnection|com.hashicorp.cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-acme.certificate.CertificateConfig.property.count"></a>
 
 ```java
-public java.lang.Object getCount();
+public java.lang.Number|TerraformCount getCount();
 ```
 
-- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
+- *Type:* java.lang.Number|com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -2124,10 +2104,10 @@ public TerraformProvider getProvider();
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-acme.certificate.CertificateConfig.property.provisioners"></a>
 
 ```java
-public java.lang.Object getProvisioners();
+public java.util.List<FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner> getProvisioners();
 ```
 
-- *Type:* java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner>
+- *Type:* java.util.List<com.hashicorp.cdktf.FileProvisioner|com.hashicorp.cdktf.LocalExecProvisioner|com.hashicorp.cdktf.RemoteExecProvisioner>
 
 ---
 
@@ -2194,10 +2174,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancl
 ##### `disableCompletePropagation`<sup>Optional</sup> <a name="disableCompletePropagation" id="@cdktf/provider-acme.certificate.CertificateConfig.property.disableCompletePropagation"></a>
 
 ```java
-public java.lang.Object getDisableCompletePropagation();
+public java.lang.Boolean|IResolvable getDisableCompletePropagation();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#disable_complete_propagation Certificate#disable_complete_propagation}.
 
@@ -2206,10 +2186,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancl
 ##### `dnsChallenge`<sup>Optional</sup> <a name="dnsChallenge" id="@cdktf/provider-acme.certificate.CertificateConfig.property.dnsChallenge"></a>
 
 ```java
-public java.lang.Object getDnsChallenge();
+public IResolvable|java.util.List<CertificateDnsChallenge> getDnsChallenge();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-acme.certificate.CertificateDnsChallenge">CertificateDnsChallenge</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-acme.certificate.CertificateDnsChallenge">CertificateDnsChallenge</a>>
 
 dns_challenge block.
 
@@ -2315,10 +2295,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancl
 ##### `mustStaple`<sup>Optional</sup> <a name="mustStaple" id="@cdktf/provider-acme.certificate.CertificateConfig.property.mustStaple"></a>
 
 ```java
-public java.lang.Object getMustStaple();
+public java.lang.Boolean|IResolvable getMustStaple();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#must_staple Certificate#must_staple}.
 
@@ -2375,10 +2355,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancl
 ##### `renewalInfoIgnoreRetryAfter`<sup>Optional</sup> <a name="renewalInfoIgnoreRetryAfter" id="@cdktf/provider-acme.certificate.CertificateConfig.property.renewalInfoIgnoreRetryAfter"></a>
 
 ```java
-public java.lang.Object getRenewalInfoIgnoreRetryAfter();
+public java.lang.Boolean|IResolvable getRenewalInfoIgnoreRetryAfter();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#renewal_info_ignore_retry_after Certificate#renewal_info_ignore_retry_after}.
 
@@ -2399,10 +2379,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancl
 ##### `revokeCertificateOnDestroy`<sup>Optional</sup> <a name="revokeCertificateOnDestroy" id="@cdktf/provider-acme.certificate.CertificateConfig.property.revokeCertificateOnDestroy"></a>
 
 ```java
-public java.lang.Object getRevokeCertificateOnDestroy();
+public java.lang.Boolean|IResolvable getRevokeCertificateOnDestroy();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#revoke_certificate_on_destroy Certificate#revoke_certificate_on_destroy}.
 
@@ -2449,10 +2429,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancl
 ##### `useRenewalInfo`<sup>Optional</sup> <a name="useRenewalInfo" id="@cdktf/provider-acme.certificate.CertificateConfig.property.useRenewalInfo"></a>
 
 ```java
-public java.lang.Object getUseRenewalInfo();
+public java.lang.Boolean|IResolvable getUseRenewalInfo();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#use_renewal_info Certificate#use_renewal_info}.
 
@@ -2801,7 +2781,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateDnsChallengeList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateDnsChallengeList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateDnsChallengeList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-acme.certificate.CertificateDnsChallenge">CertificateDnsChallenge</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateDnsChallengeList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-acme.certificate.CertificateDnsChallenge">CertificateDnsChallenge</a>></code> | *No description.* |
 
 ---
 
@@ -2832,10 +2812,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-acme.certificate.CertificateDnsChallengeList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<CertificateDnsChallenge> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-acme.certificate.CertificateDnsChallenge">CertificateDnsChallenge</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-acme.certificate.CertificateDnsChallenge">CertificateDnsChallenge</a>>
 
 ---
 
@@ -3079,7 +3059,7 @@ public void resetConfig()
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateDnsChallengeOutputReference.property.providerInput">providerInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateDnsChallengeOutputReference.property.config">config</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateDnsChallengeOutputReference.property.provider">provider</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateDnsChallengeOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-acme.certificate.CertificateDnsChallenge">CertificateDnsChallenge</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateDnsChallengeOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-acme.certificate.CertificateDnsChallenge">CertificateDnsChallenge</a></code> | *No description.* |
 
 ---
 
@@ -3150,10 +3130,10 @@ public java.lang.String getProvider();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-acme.certificate.CertificateDnsChallengeOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|CertificateDnsChallenge getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-acme.certificate.CertificateDnsChallenge">CertificateDnsChallenge</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-acme.certificate.CertificateDnsChallenge">CertificateDnsChallenge</a>
 
 ---
 
