@@ -304,7 +304,7 @@ private System.Collections.Generic.IDictionary<string, string> GetStringMapAttri
 ##### `HasResourceMove` <a name="HasResourceMove" id="@cdktf/provider-acme.certificate.Certificate.hasResourceMove"></a>
 
 ```csharp
-private object HasResourceMove()
+private TerraformResourceMoveByTarget|TerraformResourceMoveById HasResourceMove()
 ```
 
 ##### `ImportFrom` <a name="ImportFrom" id="@cdktf/provider-acme.certificate.Certificate.importFrom"></a>
@@ -358,7 +358,7 @@ Full id of resource being moved from, e.g. "aws_s3_bucket.example".
 ##### `MoveTo` <a name="MoveTo" id="@cdktf/provider-acme.certificate.Certificate.moveTo"></a>
 
 ```csharp
-private void MoveTo(string MoveTarget, object Index = null)
+private void MoveTo(string MoveTarget, string|double Index = null)
 ```
 
 Moves this resource to the target resource given by moveTarget.
@@ -373,7 +373,7 @@ The previously set user defined string set by .addMoveTarget() corresponding to 
 
 ###### `Index`<sup>Optional</sup> <a name="Index" id="@cdktf/provider-acme.certificate.Certificate.moveTo.parameter.index"></a>
 
-- *Type:* object
+- *Type:* string|double
 
 Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
@@ -398,12 +398,12 @@ Full id of resource to move to, e.g. "aws_s3_bucket.example".
 ##### `PutDnsChallenge` <a name="PutDnsChallenge" id="@cdktf/provider-acme.certificate.Certificate.putDnsChallenge"></a>
 
 ```csharp
-private void PutDnsChallenge(object Value)
+private void PutDnsChallenge(IResolvable|CertificateDnsChallenge[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-acme.certificate.Certificate.putDnsChallenge.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-acme.certificate.CertificateDnsChallenge">CertificateDnsChallenge</a>[]
 
 ---
 
@@ -743,13 +743,13 @@ Refer to the {@link https://registry.terraform.io/providers/vancluever/acme/2.36
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.terraformMetaArguments">TerraformMetaArguments</a></code> | <code>System.Collections.Generic.IDictionary<string, object></code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.terraformResourceType">TerraformResourceType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>HashiCorp.Cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.count">Count</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.connection">Connection</a></code> | <code>HashiCorp.Cdktf.SSHProvisionerConnection\|HashiCorp.Cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.count">Count</a></code> | <code>double\|HashiCorp.Cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.dependsOn">DependsOn</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.provisioners">Provisioners</a></code> | <code>HashiCorp.Cdktf.FileProvisioner\|HashiCorp.Cdktf.LocalExecProvisioner\|HashiCorp.Cdktf.RemoteExecProvisioner[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.certificateDomain">CertificateDomain</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.certificateNotAfter">CertificateNotAfter</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.certificateP12">CertificateP12</a></code> | <code>string</code> | *No description.* |
@@ -774,8 +774,8 @@ Refer to the {@link https://registry.terraform.io/providers/vancluever/acme/2.36
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.certificateRequestPemInput">CertificateRequestPemInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.certTimeoutInput">CertTimeoutInput</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.commonNameInput">CommonNameInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.disableCompletePropagationInput">DisableCompletePropagationInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.dnsChallengeInput">DnsChallengeInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.disableCompletePropagationInput">DisableCompletePropagationInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.dnsChallengeInput">DnsChallengeInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-acme.certificate.CertificateDnsChallenge">CertificateDnsChallenge</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.httpChallengeInput">HttpChallengeInput</a></code> | <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpChallenge">CertificateHttpChallenge</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.httpMemcachedChallengeInput">HttpMemcachedChallengeInput</a></code> | <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpMemcachedChallenge">CertificateHttpMemcachedChallenge</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.httpS3ChallengeInput">HttpS3ChallengeInput</a></code> | <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpS3Challenge">CertificateHttpS3Challenge</a></code> | *No description.* |
@@ -783,38 +783,38 @@ Refer to the {@link https://registry.terraform.io/providers/vancluever/acme/2.36
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.idInput">IdInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.keyTypeInput">KeyTypeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.minDaysRemainingInput">MinDaysRemainingInput</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.mustStapleInput">MustStapleInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.mustStapleInput">MustStapleInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.preCheckDelayInput">PreCheckDelayInput</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.preferredChainInput">PreferredChainInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.profileInput">ProfileInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.recursiveNameserversInput">RecursiveNameserversInput</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.renewalInfoIgnoreRetryAfterInput">RenewalInfoIgnoreRetryAfterInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.renewalInfoIgnoreRetryAfterInput">RenewalInfoIgnoreRetryAfterInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.renewalInfoMaxSleepInput">RenewalInfoMaxSleepInput</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.revokeCertificateOnDestroyInput">RevokeCertificateOnDestroyInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.revokeCertificateOnDestroyInput">RevokeCertificateOnDestroyInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.revokeCertificateReasonInput">RevokeCertificateReasonInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.subjectAlternativeNamesInput">SubjectAlternativeNamesInput</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.tlsChallengeInput">TlsChallengeInput</a></code> | <code><a href="#@cdktf/provider-acme.certificate.CertificateTlsChallenge">CertificateTlsChallenge</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.useRenewalInfoInput">UseRenewalInfoInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.useRenewalInfoInput">UseRenewalInfoInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.accountKeyPem">AccountKeyPem</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.certificateP12Password">CertificateP12Password</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.certificateRequestPem">CertificateRequestPem</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.certTimeout">CertTimeout</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.commonName">CommonName</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.disableCompletePropagation">DisableCompletePropagation</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.disableCompletePropagation">DisableCompletePropagation</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.id">Id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.keyType">KeyType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.minDaysRemaining">MinDaysRemaining</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.mustStaple">MustStaple</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.mustStaple">MustStaple</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.preCheckDelay">PreCheckDelay</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.preferredChain">PreferredChain</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.profile">Profile</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.recursiveNameservers">RecursiveNameservers</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.renewalInfoIgnoreRetryAfter">RenewalInfoIgnoreRetryAfter</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.renewalInfoIgnoreRetryAfter">RenewalInfoIgnoreRetryAfter</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.renewalInfoMaxSleep">RenewalInfoMaxSleep</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.revokeCertificateOnDestroy">RevokeCertificateOnDestroy</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.revokeCertificateOnDestroy">RevokeCertificateOnDestroy</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.revokeCertificateReason">RevokeCertificateReason</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.subjectAlternativeNames">SubjectAlternativeNames</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.useRenewalInfo">UseRenewalInfo</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.useRenewalInfo">UseRenewalInfo</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 
 ---
 
@@ -893,20 +893,20 @@ public TerraformProviderGeneratorMetadata TerraformGeneratorMetadata { get; }
 ##### `Connection`<sup>Optional</sup> <a name="Connection" id="@cdktf/provider-acme.certificate.Certificate.property.connection"></a>
 
 ```csharp
-public object Connection { get; }
+public SSHProvisionerConnection|WinrmProvisionerConnection Connection { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.SSHProvisionerConnection|HashiCorp.Cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-acme.certificate.Certificate.property.count"></a>
 
 ```csharp
-public object Count { get; }
+public double|TerraformCount Count { get; }
 ```
 
-- *Type:* object
+- *Type:* double|HashiCorp.Cdktf.TerraformCount
 
 ---
 
@@ -953,10 +953,10 @@ public TerraformProvider Provider { get; }
 ##### `Provisioners`<sup>Optional</sup> <a name="Provisioners" id="@cdktf/provider-acme.certificate.Certificate.property.provisioners"></a>
 
 ```csharp
-public object[] Provisioners { get; }
+public (FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner)[] Provisioners { get; }
 ```
 
-- *Type:* object[]
+- *Type:* HashiCorp.Cdktf.FileProvisioner|HashiCorp.Cdktf.LocalExecProvisioner|HashiCorp.Cdktf.RemoteExecProvisioner[]
 
 ---
 
@@ -1203,20 +1203,20 @@ public string CommonNameInput { get; }
 ##### `DisableCompletePropagationInput`<sup>Optional</sup> <a name="DisableCompletePropagationInput" id="@cdktf/provider-acme.certificate.Certificate.property.disableCompletePropagationInput"></a>
 
 ```csharp
-public object DisableCompletePropagationInput { get; }
+public bool|IResolvable DisableCompletePropagationInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `DnsChallengeInput`<sup>Optional</sup> <a name="DnsChallengeInput" id="@cdktf/provider-acme.certificate.Certificate.property.dnsChallengeInput"></a>
 
 ```csharp
-public object DnsChallengeInput { get; }
+public IResolvable|CertificateDnsChallenge[] DnsChallengeInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-acme.certificate.CertificateDnsChallenge">CertificateDnsChallenge</a>[]
 
 ---
 
@@ -1293,10 +1293,10 @@ public double MinDaysRemainingInput { get; }
 ##### `MustStapleInput`<sup>Optional</sup> <a name="MustStapleInput" id="@cdktf/provider-acme.certificate.Certificate.property.mustStapleInput"></a>
 
 ```csharp
-public object MustStapleInput { get; }
+public bool|IResolvable MustStapleInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1343,10 +1343,10 @@ public string[] RecursiveNameserversInput { get; }
 ##### `RenewalInfoIgnoreRetryAfterInput`<sup>Optional</sup> <a name="RenewalInfoIgnoreRetryAfterInput" id="@cdktf/provider-acme.certificate.Certificate.property.renewalInfoIgnoreRetryAfterInput"></a>
 
 ```csharp
-public object RenewalInfoIgnoreRetryAfterInput { get; }
+public bool|IResolvable RenewalInfoIgnoreRetryAfterInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1363,10 +1363,10 @@ public double RenewalInfoMaxSleepInput { get; }
 ##### `RevokeCertificateOnDestroyInput`<sup>Optional</sup> <a name="RevokeCertificateOnDestroyInput" id="@cdktf/provider-acme.certificate.Certificate.property.revokeCertificateOnDestroyInput"></a>
 
 ```csharp
-public object RevokeCertificateOnDestroyInput { get; }
+public bool|IResolvable RevokeCertificateOnDestroyInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1403,10 +1403,10 @@ public CertificateTlsChallenge TlsChallengeInput { get; }
 ##### `UseRenewalInfoInput`<sup>Optional</sup> <a name="UseRenewalInfoInput" id="@cdktf/provider-acme.certificate.Certificate.property.useRenewalInfoInput"></a>
 
 ```csharp
-public object UseRenewalInfoInput { get; }
+public bool|IResolvable UseRenewalInfoInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1463,10 +1463,10 @@ public string CommonName { get; }
 ##### `DisableCompletePropagation`<sup>Required</sup> <a name="DisableCompletePropagation" id="@cdktf/provider-acme.certificate.Certificate.property.disableCompletePropagation"></a>
 
 ```csharp
-public object DisableCompletePropagation { get; }
+public bool|IResolvable DisableCompletePropagation { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1503,10 +1503,10 @@ public double MinDaysRemaining { get; }
 ##### `MustStaple`<sup>Required</sup> <a name="MustStaple" id="@cdktf/provider-acme.certificate.Certificate.property.mustStaple"></a>
 
 ```csharp
-public object MustStaple { get; }
+public bool|IResolvable MustStaple { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1553,10 +1553,10 @@ public string[] RecursiveNameservers { get; }
 ##### `RenewalInfoIgnoreRetryAfter`<sup>Required</sup> <a name="RenewalInfoIgnoreRetryAfter" id="@cdktf/provider-acme.certificate.Certificate.property.renewalInfoIgnoreRetryAfter"></a>
 
 ```csharp
-public object RenewalInfoIgnoreRetryAfter { get; }
+public bool|IResolvable RenewalInfoIgnoreRetryAfter { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1573,10 +1573,10 @@ public double RenewalInfoMaxSleep { get; }
 ##### `RevokeCertificateOnDestroy`<sup>Required</sup> <a name="RevokeCertificateOnDestroy" id="@cdktf/provider-acme.certificate.Certificate.property.revokeCertificateOnDestroy"></a>
 
 ```csharp
-public object RevokeCertificateOnDestroy { get; }
+public bool|IResolvable RevokeCertificateOnDestroy { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1603,10 +1603,10 @@ public string[] SubjectAlternativeNames { get; }
 ##### `UseRenewalInfo`<sup>Required</sup> <a name="UseRenewalInfo" id="@cdktf/provider-acme.certificate.Certificate.property.useRenewalInfo"></a>
 
 ```csharp
-public object UseRenewalInfo { get; }
+public bool|IResolvable UseRenewalInfo { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1638,20 +1638,20 @@ public string TfResourceType { get; }
 using HashiCorp.Cdktf.Providers.Acme;
 
 new CertificateConfig {
-    object Connection = null,
-    object Count = null,
+    SSHProvisionerConnection|WinrmProvisionerConnection Connection = null,
+    double|TerraformCount Count = null,
     ITerraformDependable[] DependsOn = null,
     ITerraformIterator ForEach = null,
     TerraformResourceLifecycle Lifecycle = null,
     TerraformProvider Provider = null,
-    object[] Provisioners = null,
+    (FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner)[] Provisioners = null,
     string AccountKeyPem,
     string CertificateP12Password = null,
     string CertificateRequestPem = null,
     double CertTimeout = null,
     string CommonName = null,
-    object DisableCompletePropagation = null,
-    object DnsChallenge = null,
+    bool|IResolvable DisableCompletePropagation = null,
+    IResolvable|CertificateDnsChallenge[] DnsChallenge = null,
     CertificateHttpChallenge HttpChallenge = null,
     CertificateHttpMemcachedChallenge HttpMemcachedChallenge = null,
     CertificateHttpS3Challenge HttpS3Challenge = null,
@@ -1659,18 +1659,18 @@ new CertificateConfig {
     string Id = null,
     string KeyType = null,
     double MinDaysRemaining = null,
-    object MustStaple = null,
+    bool|IResolvable MustStaple = null,
     double PreCheckDelay = null,
     string PreferredChain = null,
     string Profile = null,
     string[] RecursiveNameservers = null,
-    object RenewalInfoIgnoreRetryAfter = null,
+    bool|IResolvable RenewalInfoIgnoreRetryAfter = null,
     double RenewalInfoMaxSleep = null,
-    object RevokeCertificateOnDestroy = null,
+    bool|IResolvable RevokeCertificateOnDestroy = null,
     string RevokeCertificateReason = null,
     string[] SubjectAlternativeNames = null,
     CertificateTlsChallenge TlsChallenge = null,
-    object UseRenewalInfo = null
+    bool|IResolvable UseRenewalInfo = null
 };
 ```
 
@@ -1678,20 +1678,20 @@ new CertificateConfig {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.count">Count</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.connection">Connection</a></code> | <code>HashiCorp.Cdktf.SSHProvisionerConnection\|HashiCorp.Cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.count">Count</a></code> | <code>double\|HashiCorp.Cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.dependsOn">DependsOn</a></code> | <code>HashiCorp.Cdktf.ITerraformDependable[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.provisioners">Provisioners</a></code> | <code>HashiCorp.Cdktf.FileProvisioner\|HashiCorp.Cdktf.LocalExecProvisioner\|HashiCorp.Cdktf.RemoteExecProvisioner[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.accountKeyPem">AccountKeyPem</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#account_key_pem Certificate#account_key_pem}. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.certificateP12Password">CertificateP12Password</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#certificate_p12_password Certificate#certificate_p12_password}. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.certificateRequestPem">CertificateRequestPem</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#certificate_request_pem Certificate#certificate_request_pem}. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.certTimeout">CertTimeout</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#cert_timeout Certificate#cert_timeout}. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.commonName">CommonName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#common_name Certificate#common_name}. |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.disableCompletePropagation">DisableCompletePropagation</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#disable_complete_propagation Certificate#disable_complete_propagation}. |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.dnsChallenge">DnsChallenge</a></code> | <code>object</code> | dns_challenge block. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.disableCompletePropagation">DisableCompletePropagation</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#disable_complete_propagation Certificate#disable_complete_propagation}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.dnsChallenge">DnsChallenge</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-acme.certificate.CertificateDnsChallenge">CertificateDnsChallenge</a>[]</code> | dns_challenge block. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.httpChallenge">HttpChallenge</a></code> | <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpChallenge">CertificateHttpChallenge</a></code> | http_challenge block. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.httpMemcachedChallenge">HttpMemcachedChallenge</a></code> | <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpMemcachedChallenge">CertificateHttpMemcachedChallenge</a></code> | http_memcached_challenge block. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.httpS3Challenge">HttpS3Challenge</a></code> | <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpS3Challenge">CertificateHttpS3Challenge</a></code> | http_s3_challenge block. |
@@ -1699,38 +1699,38 @@ new CertificateConfig {
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#id Certificate#id}. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.keyType">KeyType</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#key_type Certificate#key_type}. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.minDaysRemaining">MinDaysRemaining</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#min_days_remaining Certificate#min_days_remaining}. |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.mustStaple">MustStaple</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#must_staple Certificate#must_staple}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.mustStaple">MustStaple</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#must_staple Certificate#must_staple}. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.preCheckDelay">PreCheckDelay</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#pre_check_delay Certificate#pre_check_delay}. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.preferredChain">PreferredChain</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#preferred_chain Certificate#preferred_chain}. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.profile">Profile</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#profile Certificate#profile}. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.recursiveNameservers">RecursiveNameservers</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#recursive_nameservers Certificate#recursive_nameservers}. |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.renewalInfoIgnoreRetryAfter">RenewalInfoIgnoreRetryAfter</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#renewal_info_ignore_retry_after Certificate#renewal_info_ignore_retry_after}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.renewalInfoIgnoreRetryAfter">RenewalInfoIgnoreRetryAfter</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#renewal_info_ignore_retry_after Certificate#renewal_info_ignore_retry_after}. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.renewalInfoMaxSleep">RenewalInfoMaxSleep</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#renewal_info_max_sleep Certificate#renewal_info_max_sleep}. |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.revokeCertificateOnDestroy">RevokeCertificateOnDestroy</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#revoke_certificate_on_destroy Certificate#revoke_certificate_on_destroy}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.revokeCertificateOnDestroy">RevokeCertificateOnDestroy</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#revoke_certificate_on_destroy Certificate#revoke_certificate_on_destroy}. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.revokeCertificateReason">RevokeCertificateReason</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#revoke_certificate_reason Certificate#revoke_certificate_reason}. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.subjectAlternativeNames">SubjectAlternativeNames</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#subject_alternative_names Certificate#subject_alternative_names}. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.tlsChallenge">TlsChallenge</a></code> | <code><a href="#@cdktf/provider-acme.certificate.CertificateTlsChallenge">CertificateTlsChallenge</a></code> | tls_challenge block. |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.useRenewalInfo">UseRenewalInfo</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#use_renewal_info Certificate#use_renewal_info}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.useRenewalInfo">UseRenewalInfo</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#use_renewal_info Certificate#use_renewal_info}. |
 
 ---
 
 ##### `Connection`<sup>Optional</sup> <a name="Connection" id="@cdktf/provider-acme.certificate.CertificateConfig.property.connection"></a>
 
 ```csharp
-public object Connection { get; set; }
+public SSHProvisionerConnection|WinrmProvisionerConnection Connection { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.SSHProvisionerConnection|HashiCorp.Cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-acme.certificate.CertificateConfig.property.count"></a>
 
 ```csharp
-public object Count { get; set; }
+public double|TerraformCount Count { get; set; }
 ```
 
-- *Type:* object
+- *Type:* double|HashiCorp.Cdktf.TerraformCount
 
 ---
 
@@ -1777,10 +1777,10 @@ public TerraformProvider Provider { get; set; }
 ##### `Provisioners`<sup>Optional</sup> <a name="Provisioners" id="@cdktf/provider-acme.certificate.CertificateConfig.property.provisioners"></a>
 
 ```csharp
-public object[] Provisioners { get; set; }
+public (FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner)[] Provisioners { get; set; }
 ```
 
-- *Type:* object[]
+- *Type:* HashiCorp.Cdktf.FileProvisioner|HashiCorp.Cdktf.LocalExecProvisioner|HashiCorp.Cdktf.RemoteExecProvisioner[]
 
 ---
 
@@ -1847,10 +1847,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancl
 ##### `DisableCompletePropagation`<sup>Optional</sup> <a name="DisableCompletePropagation" id="@cdktf/provider-acme.certificate.CertificateConfig.property.disableCompletePropagation"></a>
 
 ```csharp
-public object DisableCompletePropagation { get; set; }
+public bool|IResolvable DisableCompletePropagation { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#disable_complete_propagation Certificate#disable_complete_propagation}.
 
@@ -1859,10 +1859,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancl
 ##### `DnsChallenge`<sup>Optional</sup> <a name="DnsChallenge" id="@cdktf/provider-acme.certificate.CertificateConfig.property.dnsChallenge"></a>
 
 ```csharp
-public object DnsChallenge { get; set; }
+public IResolvable|CertificateDnsChallenge[] DnsChallenge { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-acme.certificate.CertificateDnsChallenge">CertificateDnsChallenge</a>[]
 
 dns_challenge block.
 
@@ -1968,10 +1968,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancl
 ##### `MustStaple`<sup>Optional</sup> <a name="MustStaple" id="@cdktf/provider-acme.certificate.CertificateConfig.property.mustStaple"></a>
 
 ```csharp
-public object MustStaple { get; set; }
+public bool|IResolvable MustStaple { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#must_staple Certificate#must_staple}.
 
@@ -2028,10 +2028,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancl
 ##### `RenewalInfoIgnoreRetryAfter`<sup>Optional</sup> <a name="RenewalInfoIgnoreRetryAfter" id="@cdktf/provider-acme.certificate.CertificateConfig.property.renewalInfoIgnoreRetryAfter"></a>
 
 ```csharp
-public object RenewalInfoIgnoreRetryAfter { get; set; }
+public bool|IResolvable RenewalInfoIgnoreRetryAfter { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#renewal_info_ignore_retry_after Certificate#renewal_info_ignore_retry_after}.
 
@@ -2052,10 +2052,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancl
 ##### `RevokeCertificateOnDestroy`<sup>Optional</sup> <a name="RevokeCertificateOnDestroy" id="@cdktf/provider-acme.certificate.CertificateConfig.property.revokeCertificateOnDestroy"></a>
 
 ```csharp
-public object RevokeCertificateOnDestroy { get; set; }
+public bool|IResolvable RevokeCertificateOnDestroy { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#revoke_certificate_on_destroy Certificate#revoke_certificate_on_destroy}.
 
@@ -2102,10 +2102,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancl
 ##### `UseRenewalInfo`<sup>Optional</sup> <a name="UseRenewalInfo" id="@cdktf/provider-acme.certificate.CertificateConfig.property.useRenewalInfo"></a>
 
 ```csharp
-public object UseRenewalInfo { get; set; }
+public bool|IResolvable UseRenewalInfo { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#use_renewal_info Certificate#use_renewal_info}.
 
@@ -2454,7 +2454,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateDnsChallengeList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateDnsChallengeList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateDnsChallengeList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateDnsChallengeList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-acme.certificate.CertificateDnsChallenge">CertificateDnsChallenge</a>[]</code> | *No description.* |
 
 ---
 
@@ -2485,10 +2485,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-acme.certificate.CertificateDnsChallengeList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|CertificateDnsChallenge[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-acme.certificate.CertificateDnsChallenge">CertificateDnsChallenge</a>[]
 
 ---
 
@@ -2732,7 +2732,7 @@ private void ResetConfig()
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateDnsChallengeOutputReference.property.providerInput">ProviderInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateDnsChallengeOutputReference.property.config">Config</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateDnsChallengeOutputReference.property.provider">Provider</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateDnsChallengeOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateDnsChallengeOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-acme.certificate.CertificateDnsChallenge">CertificateDnsChallenge</a></code> | *No description.* |
 
 ---
 
@@ -2803,10 +2803,10 @@ public string Provider { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-acme.certificate.CertificateDnsChallengeOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|CertificateDnsChallenge InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-acme.certificate.CertificateDnsChallenge">CertificateDnsChallenge</a>
 
 ---
 

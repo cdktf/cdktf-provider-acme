@@ -14,20 +14,20 @@ from cdktf_cdktf_provider_acme import certificate
 certificate.Certificate(
   scope: Construct,
   id: str,
-  connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
+  connection: SSHProvisionerConnection | WinrmProvisionerConnection = None,
+  count: typing.Union[int, float] | TerraformCount = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
-  provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
+  provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner] = None,
   account_key_pem: str,
   certificate_p12_password: str = None,
   certificate_request_pem: str = None,
   cert_timeout: typing.Union[int, float] = None,
   common_name: str = None,
-  disable_complete_propagation: typing.Union[bool, IResolvable] = None,
-  dns_challenge: typing.Union[IResolvable, typing.List[CertificateDnsChallenge]] = None,
+  disable_complete_propagation: bool | IResolvable = None,
+  dns_challenge: IResolvable | typing.List[CertificateDnsChallenge] = None,
   http_challenge: CertificateHttpChallenge = None,
   http_memcached_challenge: CertificateHttpMemcachedChallenge = None,
   http_s3_challenge: CertificateHttpS3Challenge = None,
@@ -35,18 +35,18 @@ certificate.Certificate(
   id: str = None,
   key_type: str = None,
   min_days_remaining: typing.Union[int, float] = None,
-  must_staple: typing.Union[bool, IResolvable] = None,
+  must_staple: bool | IResolvable = None,
   pre_check_delay: typing.Union[int, float] = None,
   preferred_chain: str = None,
   profile: str = None,
   recursive_nameservers: typing.List[str] = None,
-  renewal_info_ignore_retry_after: typing.Union[bool, IResolvable] = None,
+  renewal_info_ignore_retry_after: bool | IResolvable = None,
   renewal_info_max_sleep: typing.Union[int, float] = None,
-  revoke_certificate_on_destroy: typing.Union[bool, IResolvable] = None,
+  revoke_certificate_on_destroy: bool | IResolvable = None,
   revoke_certificate_reason: str = None,
   subject_alternative_names: typing.List[str] = None,
   tls_challenge: CertificateTlsChallenge = None,
-  use_renewal_info: typing.Union[bool, IResolvable] = None
+  use_renewal_info: bool | IResolvable = None
 )
 ```
 
@@ -54,20 +54,20 @@ certificate.Certificate(
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
-| <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.accountKeyPem">account_key_pem</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#account_key_pem Certificate#account_key_pem}. |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.certificateP12Password">certificate_p12_password</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#certificate_p12_password Certificate#certificate_p12_password}. |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.certificateRequestPem">certificate_request_pem</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#certificate_request_pem Certificate#certificate_request_pem}. |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.certTimeout">cert_timeout</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#cert_timeout Certificate#cert_timeout}. |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.commonName">common_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#common_name Certificate#common_name}. |
-| <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.disableCompletePropagation">disable_complete_propagation</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#disable_complete_propagation Certificate#disable_complete_propagation}. |
-| <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.dnsChallenge">dns_challenge</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-acme.certificate.CertificateDnsChallenge">CertificateDnsChallenge</a>]]</code> | dns_challenge block. |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.disableCompletePropagation">disable_complete_propagation</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#disable_complete_propagation Certificate#disable_complete_propagation}. |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.dnsChallenge">dns_challenge</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-acme.certificate.CertificateDnsChallenge">CertificateDnsChallenge</a>]</code> | dns_challenge block. |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.httpChallenge">http_challenge</a></code> | <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpChallenge">CertificateHttpChallenge</a></code> | http_challenge block. |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.httpMemcachedChallenge">http_memcached_challenge</a></code> | <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpMemcachedChallenge">CertificateHttpMemcachedChallenge</a></code> | http_memcached_challenge block. |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.httpS3Challenge">http_s3_challenge</a></code> | <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpS3Challenge">CertificateHttpS3Challenge</a></code> | http_s3_challenge block. |
@@ -75,18 +75,18 @@ certificate.Certificate(
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#id Certificate#id}. |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.keyType">key_type</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#key_type Certificate#key_type}. |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.minDaysRemaining">min_days_remaining</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#min_days_remaining Certificate#min_days_remaining}. |
-| <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.mustStaple">must_staple</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#must_staple Certificate#must_staple}. |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.mustStaple">must_staple</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#must_staple Certificate#must_staple}. |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.preCheckDelay">pre_check_delay</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#pre_check_delay Certificate#pre_check_delay}. |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.preferredChain">preferred_chain</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#preferred_chain Certificate#preferred_chain}. |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.profile">profile</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#profile Certificate#profile}. |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.recursiveNameservers">recursive_nameservers</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#recursive_nameservers Certificate#recursive_nameservers}. |
-| <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.renewalInfoIgnoreRetryAfter">renewal_info_ignore_retry_after</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#renewal_info_ignore_retry_after Certificate#renewal_info_ignore_retry_after}. |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.renewalInfoIgnoreRetryAfter">renewal_info_ignore_retry_after</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#renewal_info_ignore_retry_after Certificate#renewal_info_ignore_retry_after}. |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.renewalInfoMaxSleep">renewal_info_max_sleep</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#renewal_info_max_sleep Certificate#renewal_info_max_sleep}. |
-| <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.revokeCertificateOnDestroy">revoke_certificate_on_destroy</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#revoke_certificate_on_destroy Certificate#revoke_certificate_on_destroy}. |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.revokeCertificateOnDestroy">revoke_certificate_on_destroy</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#revoke_certificate_on_destroy Certificate#revoke_certificate_on_destroy}. |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.revokeCertificateReason">revoke_certificate_reason</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#revoke_certificate_reason Certificate#revoke_certificate_reason}. |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.subjectAlternativeNames">subject_alternative_names</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#subject_alternative_names Certificate#subject_alternative_names}. |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.tlsChallenge">tls_challenge</a></code> | <code><a href="#@cdktf/provider-acme.certificate.CertificateTlsChallenge">CertificateTlsChallenge</a></code> | tls_challenge block. |
-| <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.useRenewalInfo">use_renewal_info</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#use_renewal_info Certificate#use_renewal_info}. |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.useRenewalInfo">use_renewal_info</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#use_renewal_info Certificate#use_renewal_info}. |
 
 ---
 
@@ -110,13 +110,13 @@ Must be unique amongst siblings in the same scope
 
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.connection"></a>
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.count"></a>
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -146,7 +146,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.provisioners"></a>
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -192,7 +192,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancl
 
 ##### `disable_complete_propagation`<sup>Optional</sup> <a name="disable_complete_propagation" id="@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.disableCompletePropagation"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#disable_complete_propagation Certificate#disable_complete_propagation}.
 
@@ -200,7 +200,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancl
 
 ##### `dns_challenge`<sup>Optional</sup> <a name="dns_challenge" id="@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.dnsChallenge"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-acme.certificate.CertificateDnsChallenge">CertificateDnsChallenge</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-acme.certificate.CertificateDnsChallenge">CertificateDnsChallenge</a>]
 
 dns_challenge block.
 
@@ -277,7 +277,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancl
 
 ##### `must_staple`<sup>Optional</sup> <a name="must_staple" id="@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.mustStaple"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#must_staple Certificate#must_staple}.
 
@@ -317,7 +317,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancl
 
 ##### `renewal_info_ignore_retry_after`<sup>Optional</sup> <a name="renewal_info_ignore_retry_after" id="@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.renewalInfoIgnoreRetryAfter"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#renewal_info_ignore_retry_after Certificate#renewal_info_ignore_retry_after}.
 
@@ -333,7 +333,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancl
 
 ##### `revoke_certificate_on_destroy`<sup>Optional</sup> <a name="revoke_certificate_on_destroy" id="@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.revokeCertificateOnDestroy"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#revoke_certificate_on_destroy Certificate#revoke_certificate_on_destroy}.
 
@@ -367,7 +367,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancl
 
 ##### `use_renewal_info`<sup>Optional</sup> <a name="use_renewal_info" id="@cdktf/provider-acme.certificate.Certificate.Initializer.parameter.useRenewalInfo"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#use_renewal_info Certificate#use_renewal_info}.
 
@@ -656,7 +656,7 @@ def get_string_map_attribute(
 ##### `has_resource_move` <a name="has_resource_move" id="@cdktf/provider-acme.certificate.Certificate.hasResourceMove"></a>
 
 ```python
-def has_resource_move() -> typing.Union[TerraformResourceMoveByTarget, TerraformResourceMoveById]
+def has_resource_move() -> TerraformResourceMoveByTarget | TerraformResourceMoveById
 ```
 
 ##### `import_from` <a name="import_from" id="@cdktf/provider-acme.certificate.Certificate.importFrom"></a>
@@ -719,7 +719,7 @@ Full id of resource being moved from, e.g. "aws_s3_bucket.example".
 ```python
 def move_to(
   move_target: str,
-  index: typing.Union[str, typing.Union[int, float]] = None
+  index: str | typing.Union[int, float] = None
 ) -> None
 ```
 
@@ -735,7 +735,7 @@ The previously set user defined string set by .addMoveTarget() corresponding to 
 
 ###### `index`<sup>Optional</sup> <a name="index" id="@cdktf/provider-acme.certificate.Certificate.moveTo.parameter.index"></a>
 
-- *Type:* typing.Union[str, typing.Union[int, float]]
+- *Type:* str | typing.Union[int, float]
 
 Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
@@ -763,13 +763,13 @@ Full id of resource to move to, e.g. "aws_s3_bucket.example".
 
 ```python
 def put_dns_challenge(
-  value: typing.Union[IResolvable, typing.List[CertificateDnsChallenge]]
+  value: IResolvable | typing.List[CertificateDnsChallenge]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-acme.certificate.Certificate.putDnsChallenge.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-acme.certificate.CertificateDnsChallenge">CertificateDnsChallenge</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-acme.certificate.CertificateDnsChallenge">CertificateDnsChallenge</a>]
 
 ---
 
@@ -1149,13 +1149,13 @@ Refer to the {@link https://registry.terraform.io/providers/vancluever/acme/2.36
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.terraformMetaArguments">terraform_meta_arguments</a></code> | <code>typing.Mapping[typing.Any]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.certificateDomain">certificate_domain</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.certificateNotAfter">certificate_not_after</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.certificateP12">certificate_p12</a></code> | <code>str</code> | *No description.* |
@@ -1180,8 +1180,8 @@ Refer to the {@link https://registry.terraform.io/providers/vancluever/acme/2.36
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.certificateRequestPemInput">certificate_request_pem_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.certTimeoutInput">cert_timeout_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.commonNameInput">common_name_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.disableCompletePropagationInput">disable_complete_propagation_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.dnsChallengeInput">dns_challenge_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-acme.certificate.CertificateDnsChallenge">CertificateDnsChallenge</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.disableCompletePropagationInput">disable_complete_propagation_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.dnsChallengeInput">dns_challenge_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-acme.certificate.CertificateDnsChallenge">CertificateDnsChallenge</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.httpChallengeInput">http_challenge_input</a></code> | <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpChallenge">CertificateHttpChallenge</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.httpMemcachedChallengeInput">http_memcached_challenge_input</a></code> | <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpMemcachedChallenge">CertificateHttpMemcachedChallenge</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.httpS3ChallengeInput">http_s3_challenge_input</a></code> | <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpS3Challenge">CertificateHttpS3Challenge</a></code> | *No description.* |
@@ -1189,38 +1189,38 @@ Refer to the {@link https://registry.terraform.io/providers/vancluever/acme/2.36
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.keyTypeInput">key_type_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.minDaysRemainingInput">min_days_remaining_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.mustStapleInput">must_staple_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.mustStapleInput">must_staple_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.preCheckDelayInput">pre_check_delay_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.preferredChainInput">preferred_chain_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.profileInput">profile_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.recursiveNameserversInput">recursive_nameservers_input</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.renewalInfoIgnoreRetryAfterInput">renewal_info_ignore_retry_after_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.renewalInfoIgnoreRetryAfterInput">renewal_info_ignore_retry_after_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.renewalInfoMaxSleepInput">renewal_info_max_sleep_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.revokeCertificateOnDestroyInput">revoke_certificate_on_destroy_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.revokeCertificateOnDestroyInput">revoke_certificate_on_destroy_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.revokeCertificateReasonInput">revoke_certificate_reason_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.subjectAlternativeNamesInput">subject_alternative_names_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.tlsChallengeInput">tls_challenge_input</a></code> | <code><a href="#@cdktf/provider-acme.certificate.CertificateTlsChallenge">CertificateTlsChallenge</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.useRenewalInfoInput">use_renewal_info_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.useRenewalInfoInput">use_renewal_info_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.accountKeyPem">account_key_pem</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.certificateP12Password">certificate_p12_password</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.certificateRequestPem">certificate_request_pem</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.certTimeout">cert_timeout</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.commonName">common_name</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.disableCompletePropagation">disable_complete_propagation</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.disableCompletePropagation">disable_complete_propagation</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.keyType">key_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.minDaysRemaining">min_days_remaining</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.mustStaple">must_staple</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.mustStaple">must_staple</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.preCheckDelay">pre_check_delay</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.preferredChain">preferred_chain</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.profile">profile</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.recursiveNameservers">recursive_nameservers</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.renewalInfoIgnoreRetryAfter">renewal_info_ignore_retry_after</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.renewalInfoIgnoreRetryAfter">renewal_info_ignore_retry_after</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.renewalInfoMaxSleep">renewal_info_max_sleep</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.revokeCertificateOnDestroy">revoke_certificate_on_destroy</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.revokeCertificateOnDestroy">revoke_certificate_on_destroy</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.revokeCertificateReason">revoke_certificate_reason</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.subjectAlternativeNames">subject_alternative_names</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.useRenewalInfo">use_renewal_info</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.Certificate.property.useRenewalInfo">use_renewal_info</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 
 ---
 
@@ -1299,20 +1299,20 @@ terraform_generator_metadata: TerraformProviderGeneratorMetadata
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-acme.certificate.Certificate.property.connection"></a>
 
 ```python
-connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
+connection: SSHProvisionerConnection | WinrmProvisionerConnection
 ```
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-acme.certificate.Certificate.property.count"></a>
 
 ```python
-count: typing.Union[typing.Union[int, float], TerraformCount]
+count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -1359,10 +1359,10 @@ provider: TerraformProvider
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-acme.certificate.Certificate.property.provisioners"></a>
 
 ```python
-provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]]
+provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
 ```
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -1609,20 +1609,20 @@ common_name_input: str
 ##### `disable_complete_propagation_input`<sup>Optional</sup> <a name="disable_complete_propagation_input" id="@cdktf/provider-acme.certificate.Certificate.property.disableCompletePropagationInput"></a>
 
 ```python
-disable_complete_propagation_input: typing.Union[bool, IResolvable]
+disable_complete_propagation_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `dns_challenge_input`<sup>Optional</sup> <a name="dns_challenge_input" id="@cdktf/provider-acme.certificate.Certificate.property.dnsChallengeInput"></a>
 
 ```python
-dns_challenge_input: typing.Union[IResolvable, typing.List[CertificateDnsChallenge]]
+dns_challenge_input: IResolvable | typing.List[CertificateDnsChallenge]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-acme.certificate.CertificateDnsChallenge">CertificateDnsChallenge</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-acme.certificate.CertificateDnsChallenge">CertificateDnsChallenge</a>]
 
 ---
 
@@ -1699,10 +1699,10 @@ min_days_remaining_input: typing.Union[int, float]
 ##### `must_staple_input`<sup>Optional</sup> <a name="must_staple_input" id="@cdktf/provider-acme.certificate.Certificate.property.mustStapleInput"></a>
 
 ```python
-must_staple_input: typing.Union[bool, IResolvable]
+must_staple_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -1749,10 +1749,10 @@ recursive_nameservers_input: typing.List[str]
 ##### `renewal_info_ignore_retry_after_input`<sup>Optional</sup> <a name="renewal_info_ignore_retry_after_input" id="@cdktf/provider-acme.certificate.Certificate.property.renewalInfoIgnoreRetryAfterInput"></a>
 
 ```python
-renewal_info_ignore_retry_after_input: typing.Union[bool, IResolvable]
+renewal_info_ignore_retry_after_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -1769,10 +1769,10 @@ renewal_info_max_sleep_input: typing.Union[int, float]
 ##### `revoke_certificate_on_destroy_input`<sup>Optional</sup> <a name="revoke_certificate_on_destroy_input" id="@cdktf/provider-acme.certificate.Certificate.property.revokeCertificateOnDestroyInput"></a>
 
 ```python
-revoke_certificate_on_destroy_input: typing.Union[bool, IResolvable]
+revoke_certificate_on_destroy_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -1809,10 +1809,10 @@ tls_challenge_input: CertificateTlsChallenge
 ##### `use_renewal_info_input`<sup>Optional</sup> <a name="use_renewal_info_input" id="@cdktf/provider-acme.certificate.Certificate.property.useRenewalInfoInput"></a>
 
 ```python
-use_renewal_info_input: typing.Union[bool, IResolvable]
+use_renewal_info_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -1869,10 +1869,10 @@ common_name: str
 ##### `disable_complete_propagation`<sup>Required</sup> <a name="disable_complete_propagation" id="@cdktf/provider-acme.certificate.Certificate.property.disableCompletePropagation"></a>
 
 ```python
-disable_complete_propagation: typing.Union[bool, IResolvable]
+disable_complete_propagation: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -1909,10 +1909,10 @@ min_days_remaining: typing.Union[int, float]
 ##### `must_staple`<sup>Required</sup> <a name="must_staple" id="@cdktf/provider-acme.certificate.Certificate.property.mustStaple"></a>
 
 ```python
-must_staple: typing.Union[bool, IResolvable]
+must_staple: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -1959,10 +1959,10 @@ recursive_nameservers: typing.List[str]
 ##### `renewal_info_ignore_retry_after`<sup>Required</sup> <a name="renewal_info_ignore_retry_after" id="@cdktf/provider-acme.certificate.Certificate.property.renewalInfoIgnoreRetryAfter"></a>
 
 ```python
-renewal_info_ignore_retry_after: typing.Union[bool, IResolvable]
+renewal_info_ignore_retry_after: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -1979,10 +1979,10 @@ renewal_info_max_sleep: typing.Union[int, float]
 ##### `revoke_certificate_on_destroy`<sup>Required</sup> <a name="revoke_certificate_on_destroy" id="@cdktf/provider-acme.certificate.Certificate.property.revokeCertificateOnDestroy"></a>
 
 ```python
-revoke_certificate_on_destroy: typing.Union[bool, IResolvable]
+revoke_certificate_on_destroy: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -2009,10 +2009,10 @@ subject_alternative_names: typing.List[str]
 ##### `use_renewal_info`<sup>Required</sup> <a name="use_renewal_info" id="@cdktf/provider-acme.certificate.Certificate.property.useRenewalInfo"></a>
 
 ```python
-use_renewal_info: typing.Union[bool, IResolvable]
+use_renewal_info: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -2044,20 +2044,20 @@ tfResourceType: str
 from cdktf_cdktf_provider_acme import certificate
 
 certificate.CertificateConfig(
-  connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
+  connection: SSHProvisionerConnection | WinrmProvisionerConnection = None,
+  count: typing.Union[int, float] | TerraformCount = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
-  provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
+  provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner] = None,
   account_key_pem: str,
   certificate_p12_password: str = None,
   certificate_request_pem: str = None,
   cert_timeout: typing.Union[int, float] = None,
   common_name: str = None,
-  disable_complete_propagation: typing.Union[bool, IResolvable] = None,
-  dns_challenge: typing.Union[IResolvable, typing.List[CertificateDnsChallenge]] = None,
+  disable_complete_propagation: bool | IResolvable = None,
+  dns_challenge: IResolvable | typing.List[CertificateDnsChallenge] = None,
   http_challenge: CertificateHttpChallenge = None,
   http_memcached_challenge: CertificateHttpMemcachedChallenge = None,
   http_s3_challenge: CertificateHttpS3Challenge = None,
@@ -2065,18 +2065,18 @@ certificate.CertificateConfig(
   id: str = None,
   key_type: str = None,
   min_days_remaining: typing.Union[int, float] = None,
-  must_staple: typing.Union[bool, IResolvable] = None,
+  must_staple: bool | IResolvable = None,
   pre_check_delay: typing.Union[int, float] = None,
   preferred_chain: str = None,
   profile: str = None,
   recursive_nameservers: typing.List[str] = None,
-  renewal_info_ignore_retry_after: typing.Union[bool, IResolvable] = None,
+  renewal_info_ignore_retry_after: bool | IResolvable = None,
   renewal_info_max_sleep: typing.Union[int, float] = None,
-  revoke_certificate_on_destroy: typing.Union[bool, IResolvable] = None,
+  revoke_certificate_on_destroy: bool | IResolvable = None,
   revoke_certificate_reason: str = None,
   subject_alternative_names: typing.List[str] = None,
   tls_challenge: CertificateTlsChallenge = None,
-  use_renewal_info: typing.Union[bool, IResolvable] = None
+  use_renewal_info: bool | IResolvable = None
 )
 ```
 
@@ -2084,20 +2084,20 @@ certificate.CertificateConfig(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.accountKeyPem">account_key_pem</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#account_key_pem Certificate#account_key_pem}. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.certificateP12Password">certificate_p12_password</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#certificate_p12_password Certificate#certificate_p12_password}. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.certificateRequestPem">certificate_request_pem</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#certificate_request_pem Certificate#certificate_request_pem}. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.certTimeout">cert_timeout</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#cert_timeout Certificate#cert_timeout}. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.commonName">common_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#common_name Certificate#common_name}. |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.disableCompletePropagation">disable_complete_propagation</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#disable_complete_propagation Certificate#disable_complete_propagation}. |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.dnsChallenge">dns_challenge</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-acme.certificate.CertificateDnsChallenge">CertificateDnsChallenge</a>]]</code> | dns_challenge block. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.disableCompletePropagation">disable_complete_propagation</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#disable_complete_propagation Certificate#disable_complete_propagation}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.dnsChallenge">dns_challenge</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-acme.certificate.CertificateDnsChallenge">CertificateDnsChallenge</a>]</code> | dns_challenge block. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.httpChallenge">http_challenge</a></code> | <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpChallenge">CertificateHttpChallenge</a></code> | http_challenge block. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.httpMemcachedChallenge">http_memcached_challenge</a></code> | <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpMemcachedChallenge">CertificateHttpMemcachedChallenge</a></code> | http_memcached_challenge block. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.httpS3Challenge">http_s3_challenge</a></code> | <code><a href="#@cdktf/provider-acme.certificate.CertificateHttpS3Challenge">CertificateHttpS3Challenge</a></code> | http_s3_challenge block. |
@@ -2105,38 +2105,38 @@ certificate.CertificateConfig(
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#id Certificate#id}. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.keyType">key_type</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#key_type Certificate#key_type}. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.minDaysRemaining">min_days_remaining</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#min_days_remaining Certificate#min_days_remaining}. |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.mustStaple">must_staple</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#must_staple Certificate#must_staple}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.mustStaple">must_staple</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#must_staple Certificate#must_staple}. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.preCheckDelay">pre_check_delay</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#pre_check_delay Certificate#pre_check_delay}. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.preferredChain">preferred_chain</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#preferred_chain Certificate#preferred_chain}. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.profile">profile</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#profile Certificate#profile}. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.recursiveNameservers">recursive_nameservers</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#recursive_nameservers Certificate#recursive_nameservers}. |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.renewalInfoIgnoreRetryAfter">renewal_info_ignore_retry_after</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#renewal_info_ignore_retry_after Certificate#renewal_info_ignore_retry_after}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.renewalInfoIgnoreRetryAfter">renewal_info_ignore_retry_after</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#renewal_info_ignore_retry_after Certificate#renewal_info_ignore_retry_after}. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.renewalInfoMaxSleep">renewal_info_max_sleep</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#renewal_info_max_sleep Certificate#renewal_info_max_sleep}. |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.revokeCertificateOnDestroy">revoke_certificate_on_destroy</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#revoke_certificate_on_destroy Certificate#revoke_certificate_on_destroy}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.revokeCertificateOnDestroy">revoke_certificate_on_destroy</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#revoke_certificate_on_destroy Certificate#revoke_certificate_on_destroy}. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.revokeCertificateReason">revoke_certificate_reason</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#revoke_certificate_reason Certificate#revoke_certificate_reason}. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.subjectAlternativeNames">subject_alternative_names</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#subject_alternative_names Certificate#subject_alternative_names}. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.tlsChallenge">tls_challenge</a></code> | <code><a href="#@cdktf/provider-acme.certificate.CertificateTlsChallenge">CertificateTlsChallenge</a></code> | tls_challenge block. |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.useRenewalInfo">use_renewal_info</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#use_renewal_info Certificate#use_renewal_info}. |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateConfig.property.useRenewalInfo">use_renewal_info</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#use_renewal_info Certificate#use_renewal_info}. |
 
 ---
 
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-acme.certificate.CertificateConfig.property.connection"></a>
 
 ```python
-connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
+connection: SSHProvisionerConnection | WinrmProvisionerConnection
 ```
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-acme.certificate.CertificateConfig.property.count"></a>
 
 ```python
-count: typing.Union[typing.Union[int, float], TerraformCount]
+count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -2183,10 +2183,10 @@ provider: TerraformProvider
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-acme.certificate.CertificateConfig.property.provisioners"></a>
 
 ```python
-provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]]
+provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
 ```
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -2253,10 +2253,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancl
 ##### `disable_complete_propagation`<sup>Optional</sup> <a name="disable_complete_propagation" id="@cdktf/provider-acme.certificate.CertificateConfig.property.disableCompletePropagation"></a>
 
 ```python
-disable_complete_propagation: typing.Union[bool, IResolvable]
+disable_complete_propagation: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#disable_complete_propagation Certificate#disable_complete_propagation}.
 
@@ -2265,10 +2265,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancl
 ##### `dns_challenge`<sup>Optional</sup> <a name="dns_challenge" id="@cdktf/provider-acme.certificate.CertificateConfig.property.dnsChallenge"></a>
 
 ```python
-dns_challenge: typing.Union[IResolvable, typing.List[CertificateDnsChallenge]]
+dns_challenge: IResolvable | typing.List[CertificateDnsChallenge]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-acme.certificate.CertificateDnsChallenge">CertificateDnsChallenge</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-acme.certificate.CertificateDnsChallenge">CertificateDnsChallenge</a>]
 
 dns_challenge block.
 
@@ -2374,10 +2374,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancl
 ##### `must_staple`<sup>Optional</sup> <a name="must_staple" id="@cdktf/provider-acme.certificate.CertificateConfig.property.mustStaple"></a>
 
 ```python
-must_staple: typing.Union[bool, IResolvable]
+must_staple: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#must_staple Certificate#must_staple}.
 
@@ -2434,10 +2434,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancl
 ##### `renewal_info_ignore_retry_after`<sup>Optional</sup> <a name="renewal_info_ignore_retry_after" id="@cdktf/provider-acme.certificate.CertificateConfig.property.renewalInfoIgnoreRetryAfter"></a>
 
 ```python
-renewal_info_ignore_retry_after: typing.Union[bool, IResolvable]
+renewal_info_ignore_retry_after: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#renewal_info_ignore_retry_after Certificate#renewal_info_ignore_retry_after}.
 
@@ -2458,10 +2458,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancl
 ##### `revoke_certificate_on_destroy`<sup>Optional</sup> <a name="revoke_certificate_on_destroy" id="@cdktf/provider-acme.certificate.CertificateConfig.property.revokeCertificateOnDestroy"></a>
 
 ```python
-revoke_certificate_on_destroy: typing.Union[bool, IResolvable]
+revoke_certificate_on_destroy: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#revoke_certificate_on_destroy Certificate#revoke_certificate_on_destroy}.
 
@@ -2508,10 +2508,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancl
 ##### `use_renewal_info`<sup>Optional</sup> <a name="use_renewal_info" id="@cdktf/provider-acme.certificate.CertificateConfig.property.useRenewalInfo"></a>
 
 ```python
-use_renewal_info: typing.Union[bool, IResolvable]
+use_renewal_info: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.36.0/docs/resources/certificate#use_renewal_info Certificate#use_renewal_info}.
 
@@ -2870,7 +2870,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateDnsChallengeList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateDnsChallengeList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateDnsChallengeList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-acme.certificate.CertificateDnsChallenge">CertificateDnsChallenge</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateDnsChallengeList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-acme.certificate.CertificateDnsChallenge">CertificateDnsChallenge</a>]</code> | *No description.* |
 
 ---
 
@@ -2901,10 +2901,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-acme.certificate.CertificateDnsChallengeList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[CertificateDnsChallenge]]
+internal_value: IResolvable | typing.List[CertificateDnsChallenge]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-acme.certificate.CertificateDnsChallenge">CertificateDnsChallenge</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-acme.certificate.CertificateDnsChallenge">CertificateDnsChallenge</a>]
 
 ---
 
@@ -3175,7 +3175,7 @@ def reset_config() -> None
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateDnsChallengeOutputReference.property.providerInput">provider_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateDnsChallengeOutputReference.property.config">config</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-acme.certificate.CertificateDnsChallengeOutputReference.property.provider">provider</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-acme.certificate.CertificateDnsChallengeOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-acme.certificate.CertificateDnsChallenge">CertificateDnsChallenge</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-acme.certificate.CertificateDnsChallengeOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-acme.certificate.CertificateDnsChallenge">CertificateDnsChallenge</a></code> | *No description.* |
 
 ---
 
@@ -3246,10 +3246,10 @@ provider: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-acme.certificate.CertificateDnsChallengeOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, CertificateDnsChallenge]
+internal_value: IResolvable | CertificateDnsChallenge
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-acme.certificate.CertificateDnsChallenge">CertificateDnsChallenge</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-acme.certificate.CertificateDnsChallenge">CertificateDnsChallenge</a>
 
 ---
 
